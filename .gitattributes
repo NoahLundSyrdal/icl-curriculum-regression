@@ -6,3 +6,8 @@
 *.zip binary
 *.pdf binary
 *.png binary
+
+# Archived CSV uses CRLF; preserve original EOF spacing in captured source.
+/reports/**/*.csv whitespace=cr-at-eol
+/experiments/confirmation_20261008/** whitespace=cr-at-eol,-blank-at-eof
+/historical/** whitespace=cr-at-eol,-blank-at-eof

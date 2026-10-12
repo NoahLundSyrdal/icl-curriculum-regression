@@ -49,4 +49,3 @@ dx.axvline(50,color='#65758b',lw=.8,ls='--');dx.set_xlim(0,100);dx.set_xlabel('N
 dx.set_title('D. Noise response: medians and middle 50%',loc='left',fontsize=10);dx.legend(frameon=False,fontsize=8);dx.grid(axis='y',alpha=.15)
 fig.tight_layout(h_pad=2,w_pad=2.5)
 fig.savefig(OUT/'icl_confirmation_figures.png',bbox_inches='tight');fig.savefig(OUT/'icl_confirmation_figures.svg',bbox_inches='tight');plt.close(fig)
-
