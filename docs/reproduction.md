@@ -2,7 +2,17 @@
 
 ## 1. Verify the archived observations and source
 
-From the repository root:
+Clone the private repository using an account with access:
+
+```bash
+gh repo clone NoahLundSyrdal/icl-curriculum-regression
+cd icl-curriculum-regression
+python3 tools/reproduce_results.py
+```
+
+The last command prints the main numerical results after checking the archive and independently recomputing outcomes. Expected tables and precise endpoint definitions are in [results.md](results.md).
+
+To run the two underlying checks separately, from the repository root:
 
 ```bash
 python3 tools/verify_archive.py
@@ -49,19 +59,36 @@ For a single original confirmation task, after preparing a GPU environment:
 
 ```bash
 cd runs/confirmation-reproduction
-python3 confirmation_experiment.py --cohort confirmation --task-index 0
+python3 -m venv .venv
+.venv/bin/python -m pip install -r ../../requirements-gpu.txt
+.venv/bin/python confirmation_experiment.py --cohort confirmation --task-index 0
 ```
+
+For all 60 confirmation models on IDUN, after creating that staged `.venv`, use the unchanged training array and then the summary dependency:
+
+```bash
+mkdir -p logs
+icl_array_job=$(sbatch --parsable --account=share-ie-idi --qos=high confirmation_train.slurm)
+sbatch --account=share-ie-idi --qos=high --dependency=afterok:${icl_array_job} --kill-on-invalid-dep=yes confirmation_summary.slurm
+```
+
+These commands submit GPU work; they are not needed to recompute archived numbers. The summary runs only if the full array succeeds and requires the checkpoints produced by the new training. Outside IDUN, use the single-task entry point in your own scheduler and run the original summary after all 60 tasks finish.
 
 This mode copies the original freeze plus the locked development selection and resolved confirmation tasks. It reproduces the confirmation configurations conditioned on that recorded selection. Run task indices 0 through 59 to repeat the full confirmation cohort. The task table fixes seeds/configurations; a rerun with those seeds is reproduction, not a fresh independent statistical confirmation. Use a new protocol and seeds for a new independent study.
 
-For the complete original development/selection pipeline:
+For the complete original development/selection pipeline on IDUN, create the environment **inside the staged run**: every Slurm script expects `.venv/bin/python` relative to that directory. Start from the repository root:
+
 
 ```bash
 python3 tools/stage_training.py --mode full --destination runs/full-reproduction
 cd runs/full-reproduction
-python3 submit_confirmation.py --preflight-only
+module purge
+module load Python/3.12.3-GCCcore-13.3.0
+python3 -m venv .venv
+.venv/bin/python -m pip install -r ../../requirements-gpu.txt
+.venv/bin/python submit_confirmation.py --preflight-only
 # After CPU preflight completes successfully:
-python3 submit_confirmation.py
+.venv/bin/python submit_confirmation.py
 ```
 
 `full` copies only source and no existing submissions/results. The original submitter creates a new freeze and launches CPU checks, GPU smoke checks, 36 development jobs, selection, 60 confirmation jobs, and summary with success dependencies. This can use hundreds of GPU-hours. These commands are reproduction instructions; packaging the repository does not execute them. The frozen submitter has the original allocation and QoS; check their applicability before intentionally launching work. Changed source creates a different run identity and must not be labeled the original experiment.

@@ -4,6 +4,13 @@ Source and results for the 8 October 2026 experiment: a curriculum over task dim
 
 The 21 prospectively frozen source files are preserved byte for byte. This repository adds documentation, an archive verifier, CI, and explicitly exploratory review analyses around that source. It also retains the earlier rerun source snapshots for context.
 
+## Reading guide
+
+- [Results: tables, figures, caveats and raw evidence](docs/results.md)
+- [Reproduction: recompute results or repeat GPU training](docs/reproduction.md)
+- [Code walkthrough: exact execution path and implementing functions](docs/code_walkthrough.md)
+- [Methods and actual configurations](docs/methods.md)
+
 ## What we ran
 
 - 36 development models: three seeds × four optimizer configurations × three strategies, 50,000 updates.
@@ -22,11 +29,10 @@ The mean AUC-effect criterion depends on one slow shuffled run. Full-difficulty 
 Only Python's standard library is needed:
 
 ```bash
-python3 tools/verify_archive.py
-python3 analysis/recompute_review.py data/confirmation_20261008.zip artifacts/review_recomputed.json
+python3 tools/reproduce_results.py
 ```
 
-`verify_archive.py` checks the raw archive checksum, archive integrity, source freeze, optimizer selection, all 1,140 development/confirmation metric records, pairing, and agreement with recorded run identities. The reanalysis recomputes scalar outcomes from raw metrics and checks them against the original summary.
+`reproduce_results.py` runs the archive verifier and raw-metric reanalysis, then prints the clean/noisy results, frozen AUC comparison and baseline groups. `verify_archive.py` checks the raw archive checksum, archive integrity, source freeze, optimizer selection, all 1,140 development/confirmation metric records, pairing, and agreement with recorded run identities. The reanalysis recomputes scalar outcomes from raw metrics and checks them against the original summary.
 
 For figures:
 
