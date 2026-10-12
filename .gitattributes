@@ -1,0 +1,8 @@
+# Preserve exact bytes in prospectively frozen files and archived observations.
+/experiments/confirmation_20261008/** -text
+/historical/** -text
+/provenance/** -text
+/reports/** -text
+*.zip binary
+*.pdf binary
+*.png binary

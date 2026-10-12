@@ -1,0 +1,30 @@
+BACKGROUND REUSE AND TRAINING-OBJECTIVE CORRECTION
+12 October 2026; revised after Anders's review.
+
+Reuse the original explanation of inference-time ICL, prompt notation, synthetic episodic regression, and general curriculum definition. Retain citations and appropriate coauthor attribution. Cite the original project as the preceding noise-robustness study. Rewrite the motivation, hypotheses, methods and conclusions for this new dimension/context experiment. Preserve the earlier negative increasing-noise result; these experiments do not rehabilitate it.
+
+CORRECTION TO THE PREVIOUS PACKET
+The original paper's Section 3 describes final-query training. That wording does not establish what the historical code actually did. The synthetic repository inspected here already averages over all prediction positions: train_step calls model(xs, ys) and loss_func(output, ys); default model indices span all positions; mean_squared_error takes a mean over all positions and examples. Do not claim we changed the original objective from final-query-only training. Reconcile the paper wording with the exact historical run's code/configuration before rewriting its historical methods. The inspected repository's all-position objective is verified; exact historical run provenance has not been recovered.
+
+Inspected repository: https://github.com/neilpattanaik/in-context-learning
+Commit: 338337192195827c58356f9b627e5f999ea703d2
+Evidence: src/train.py lines 22-28, src/tasks.py lines 10-11, src/models.py lines 116-127. File hashes and evidence are in REVIEW_AUDIT.json and ORIGINAL_TRAINING_CODE_AUDIT.txt.
+
+CURRENT CONFIRMATION OBJECTIVE
+L(theta,t) = E[(1/|K_t|) sum_{k in K_t} (M_theta(P^k) - y_{k+1})^2].
+P^k contains k demonstrations and the next query input. Causal attention hides its target. K_t has 2d+1 prediction positions for an active dimension d, reaching 101 at d=50. The input always has 50 coordinates and 101 prediction positions; the target is scaled by sqrt(50/d) during lower-dimensional training to keep expected target variance 50. Distinguish the final-query definition of an ICL prediction from the training loss averaged across predictions.
+
+SUGGESTED FRAMING
+Training Curricula for In-Context Linear Regression: A Clean-Accuracy and Noise-Robustness Trade-off
+
+SUGGESTED BACKGROUND PARAGRAPH
+In-context learning lets a trained model predict outputs for a new task from demonstrations supplied at inference, without updating its parameters. Synthetic linear regression provides a controlled setting for studying how this capability is acquired. Garg et al. (2022) established dimension/context curriculum benefits, and Liu et al. (2025) studied curricula, task complexity and architecture in synthetic ICL. Shin and Alvarez-Melis (2026) distinguish ordering from cumulative difficulty exposure with a static exposure-matched control across a broad task suite. Our follow-up compares a dimension/context curriculum against the exact same realized batches, targets, masks and scales reshuffled in time. We ask how that ordering changes clean acquisition and robustness to noisy demonstrations. The experiments show a clean/noisy trade-off; whether this reflects weaker implicit regularization is a hypothesis for further testing.
+
+RELATED WORK AND SCOPE
+Shin and Alvarez-Melis is the closest ordering-control work. Its static control matches cumulative exposure by difficulty level, not the identical finite realized batch multiset. It also includes a real-data supervised-fine-tuning appendix; avoid describing the whole paper as exclusively symbolic. Our different control and regression/noise setting are candidate contributions, not a verified first-in-literature claim. Liu et al. (2025) here means Binwen Liu and colleagues' synthetic-ICL architecture study, not a similarly named prompt-ordering citation. Do not claim generic curriculum benefits for ICL are new or that this confirms all curricula, other architectures, pretrained LLMs, or general tasks. The ridge mechanism is not established by a curve fit alone.
+
+SOURCES
+Original project: https://www.noahsyrdal.com/papers/ICLproject.pdf
+Garg et al. (2022): https://arxiv.org/abs/2208.01066
+Liu et al. (2025): https://arxiv.org/abs/2505.06475
+Shin and Alvarez-Melis (2026): https://arxiv.org/abs/2609.09099

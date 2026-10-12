@@ -1,0 +1,714 @@
+{
+  "kind": "icl_curriculum_strong_baseline_confirmation_v1",
+  "scientific_tests_passed": true,
+  "all_96_task_batch_probes_passed": true,
+  "fresh_seed_audit": {
+    "prior_records": 1012,
+    "prior_training_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      100,
+      101,
+      200,
+      201,
+      202,
+      203,
+      204,
+      300,
+      301
+    ],
+    "prior_evaluation_banks": [
+      81973,
+      173819,
+      273819,
+      273821,
+      315831,
+      315833
+    ],
+    "fresh_training_seeds": true,
+    "fresh_evaluation_banks": true
+  },
+  "production_probes": [
+    {
+      "cohort": "development",
+      "index": 0,
+      "seed": 600,
+      "arm": "curriculum",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 1,
+      "seed": 600,
+      "arm": "shuffled",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 2,
+      "seed": 600,
+      "arm": "hard",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 3,
+      "seed": 600,
+      "arm": "curriculum",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 4,
+      "seed": 600,
+      "arm": "shuffled",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 5,
+      "seed": 600,
+      "arm": "hard",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 6,
+      "seed": 600,
+      "arm": "curriculum",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 7,
+      "seed": 600,
+      "arm": "shuffled",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 8,
+      "seed": 600,
+      "arm": "hard",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 9,
+      "seed": 600,
+      "arm": "curriculum",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 10,
+      "seed": 600,
+      "arm": "shuffled",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 11,
+      "seed": 600,
+      "arm": "hard",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 12,
+      "seed": 601,
+      "arm": "curriculum",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 13,
+      "seed": 601,
+      "arm": "shuffled",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 14,
+      "seed": 601,
+      "arm": "hard",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 15,
+      "seed": 601,
+      "arm": "curriculum",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 16,
+      "seed": 601,
+      "arm": "shuffled",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 17,
+      "seed": 601,
+      "arm": "hard",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 18,
+      "seed": 601,
+      "arm": "curriculum",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 19,
+      "seed": 601,
+      "arm": "shuffled",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 20,
+      "seed": 601,
+      "arm": "hard",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 21,
+      "seed": 601,
+      "arm": "curriculum",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 22,
+      "seed": 601,
+      "arm": "shuffled",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 23,
+      "seed": 601,
+      "arm": "hard",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 24,
+      "seed": 602,
+      "arm": "curriculum",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 25,
+      "seed": 602,
+      "arm": "shuffled",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 26,
+      "seed": 602,
+      "arm": "hard",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 27,
+      "seed": 602,
+      "arm": "curriculum",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 28,
+      "seed": 602,
+      "arm": "shuffled",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 29,
+      "seed": 602,
+      "arm": "hard",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 30,
+      "seed": 602,
+      "arm": "curriculum",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 31,
+      "seed": 602,
+      "arm": "shuffled",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 32,
+      "seed": 602,
+      "arm": "hard",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 33,
+      "seed": 602,
+      "arm": "curriculum",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 34,
+      "seed": 602,
+      "arm": "shuffled",
+      "steps": 50000
+    },
+    {
+      "cohort": "development",
+      "index": 35,
+      "seed": 602,
+      "arm": "hard",
+      "steps": 50000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 0,
+      "seed": 1000,
+      "arm": "curriculum",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 1,
+      "seed": 1000,
+      "arm": "shuffled",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 2,
+      "seed": 1000,
+      "arm": "hard",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 3,
+      "seed": 1001,
+      "arm": "curriculum",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 4,
+      "seed": 1001,
+      "arm": "shuffled",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 5,
+      "seed": 1001,
+      "arm": "hard",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 6,
+      "seed": 1002,
+      "arm": "curriculum",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 7,
+      "seed": 1002,
+      "arm": "shuffled",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 8,
+      "seed": 1002,
+      "arm": "hard",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 9,
+      "seed": 1003,
+      "arm": "curriculum",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 10,
+      "seed": 1003,
+      "arm": "shuffled",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 11,
+      "seed": 1003,
+      "arm": "hard",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 12,
+      "seed": 1004,
+      "arm": "curriculum",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 13,
+      "seed": 1004,
+      "arm": "shuffled",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 14,
+      "seed": 1004,
+      "arm": "hard",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 15,
+      "seed": 1005,
+      "arm": "curriculum",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 16,
+      "seed": 1005,
+      "arm": "shuffled",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 17,
+      "seed": 1005,
+      "arm": "hard",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 18,
+      "seed": 1006,
+      "arm": "curriculum",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 19,
+      "seed": 1006,
+      "arm": "shuffled",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 20,
+      "seed": 1006,
+      "arm": "hard",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 21,
+      "seed": 1007,
+      "arm": "curriculum",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 22,
+      "seed": 1007,
+      "arm": "shuffled",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 23,
+      "seed": 1007,
+      "arm": "hard",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 24,
+      "seed": 1008,
+      "arm": "curriculum",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 25,
+      "seed": 1008,
+      "arm": "shuffled",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 26,
+      "seed": 1008,
+      "arm": "hard",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 27,
+      "seed": 1009,
+      "arm": "curriculum",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 28,
+      "seed": 1009,
+      "arm": "shuffled",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 29,
+      "seed": 1009,
+      "arm": "hard",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 30,
+      "seed": 1010,
+      "arm": "curriculum",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 31,
+      "seed": 1010,
+      "arm": "shuffled",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 32,
+      "seed": 1010,
+      "arm": "hard",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 33,
+      "seed": 1011,
+      "arm": "curriculum",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 34,
+      "seed": 1011,
+      "arm": "shuffled",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 35,
+      "seed": 1011,
+      "arm": "hard",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 36,
+      "seed": 1012,
+      "arm": "curriculum",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 37,
+      "seed": 1012,
+      "arm": "shuffled",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 38,
+      "seed": 1012,
+      "arm": "hard",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 39,
+      "seed": 1013,
+      "arm": "curriculum",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 40,
+      "seed": 1013,
+      "arm": "shuffled",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 41,
+      "seed": 1013,
+      "arm": "hard",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 42,
+      "seed": 1014,
+      "arm": "curriculum",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 43,
+      "seed": 1014,
+      "arm": "shuffled",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 44,
+      "seed": 1014,
+      "arm": "hard",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 45,
+      "seed": 1015,
+      "arm": "curriculum",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 46,
+      "seed": 1015,
+      "arm": "shuffled",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 47,
+      "seed": 1015,
+      "arm": "hard",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 48,
+      "seed": 1016,
+      "arm": "curriculum",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 49,
+      "seed": 1016,
+      "arm": "shuffled",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 50,
+      "seed": 1016,
+      "arm": "hard",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 51,
+      "seed": 1017,
+      "arm": "curriculum",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 52,
+      "seed": 1017,
+      "arm": "shuffled",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 53,
+      "seed": 1017,
+      "arm": "hard",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 54,
+      "seed": 1018,
+      "arm": "curriculum",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 55,
+      "seed": 1018,
+      "arm": "shuffled",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 56,
+      "seed": 1018,
+      "arm": "hard",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 57,
+      "seed": 1019,
+      "arm": "curriculum",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 58,
+      "seed": 1019,
+      "arm": "shuffled",
+      "steps": 125000
+    },
+    {
+      "cohort": "confirmation",
+      "index": 59,
+      "seed": 1019,
+      "arm": "hard",
+      "steps": 125000
+    }
+  ],
+  "freeze_sha256": "97c4b474eb6d196dba5d195ca0bbce2e20d8dc084a49ea4e144528dc1401e41c",
+  "runtime": {
+    "torch": "2.9.0+cu126",
+    "transformers": "4.57.1",
+    "python": "3.12.3 (main, Apr  8 2025, 14:03:57) [GCC 13.3.0]"
+  }
+}

@@ -1,0 +1,10 @@
+Curriculum helps acquisition versus tuned hard-only in this fixed setup; chronology also helps beyond matched exposure.
+All 60 runs complete and verified; 20 fresh paired training seeds.
+Primary clean AUC means: {"curriculum": 0.017514676002901977, "shuffled": 0.043214291541953574, "hard": 0.7324606898531784}
+Final learned counts at NMSE <= .25: {"curriculum": 20, "shuffled": 20, "hard": 10}
+Primary support criteria: {"two_sided_significant": true, "practical_mean_reduction": true, "curriculum_learned": true}
+Primary sign test: {"wins": 20, "losses": 0, "ties": 0, "effective_n": 20, "two_sided_p": 1.9073486328125e-06, "null_win_probability": 0.5, "tie_tolerance": 1e-08}
+Ordering test eligible for confirmation: True
+Ordering sign test (descriptive if not eligible): {"wins": 16, "losses": 4, "ties": 0, "effective_n": 20, "two_sided_p": 0.01181793212890625, "null_win_probability": 0.5, "tie_tolerance": 1e-08}
+Fixed sequence: test broad curriculum-vs-tuned-hard claim first; only if its full support gate passes may the ordering contrast support a confirmatory claim. Otherwise ordering p-value is descriptive.
+No formal proof, universal ICL claim, mechanism claim, or independent noisy-context significance claim follows.

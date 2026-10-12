@@ -1,0 +1,238 @@
+{
+  "dimension_pilot.slurm": {
+    "sha256_at_packaging": "63d906135ca223a783526c85e90a342ef1eaaa7b41c83c72b4c2e628c6efb84f",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "OVERNIGHT_PROTOCOL.txt": {
+    "sha256_at_packaging": "0392f8f9dffb4abe76328a877c157835f8b4f85f120edfbaedccea760c5d772c",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "dimension_long_smoke.py": {
+    "sha256_at_packaging": "7dd164834218450034d23e2007cbdb0ebc31dd11b738cd2d1b9d2ae8dd67b2e9",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "continuation_summary.slurm": {
+    "sha256_at_packaging": "0a9564705759d81bb2292fecc5b0f86163e82b1814a6b0be502e85fc5cf2e80e",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "checkpoint_diagnostics.py": {
+    "sha256_at_packaging": "4be0bb600562fc274b1ba71874feac5ad85ae0d57577c544673ad12062e6e36c",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "followup_pairing.slurm": {
+    "sha256_at_packaging": "5dd01a3b8a20fe0687091bc162763de8035c3f37ff59ceb9a0d3839b70c4a142",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "dimension_long_summary.slurm": {
+    "sha256_at_packaging": "f98bb96c4cb2b951d59260d9a6fa2a4cc71f896b47400d4d57fc4ff746c6debd",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "continuation_preflight.slurm": {
+    "sha256_at_packaging": "198007fbf3bc2d9d7aaf4d7b20c6604f80772865bd9b1c249e397d3b00920a15",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "dimension_long_preflight.slurm": {
+    "sha256_at_packaging": "821a88471eda45dee5db6af1872476be10766da6d686f29ef9bc3ec3b5ce1854",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "dimension_preflight.slurm": {
+    "sha256_at_packaging": "08ef7fd5bf0d0a7bcb1982c9605ef233d21d3a65fbf7ed5051c8b0a2879d49bf",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "benchmark.py": {
+    "sha256_at_packaging": "1fd520f21367aa6f72fbd34b71376eebac7ba672fcd61933b8eb0401031a7d14",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "requirements.txt": {
+    "sha256_at_packaging": "7576c026c9b61ce59be837ec1038d75eb0386833d0d591f61c2669f6ec0d7345",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "plot_continuation.py": {
+    "sha256_at_packaging": "3b69fa98863ffd0fb048026576c8e8bf02bc1abe6274dd008f8164a5baafcde8",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "ROBUSTNESS_PROTOCOL.txt": {
+    "sha256_at_packaging": "c239acbeed646bda3eae77513a02ac42ce729b575851c9ec570124c0703cef22",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "clean_control.py": {
+    "sha256_at_packaging": "daf002fe78752655b21b229499019b08bf565f2e67bdabd68f3b1811b09c369b",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "test_dimension.py": {
+    "sha256_at_packaging": "4b3e1db1246aea4c6572b1f2502fbc414ebc0f98e05ff10cb95af7750e65517a",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "dimension_summary.slurm": {
+    "sha256_at_packaging": "0b7fc8456e3503300452a32bee73d502be13360fc6682148fa537c848364c3ce",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "validate_followup_pairing.py": {
+    "sha256_at_packaging": "aebe80f31846c5a79bbf5e0e43188323255f0dc14ec3c863f8c3ce53f8bbd7d4",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "test_experiment.py": {
+    "sha256_at_packaging": "e3b820d2e241b68b70123d77541d41add5b1abbee29819b53bfb5ada1a4387c6",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "test_dimension_long.py": {
+    "sha256_at_packaging": "cf3b178dd41a653790ea38d97d9479d20bc14bdb6f641865a2ab1a0cc5502655",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "submit_followup.py": {
+    "sha256_at_packaging": "fae05983647d06d4dfded40ca9ce0a1fd01d5aa92183819b13f495b386b41faa",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "test_summary_continuation.py": {
+    "sha256_at_packaging": "8c35dbb7fa0fe2a871db84de9a9e573d31cd66489dae52cea0845db8582dd8e2",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "idun.slurm": {
+    "sha256_at_packaging": "05de5d19e63a87d8469df7588bf186a2f720038c6384de249f1e6a1314e38563",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "summarize.py": {
+    "sha256_at_packaging": "303f381389071a8dedef6293a66b61e8f4a629e142c13347b8472379fe9a7699",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "plotting_environment.lock.txt": {
+    "sha256_at_packaging": "853ff9f3935cbedf2e8be15d9dd14b5c395e2a9f46a06e4359ea32deda73bd52",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "environment.lock.txt": {
+    "sha256_at_packaging": "add5e7dcaf7fad62decaff5a5208ec168408dada605f9e0e9adf3a91f534a1ea",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "continue_experiment.py": {
+    "sha256_at_packaging": "3e3c2a4bd0f60d1f3b8a0853d63d6f612d8a37a474ea9305d427d8b44df0df46",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "DIMENSION_PILOT_PROTOCOL.txt": {
+    "sha256_at_packaging": "6e440e35b2ab75931bc655ee704e59d23d6b6a9fa94b86217546023620531576",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "test_continuation.py": {
+    "sha256_at_packaging": "3f1bb125d6df5d6f2baf9a1289e1c70733b675587bbc11734cf253e915b69e86",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "followup_diagnostics.slurm": {
+    "sha256_at_packaging": "74c8f910d796857cb0933609a02eabffd6e060264e91f828d619a1d57e64ecb8",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "preflight_dimension_long.py": {
+    "sha256_at_packaging": "2dc7661d4ecf1c5567d25c11a0b082dfc3ac3033755653fd079cba7443ff2aea",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "dimension_smoke.py": {
+    "sha256_at_packaging": "af965e3f3c8e5ade28950b00db6d60d6043a9eca56bab81641f4b2426bb87be1",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "followup_clean.slurm": {
+    "sha256_at_packaging": "040a3c596c56c703bc595e61e9cc6cebe5e215957a5c65d0b4edf042e076ce22",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "followup_summary.slurm": {
+    "sha256_at_packaging": "f97d39b0a93e0be25140bda169704c581f17270d3b07e0bf56abe4eb509e65c9",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "setup_idun.sh": {
+    "sha256_at_packaging": "74d5c71c6f5e4001e5bc351ffd34aa48fbb8fb310d5723f159f11e4d3a6d492e",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "dimension_long_experiment.py": {
+    "sha256_at_packaging": "f1a82c6f96bdb0d8d7e822262c6fa566da323489378fc3d46cbc50bfae164d1b",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "summarize_dimension.py": {
+    "sha256_at_packaging": "b3bfa9b1dc42022a267074af5f84432dc42707530c596ef477781eaa4175dd95",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "submit_dimension_long.py": {
+    "sha256_at_packaging": "99e75def62b625f01832def6250745416e5cb3ce02d3cd871601877d944cd82b",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "followup_preflight.slurm": {
+    "sha256_at_packaging": "7b5450f047e3bfa4fa062af5a88c8eabdf4d6f4cc5ec284127ad9c3db35b6ca3",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "summarize_dimension_long.py": {
+    "sha256_at_packaging": "576a706b186a25b77b2cb1d59ddd3cfbc98f71a23381d7f512c9f0c701596ecd",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "submit_dimension.py": {
+    "sha256_at_packaging": "c9300fc015d2d623c7828b715ef3477a84fb0d7f2e9c040b98b726655168d17d",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "submit_overnight.py": {
+    "sha256_at_packaging": "c81978f840c2e5cbfc71f112d509a5bda52ed7f8be92e5575304c8c8dd6720e3",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "dimension_experiment.py": {
+    "sha256_at_packaging": "f6a7df1240801aa143cf90952d8b408a12d0daa7b2bda6af3ada4b8e8ad5183b",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "continuation.slurm": {
+    "sha256_at_packaging": "0394b724c8d3c8a8138c4c5635394310a1c537d5dc745f0f132d90f42ab5c9f7",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "run_experiment.py": {
+    "sha256_at_packaging": "4df516cd368733d00795d9a3cf16f4f114db06e156cad5a4cabe3a22ce0776b7",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "plot_results.py": {
+    "sha256_at_packaging": "76c9da3ba831945a6a9908f461c7c1e51d29d5fd67124fa97ff4d595614fb23e",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "summarize.slurm": {
+    "sha256_at_packaging": "78bdb48792b1342bf5903cdeab6f9346a07c033a3633a9872a90523248a2a638",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "test_followup.py": {
+    "sha256_at_packaging": "3ee8e4bfb4d94b2c15f7581f6d32d09fe5c2fbd1319a979032374feb815e181c",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "summarize_continuation.py": {
+    "sha256_at_packaging": "106824e2cf1356d4f9c47545fcc99c113c2d060d161e5b03c00edf43a5f81780",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "DIMENSION_LONG_PROTOCOL.txt": {
+    "sha256_at_packaging": "01a3598dd1519ef27bdc2fbd57c565d9c01dd47d6f4b110d050665d3148dce7c",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "preflight_continuation.py": {
+    "sha256_at_packaging": "8178f948e8a49b216255a394402d8ad0fd8f043c962ed5f7e0a11876f26141b4",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "benchmark.slurm": {
+    "sha256_at_packaging": "d88070bed8dca0811a663579fff56f5be2896f294d1614e395f228346785dc9a",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "report_existing_diagnostics.py": {
+    "sha256_at_packaging": "86c2728685a47af2ae215f6d924cbc9766d2e551691c2a8c78baa53c49008054",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "summarize_followup.py": {
+    "sha256_at_packaging": "bcc7c01771f6951b36e03a06e0b81c54443400c3f57526833bed0f67b0c97582",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "preflight_dimension.py": {
+    "sha256_at_packaging": "ac1e28efd7ee04babd532b0850b6d20dbb6c8e65588fb58cfab09cd83e339d12",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "dimension_long.slurm": {
+    "sha256_at_packaging": "0195fe80443197b17753daac163f4679e7c039ee24c693df9953f724e9dba8ba",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "dimension_long_smoke.slurm": {
+    "sha256_at_packaging": "cdc7a07c85f28befb1c0d9f31945fed0f630225b7c431b227e837638f09fa945",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "dimension_smoke.slurm": {
+    "sha256_at_packaging": "1cc89388fcd2f2e6ee255d8372fe7c261781d86a066ad14547ba074a00a0f1cc",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  },
+  "FOLLOWUP_PROTOCOL.txt": {
+    "sha256_at_packaging": "658f2bbc5fef5d64bfbe01592f69e608fbdf1a75d35da0349ec023ac13a7ad2f",
+    "origin": "local outputs/icl-rerun snapshot; not part of the 8 October confirmation source freeze"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "status": "independent_raw_metrics_recomputation_passed",
+  "training_runs": 60,
+  "evaluation_records": 780,
+  "means": {
+    "curriculum": {
+      "auc": 0.017514676002901977,
+      "final": 0.007726721256040037,
+      "holdout": 0.007747425464913249
+    },
+    "shuffled": {
+      "auc": 0.043214291541953574,
+      "final": 0.012078687944449485,
+      "holdout": 0.012093452922999858
+    },
+    "hard": {
+      "auc": 0.7324606898531784,
+      "final": 0.5171458876226097,
+      "holdout": 0.5190541560295969
+    }
+  },
+  "contrasts": {
+    "hard": {
+      "wins": 20,
+      "losses": 0,
+      "p": 1.9073486328125e-06,
+      "mean_reduction": 0.7149460138502763,
+      "median_reduction": 0.9121910129208117
+    },
+    "shuffled": {
+      "wins": 16,
+      "losses": 4,
+      "p": 0.01181793212890625,
+      "mean_reduction": 0.025699615539051594,
+      "median_reduction": 0.00747755652992055
+    }
+  },
+  "ordering_largest_seed": 1017,
+  "largest_seed_share_of_total_ordering_gain": 0.6925278367236528,
+  "ordering_mean_excluding_largest_descriptive_only": 0.008317806721223809,
+  "archive_sha256": "27186b31671e2f2be92a631f65c99c9b288e4188f144c2ec35c45fcffe8a4f30",
+  "limitation": "Checks arithmetic and metric identities; full checkpoint/schedule verification is the completed IDUN summary audit."
+}

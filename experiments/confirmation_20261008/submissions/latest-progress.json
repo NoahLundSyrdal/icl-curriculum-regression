@@ -1,0 +1,12 @@
+{
+  "checked_europe_oslo": "2026-10-08T22:35:34.304089+02:00",
+  "development_completed": 30,
+  "development_failed": 0,
+  "development_queue_counts": {
+    "RUNNING": 6
+  },
+  "selection_complete": false,
+  "confirmation_started": false,
+  "frozen_sources_verified": true,
+  "remote_root": "/cluster/work/noahls/icl-rerun-20261005/confirmation_20261008"
+}

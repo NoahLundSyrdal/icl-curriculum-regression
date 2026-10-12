@@ -1,0 +1,10 @@
+{
+  "archive_created_for": "github-source-and-results",
+  "run_root": "/cluster/work/noahls/icl-rerun-20261005/confirmation_20261008",
+  "source_freeze_created_utc": "2026-10-08T09:32:21.095298+00:00",
+  "frozen_sources_match": true,
+  "frozen_source_count": 21,
+  "development_metric_records": 360,
+  "confirmation_metric_records": 780,
+  "excluded": "Model weights, binary schedules and environment directories; recorded checkpoint hashes remain in raw metrics."
+}

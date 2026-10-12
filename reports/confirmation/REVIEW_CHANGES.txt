@@ -1,0 +1,20 @@
+RESPONSE TO ANDERS'S REVIEW
+12 October 2026
+
+1. Lead with noise: reproduced final curriculum losses in 19/20 seeds at SD1 and 16/20 at SD2; independent final holdout repeats the counts. The revised email and PDF say curriculum is worse under noise. Clean final wins are 17/20, whereas clean AUC wins are 16/20: the endpoints are now distinguished.
+
+2. Outlier and ordering: seed 1017 contributes 69.3% of the aggregate AUC gain. Median paired AUC gain is 0.00748; excluding that seed reduces mean gain to 0.00832, below the frozen minimum. All seeds remain in the original analysis. Final paired geometric error ratio is 0.665, or 0.688 without that seed. The AUC geometric ratios are 0.607 and 0.685. Exact Wilcoxon tests on paired AUC differences give p=0.0001335 and 0.0002670. They are post hoc and do not replace the original p=0.01182 sign test.
+
+3. Baseline: dropped 'tuned' from the narrative. Eleven of twelve development full-difficulty runs have AUC near 0.996; its selected learning rate was at the low edge of the grid. Ten confirmation runs learned, ten remained near the zero predictor. Separate means/medians/ranges replace the overall mean as the primary description. Curriculum used the optimizer configuration ranked third on its development data, selected using shuffled performance. This favors shuffled development preferences, but does not guarantee an optimal shuffled or conservative curriculum comparison in every future setting.
+
+4. Figure: curriculum/shuffled medians and interquartile bands replace arithmetic mean curves. A separate panel shows all full-difficulty trajectories against the curriculum median. Final error ratios retain every seed. The SD2 median curve shows the stronger interpolation-region peak. No fitted-ridge overlays are included.
+
+5. Literature: added Shin and Alvarez-Melis (2026), Liu et al. (2025), and retained Garg et al. (2022). Shin's static control matches cumulative exposure by difficulty level; our control matches the finite realized batch multiset. Its paper also includes real-data supervised fine-tuning; do not describe it as exclusively symbolic. Novelty is a candidate to assess, not an established first.
+
+6. Wording/metadata/original loss: removed cluster names and support-gate jargon from the reader-facing brief and email. PDF title/author metadata are set. The inspected synthetic source averages loss over all prediction positions. The prior packet's final-query-only claim was inferred from paper prose and was incorrect; historical run provenance should still be reconciled with that prose.
+
+7. Follow-up scripts: inspected load.py, baselines.py, ref.py, ref2.py and README. The loader selects all 20 seeds and agrees with the metric layout. The baseline formula and data scale match the intended Gaussian regression setup. Reference prompts use an independent Monte Carlo bank, not the model's exact evaluation episodes. The fit is exploratory and unstable, and its numerical estimates are omitted as requested.
+
+There is an additional index issue beyond the reported SD1 bug: ref2.py's hardcoded printed Bayes references are incorrect for BOTH SD1 and SD2. Its fit objective and direct peak ratios do not use these indices, so those calculations are unaffected. ref.py selects the nearest grid point programmatically; a grid-nearest reference is not necessarily the exact theoretical Bayes penalty. 'OLS inf' in ref2.py is printed as a literal, not an estimate from its stored Monte Carlo curve. The supplied plot's generating script was not included, so its ridge overlays were not independently reproduced or used.
+
+The peak ratio mean(NMSE k=48..52) / mean(NMSE k=38..42) reproduces: curriculum larger in 19/20 at SD1, p=5.722e-6; 16/20 at SD2, p=3.948e-4 (exact paired Wilcoxon, exploratory). SD2 median ratios are 1.431 vs 1.127. SD1 medians are 0.815 vs 0.678, both below one, so this statistic alone means less decline near k=50, not proof of a local peak. We describe weaker implicit regularization as a hypothesis. No claim is made that either neural model implements ridge or OLS.

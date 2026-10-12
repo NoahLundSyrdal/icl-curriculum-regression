@@ -1,0 +1,231 @@
+test_bootstrap_is_paired_and_reproducible (test_confirmation.PlanAndInference.test_bootstrap_is_paired_and_reproducible) ... ok
+test_exact_sign_test_ties_direction_and_sample_size (test_confirmation.PlanAndInference.test_exact_sign_test_ties_direction_and_sample_size) ... ok
+test_fixed_sequence_cannot_replace_failed_primary_with_ordering (test_confirmation.PlanAndInference.test_fixed_sequence_cannot_replace_failed_primary_with_ordering) ... ok
+test_fresh_disjoint_seeds_banks_and_full_grid (test_confirmation.PlanAndInference.test_fresh_disjoint_seeds_banks_and_full_grid) ... ok
+test_missing_selection_refuses_confirmation_before_development (test_confirmation.PlanAndInference.test_missing_selection_refuses_confirmation_before_development) ... ok
+test_selection_protects_strong_baselines_and_tie_order (test_confirmation.PlanAndInference.test_selection_protects_strong_baselines_and_tie_order) ... ok
+test_trapezoidal_auc_and_invalid_inputs (test_confirmation.PlanAndInference.test_trapezoidal_auc_and_invalid_inputs) ... ok
+test_all_production_tasks_use_fixed_shape_and_constant_scale (test_confirmation.TrainerControls.test_all_production_tasks_use_fixed_shape_and_constant_scale) ... ok
+test_query_target_absent_independent_causal_forward (test_confirmation.TrainerControls.test_query_target_absent_independent_causal_forward) ... /cluster/work/noahls/icl-rerun-20261005/confirmation_20261008/.venv/lib/python3.12/site-packages/torch/backends/__init__.py:46: UserWarning: Please use the new API settings to control TF32 behavior, such as torch.backends.cudnn.conv.fp32_precision = 'tf32' or torch.backends.cuda.matmul.fp32_precision = 'ieee'. Old settings, e.g, torch.backends.cuda.matmul.allow_tf32 = True, torch.backends.cudnn.allow_tf32 = True, allowTF32CuDNN() and allowTF32CuBLAS() will be deprecated after Pytorch 2.9. Please see https://pytorch.org/docs/main/notes/cuda.html#tensorfloat-32-tf32-on-ampere-and-later-devices (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:80.)
+  self.setter(val)
+ok
+test_same_initialization_and_batch_multiset_at_every_optimizer (test_confirmation.TrainerControls.test_same_initialization_and_batch_multiset_at_every_optimizer) ... ok
+test_fixed_ranking_factorial_and_equal_budget_scale_comparison (test_robustness.AnalysisChecks.test_fixed_ranking_factorial_and_equal_budget_scale_comparison) ... ok
+test_metric_rejects_wrong_query_bank_and_curve (test_robustness.AnalysisChecks.test_metric_rejects_wrong_query_bank_and_curve) ... ok
+test_trapezoid_and_descriptive_pairing (test_robustness.AnalysisChecks.test_trapezoid_and_descriptive_pairing) ... ok
+test_causal_predictions_ignore_own_and_future_labels (test_robustness.ScientificChecks.test_causal_predictions_ignore_own_and_future_labels) ... ok
+test_changed_treatment_or_config_rejected_and_missing_checkpoint_rejected (test_robustness.ScientificChecks.test_changed_treatment_or_config_rejected_and_missing_checkpoint_rejected) ... eval seed=300 arm=curriculum step=0 full_d=3 clean_nmse=1.78806
+arm=curriculum seed=300 step=1/8 active_d=1 eligible=3 mse=10.89 s/step=0.328 eta_hours=0.00
+arm=curriculum seed=300 step=2/8 active_d=1 eligible=3 mse=8.3215 s/step=0.169 eta_hours=0.00
+eval seed=300 arm=curriculum step=2 full_d=3 clean_nmse=1.77881
+ok
+test_component_factorial_and_target_variance_control (test_robustness.ScientificChecks.test_component_factorial_and_target_variance_control) ... ok
+test_constant_target_variance_empirically_across_dimensions (test_robustness.ScientificChecks.test_constant_target_variance_empirically_across_dimensions) ... ok
+test_evaluation_frequency_does_not_change_weights (test_robustness.ScientificChecks.test_evaluation_frequency_does_not_change_weights) ... eval seed=300 arm=curriculum step=0 full_d=3 clean_nmse=1.78806
+arm=curriculum seed=300 step=1/8 active_d=1 eligible=3 mse=10.89 s/step=0.011 eta_hours=0.00
+arm=curriculum seed=300 step=2/8 active_d=1 eligible=3 mse=8.3215 s/step=0.011 eta_hours=0.00
+eval seed=300 arm=curriculum step=2 full_d=3 clean_nmse=1.77881
+arm=curriculum seed=300 step=4/8 active_d=3 eligible=7 mse=3.899 s/step=0.043 eta_hours=0.00
+eval seed=300 arm=curriculum step=4 full_d=3 clean_nmse=1.77635
+arm=curriculum seed=300 step=6/8 active_d=3 eligible=7 mse=2.2018 s/step=0.038 eta_hours=0.00
+eval seed=300 arm=curriculum step=6 full_d=3 clean_nmse=1.77396
+arm=curriculum seed=300 step=8/8 active_d=3 eligible=7 mse=3.211 s/step=0.035 eta_hours=0.00
+eval seed=300 arm=curriculum step=8 full_d=3 clean_nmse=1.77317
+eval seed=300 arm=curriculum step=0 full_d=3 clean_nmse=1.78806
+arm=curriculum seed=300 step=1/8 active_d=1 eligible=3 mse=10.89 s/step=0.011 eta_hours=0.00
+arm=curriculum seed=300 step=2/8 active_d=1 eligible=3 mse=8.3215 s/step=0.011 eta_hours=0.00
+arm=curriculum seed=300 step=4/8 active_d=3 eligible=7 mse=3.899 s/step=0.012 eta_hours=0.00
+eval seed=300 arm=curriculum step=4 full_d=3 clean_nmse=1.77635
+arm=curriculum seed=300 step=6/8 active_d=3 eligible=7 mse=2.2018 s/step=0.017 eta_hours=0.00
+arm=curriculum seed=300 step=8/8 active_d=3 eligible=7 mse=3.211 s/step=0.016 eta_hours=0.00
+eval seed=300 arm=curriculum step=8 full_d=3 clean_nmse=1.77317
+ok
+test_evaluation_is_full_dim_and_rng_isolated (test_robustness.ScientificChecks.test_evaluation_is_full_dim_and_rng_isolated) ... eval seed=300 arm=curriculum step=0 full_d=3 clean_nmse=1.78806
+arm=curriculum seed=300 step=1/8 active_d=1 eligible=3 mse=10.89 s/step=0.011 eta_hours=0.00
+eval seed=300 arm=curriculum step=1 full_d=3 clean_nmse=1.78239
+ok
+test_exact_realized_batches_labels_and_weights_under_permutation (test_robustness.ScientificChecks.test_exact_realized_batches_labels_and_weights_under_permutation) ... ok
+test_exact_shared_full_batches_across_all_treatments (test_robustness.ScientificChecks.test_exact_shared_full_batches_across_all_treatments) ... ok
+test_fixed_plan_fresh_seeds_and_identical_optimizer_grid_for_each_arm (test_robustness.ScientificChecks.test_fixed_plan_fresh_seeds_and_identical_optimizer_grid_for_each_arm) ... ok
+test_loss_rescaling_changes_gradients_but_preserves_raw_error (test_robustness.ScientificChecks.test_loss_rescaling_changes_gradients_but_preserves_raw_error) ... /cluster/work/noahls/icl-rerun-20261005/confirmation_20261008/test_robustness.py:80: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  raw,obj=exp.training_objective(p,y,2,3,self.study);self.assertEqual(float(raw),2.5);obj.backward();g=p.grad.clone();p.grad=None
+ok
+test_production_masks_boundaries_and_complete_shared_ending (test_robustness.ScientificChecks.test_production_masks_boundaries_and_complete_shared_ending) ... ok
+test_resume_bitwise_preserves_parameters_adam_rng_for_all_treatments (test_robustness.ScientificChecks.test_resume_bitwise_preserves_parameters_adam_rng_for_all_treatments) ... eval seed=300 arm=curriculum step=0 full_d=3 clean_nmse=1.78806
+arm=curriculum seed=300 step=1/8 active_d=1 eligible=3 mse=10.89 s/step=0.010 eta_hours=0.00
+arm=curriculum seed=300 step=2/8 active_d=1 eligible=3 mse=8.3215 s/step=0.010 eta_hours=0.00
+eval seed=300 arm=curriculum step=2 full_d=3 clean_nmse=1.77881
+arm=curriculum seed=300 step=4/8 active_d=3 eligible=7 mse=3.899 s/step=0.018 eta_hours=0.00
+eval seed=300 arm=curriculum step=4 full_d=3 clean_nmse=1.77635
+arm=curriculum seed=300 step=6/8 active_d=3 eligible=7 mse=2.2018 s/step=0.020 eta_hours=0.00
+eval seed=300 arm=curriculum step=6 full_d=3 clean_nmse=1.77396
+arm=curriculum seed=300 step=8/8 active_d=3 eligible=7 mse=3.211 s/step=0.022 eta_hours=0.00
+eval seed=300 arm=curriculum step=8 full_d=3 clean_nmse=1.77317
+eval seed=300 arm=curriculum step=0 full_d=3 clean_nmse=1.78806
+arm=curriculum seed=300 step=1/8 active_d=1 eligible=3 mse=10.89 s/step=0.011 eta_hours=0.00
+arm=curriculum seed=300 step=2/8 active_d=1 eligible=3 mse=8.3215 s/step=0.011 eta_hours=0.00
+eval seed=300 arm=curriculum step=2 full_d=3 clean_nmse=1.77881
+arm=curriculum seed=300 step=4/8 active_d=3 eligible=7 mse=3.899 s/step=0.011 eta_hours=0.00
+eval seed=300 arm=curriculum step=4 full_d=3 clean_nmse=1.77635
+arm=curriculum seed=300 step=6/8 active_d=3 eligible=7 mse=2.2018 s/step=0.020 eta_hours=0.00
+eval seed=300 arm=curriculum step=6 full_d=3 clean_nmse=1.77396
+arm=curriculum seed=300 step=8/8 active_d=3 eligible=7 mse=3.211 s/step=0.023 eta_hours=0.00
+eval seed=300 arm=curriculum step=8 full_d=3 clean_nmse=1.77317
+eval seed=300 arm=shuffled step=0 full_d=3 clean_nmse=1.78806
+arm=shuffled seed=300 step=1/8 active_d=1 eligible=3 mse=8.3352 s/step=0.011 eta_hours=0.00
+arm=shuffled seed=300 step=2/8 active_d=2 eligible=5 mse=1.7519 s/step=0.011 eta_hours=0.00
+eval seed=300 arm=shuffled step=2 full_d=3 clean_nmse=1.78726
+arm=shuffled seed=300 step=4/8 active_d=1 eligible=3 mse=10.867 s/step=0.018 eta_hours=0.00
+eval seed=300 arm=shuffled step=4 full_d=3 clean_nmse=1.78464
+arm=shuffled seed=300 step=6/8 active_d=3 eligible=7 mse=2.1937 s/step=0.021 eta_hours=0.00
+eval seed=300 arm=shuffled step=6 full_d=3 clean_nmse=1.78174
+arm=shuffled seed=300 step=8/8 active_d=3 eligible=7 mse=3.2051 s/step=0.022 eta_hours=0.00
+eval seed=300 arm=shuffled step=8 full_d=3 clean_nmse=1.78063
+eval seed=300 arm=shuffled step=0 full_d=3 clean_nmse=1.78806
+arm=shuffled seed=300 step=1/8 active_d=1 eligible=3 mse=8.3352 s/step=0.010 eta_hours=0.00
+arm=shuffled seed=300 step=2/8 active_d=2 eligible=5 mse=1.7519 s/step=0.011 eta_hours=0.00
+eval seed=300 arm=shuffled step=2 full_d=3 clean_nmse=1.78726
+arm=shuffled seed=300 step=4/8 active_d=1 eligible=3 mse=10.867 s/step=0.010 eta_hours=0.00
+eval seed=300 arm=shuffled step=4 full_d=3 clean_nmse=1.78464
+arm=shuffled seed=300 step=6/8 active_d=3 eligible=7 mse=2.1937 s/step=0.021 eta_hours=0.00
+eval seed=300 arm=shuffled step=6 full_d=3 clean_nmse=1.78174
+arm=shuffled seed=300 step=8/8 active_d=3 eligible=7 mse=3.2051 s/step=0.023 eta_hours=0.00
+eval seed=300 arm=shuffled step=8 full_d=3 clean_nmse=1.78063
+eval seed=300 arm=curriculum step=0 full_d=3 clean_nmse=1.78806
+arm=curriculum seed=300 step=1/8 active_d=1 eligible=7 mse=6.0497 s/step=0.011 eta_hours=0.00
+arm=curriculum seed=300 step=2/8 active_d=1 eligible=7 mse=5.792 s/step=0.010 eta_hours=0.00
+eval seed=300 arm=curriculum step=2 full_d=3 clean_nmse=1.78063
+arm=curriculum seed=300 step=4/8 active_d=3 eligible=7 mse=3.896 s/step=0.018 eta_hours=0.00
+eval seed=300 arm=curriculum step=4 full_d=3 clean_nmse=1.77928
+arm=curriculum seed=300 step=6/8 active_d=3 eligible=7 mse=2.1937 s/step=0.021 eta_hours=0.00
+eval seed=300 arm=curriculum step=6 full_d=3 clean_nmse=1.7774
+arm=curriculum seed=300 step=8/8 active_d=3 eligible=7 mse=3.2047 s/step=0.022 eta_hours=0.00
+eval seed=300 arm=curriculum step=8 full_d=3 clean_nmse=1.77694
+eval seed=300 arm=curriculum step=0 full_d=3 clean_nmse=1.78806
+arm=curriculum seed=300 step=1/8 active_d=1 eligible=7 mse=6.0497 s/step=0.011 eta_hours=0.00
+arm=curriculum seed=300 step=2/8 active_d=1 eligible=7 mse=5.792 s/step=0.010 eta_hours=0.00
+eval seed=300 arm=curriculum step=2 full_d=3 clean_nmse=1.78063
+arm=curriculum seed=300 step=4/8 active_d=3 eligible=7 mse=3.896 s/step=0.010 eta_hours=0.00
+eval seed=300 arm=curriculum step=4 full_d=3 clean_nmse=1.77928
+arm=curriculum seed=300 step=6/8 active_d=3 eligible=7 mse=2.1937 s/step=0.021 eta_hours=0.00
+eval seed=300 arm=curriculum step=6 full_d=3 clean_nmse=1.7774
+arm=curriculum seed=300 step=8/8 active_d=3 eligible=7 mse=3.2047 s/step=0.023 eta_hours=0.00
+eval seed=300 arm=curriculum step=8 full_d=3 clean_nmse=1.77694
+eval seed=300 arm=shuffled step=0 full_d=3 clean_nmse=1.78806
+arm=shuffled seed=300 step=1/8 active_d=1 eligible=7 mse=5.8037 s/step=0.011 eta_hours=0.00
+arm=shuffled seed=300 step=2/8 active_d=2 eligible=7 mse=1.4157 s/step=0.010 eta_hours=0.00
+eval seed=300 arm=shuffled step=2 full_d=3 clean_nmse=1.7891
+arm=shuffled seed=300 step=4/8 active_d=1 eligible=7 mse=6.032 s/step=0.018 eta_hours=0.00
+eval seed=300 arm=shuffled step=4 full_d=3 clean_nmse=1.78728
+arm=shuffled seed=300 step=6/8 active_d=3 eligible=7 mse=2.1907 s/step=0.021 eta_hours=0.00
+eval seed=300 arm=shuffled step=6 full_d=3 clean_nmse=1.78482
+arm=shuffled seed=300 step=8/8 active_d=3 eligible=7 mse=3.2023 s/step=0.022 eta_hours=0.00
+eval seed=300 arm=shuffled step=8 full_d=3 clean_nmse=1.78396
+eval seed=300 arm=shuffled step=0 full_d=3 clean_nmse=1.78806
+arm=shuffled seed=300 step=1/8 active_d=1 eligible=7 mse=5.8037 s/step=0.011 eta_hours=0.00
+arm=shuffled seed=300 step=2/8 active_d=2 eligible=7 mse=1.4157 s/step=0.010 eta_hours=0.00
+eval seed=300 arm=shuffled step=2 full_d=3 clean_nmse=1.7891
+arm=shuffled seed=300 step=4/8 active_d=1 eligible=7 mse=6.032 s/step=0.010 eta_hours=0.00
+eval seed=300 arm=shuffled step=4 full_d=3 clean_nmse=1.78728
+arm=shuffled seed=300 step=6/8 active_d=3 eligible=7 mse=2.1907 s/step=0.020 eta_hours=0.00
+eval seed=300 arm=shuffled step=6 full_d=3 clean_nmse=1.78482
+arm=shuffled seed=300 step=8/8 active_d=3 eligible=7 mse=3.2023 s/step=0.022 eta_hours=0.00
+eval seed=300 arm=shuffled step=8 full_d=3 clean_nmse=1.78396
+eval seed=300 arm=curriculum step=0 full_d=3 clean_nmse=1.78806
+arm=curriculum seed=300 step=1/8 active_d=3 eligible=3 mse=3.1675 s/step=0.011 eta_hours=0.00
+arm=curriculum seed=300 step=2/8 active_d=3 eligible=3 mse=5.9451 s/step=0.010 eta_hours=0.00
+eval seed=300 arm=curriculum step=2 full_d=3 clean_nmse=1.77865
+arm=curriculum seed=300 step=4/8 active_d=3 eligible=7 mse=3.9122 s/step=0.018 eta_hours=0.00
+eval seed=300 arm=curriculum step=4 full_d=3 clean_nmse=1.77591
+arm=curriculum seed=300 step=6/8 active_d=3 eligible=7 mse=2.2341 s/step=0.021 eta_hours=0.00
+eval seed=300 arm=curriculum step=6 full_d=3 clean_nmse=1.77285
+arm=curriculum seed=300 step=8/8 active_d=3 eligible=7 mse=3.2305 s/step=0.022 eta_hours=0.00
+eval seed=300 arm=curriculum step=8 full_d=3 clean_nmse=1.77145
+eval seed=300 arm=curriculum step=0 full_d=3 clean_nmse=1.78806
+arm=curriculum seed=300 step=1/8 active_d=3 eligible=3 mse=3.1675 s/step=0.011 eta_hours=0.00
+arm=curriculum seed=300 step=2/8 active_d=3 eligible=3 mse=5.9451 s/step=0.011 eta_hours=0.00
+eval seed=300 arm=curriculum step=2 full_d=3 clean_nmse=1.77865
+arm=curriculum seed=300 step=4/8 active_d=3 eligible=7 mse=3.9122 s/step=0.010 eta_hours=0.00
+eval seed=300 arm=curriculum step=4 full_d=3 clean_nmse=1.77591
+arm=curriculum seed=300 step=6/8 active_d=3 eligible=7 mse=2.2341 s/step=0.021 eta_hours=0.00
+eval seed=300 arm=curriculum step=6 full_d=3 clean_nmse=1.77285
+arm=curriculum seed=300 step=8/8 active_d=3 eligible=7 mse=3.2305 s/step=0.023 eta_hours=0.00
+eval seed=300 arm=curriculum step=8 full_d=3 clean_nmse=1.77145
+eval seed=300 arm=shuffled step=0 full_d=3 clean_nmse=1.78806
+arm=shuffled seed=300 step=1/8 active_d=3 eligible=3 mse=5.9475 s/step=0.011 eta_hours=0.00
+arm=shuffled seed=300 step=2/8 active_d=3 eligible=5 mse=2.0016 s/step=0.011 eta_hours=0.00
+eval seed=300 arm=shuffled step=2 full_d=3 clean_nmse=1.78605
+arm=shuffled seed=300 step=4/8 active_d=3 eligible=3 mse=3.1979 s/step=0.018 eta_hours=0.00
+eval seed=300 arm=shuffled step=4 full_d=3 clean_nmse=1.78324
+arm=shuffled seed=300 step=6/8 active_d=3 eligible=7 mse=2.2014 s/step=0.021 eta_hours=0.00
+eval seed=300 arm=shuffled step=6 full_d=3 clean_nmse=1.77971
+arm=shuffled seed=300 step=8/8 active_d=3 eligible=7 mse=3.217 s/step=0.022 eta_hours=0.00
+eval seed=300 arm=shuffled step=8 full_d=3 clean_nmse=1.77803
+eval seed=300 arm=shuffled step=0 full_d=3 clean_nmse=1.78806
+arm=shuffled seed=300 step=1/8 active_d=3 eligible=3 mse=5.9475 s/step=0.010 eta_hours=0.00
+arm=shuffled seed=300 step=2/8 active_d=3 eligible=5 mse=2.0016 s/step=0.011 eta_hours=0.00
+eval seed=300 arm=shuffled step=2 full_d=3 clean_nmse=1.78605
+arm=shuffled seed=300 step=4/8 active_d=3 eligible=3 mse=3.1979 s/step=0.010 eta_hours=0.00
+eval seed=300 arm=shuffled step=4 full_d=3 clean_nmse=1.78324
+arm=shuffled seed=300 step=6/8 active_d=3 eligible=7 mse=2.2014 s/step=0.020 eta_hours=0.00
+eval seed=300 arm=shuffled step=6 full_d=3 clean_nmse=1.77971
+arm=shuffled seed=300 step=8/8 active_d=3 eligible=7 mse=3.217 s/step=0.023 eta_hours=0.00
+eval seed=300 arm=shuffled step=8 full_d=3 clean_nmse=1.77803
+eval seed=300 arm=hard step=0 full_d=3 clean_nmse=1.78806
+arm=hard seed=300 step=1/8 active_d=3 eligible=7 mse=2.8688 s/step=0.011 eta_hours=0.00
+arm=hard seed=300 step=2/8 active_d=3 eligible=7 mse=3.9075 s/step=0.010 eta_hours=0.00
+eval seed=300 arm=hard step=2 full_d=3 clean_nmse=1.78339
+arm=hard seed=300 step=4/8 active_d=3 eligible=7 mse=3.9002 s/step=0.018 eta_hours=0.00
+eval seed=300 arm=hard step=4 full_d=3 clean_nmse=1.78402
+arm=hard seed=300 step=6/8 active_d=3 eligible=7 mse=2.1915 s/step=0.021 eta_hours=0.00
+eval seed=300 arm=hard step=6 full_d=3 clean_nmse=1.78309
+arm=hard seed=300 step=8/8 active_d=3 eligible=7 mse=3.1926 s/step=0.022 eta_hours=0.00
+eval seed=300 arm=hard step=8 full_d=3 clean_nmse=1.78337
+eval seed=300 arm=hard step=0 full_d=3 clean_nmse=1.78806
+arm=hard seed=300 step=1/8 active_d=3 eligible=7 mse=2.8688 s/step=0.011 eta_hours=0.00
+arm=hard seed=300 step=2/8 active_d=3 eligible=7 mse=3.9075 s/step=0.011 eta_hours=0.00
+eval seed=300 arm=hard step=2 full_d=3 clean_nmse=1.78339
+arm=hard seed=300 step=4/8 active_d=3 eligible=7 mse=3.9002 s/step=0.010 eta_hours=0.00
+eval seed=300 arm=hard step=4 full_d=3 clean_nmse=1.78402
+arm=hard seed=300 step=6/8 active_d=3 eligible=7 mse=2.1915 s/step=0.021 eta_hours=0.00
+eval seed=300 arm=hard step=6 full_d=3 clean_nmse=1.78309
+arm=hard seed=300 step=8/8 active_d=3 eligible=7 mse=3.1926 s/step=0.023 eta_hours=0.00
+eval seed=300 arm=hard step=8 full_d=3 clean_nmse=1.78337
+eval seed=300 arm=curriculum step=0 full_d=3 clean_nmse=1.78806
+arm=curriculum seed=300 step=1/8 active_d=1 eligible=3 mse=10.89 s/step=0.011 eta_hours=0.00
+arm=curriculum seed=300 step=2/8 active_d=1 eligible=3 mse=8.3215 s/step=0.010 eta_hours=0.00
+eval seed=300 arm=curriculum step=2 full_d=3 clean_nmse=1.77881
+arm=curriculum seed=300 step=4/8 active_d=3 eligible=7 mse=3.899 s/step=0.018 eta_hours=0.00
+eval seed=300 arm=curriculum step=4 full_d=3 clean_nmse=1.77635
+arm=curriculum seed=300 step=6/8 active_d=3 eligible=7 mse=2.2018 s/step=0.021 eta_hours=0.00
+eval seed=300 arm=curriculum step=6 full_d=3 clean_nmse=1.77396
+arm=curriculum seed=300 step=8/8 active_d=3 eligible=7 mse=3.211 s/step=0.022 eta_hours=0.00
+eval seed=300 arm=curriculum step=8 full_d=3 clean_nmse=1.77317
+eval seed=300 arm=curriculum step=0 full_d=3 clean_nmse=1.78806
+arm=curriculum seed=300 step=1/8 active_d=1 eligible=3 mse=10.89 s/step=0.011 eta_hours=0.00
+arm=curriculum seed=300 step=2/8 active_d=1 eligible=3 mse=8.3215 s/step=0.010 eta_hours=0.00
+eval seed=300 arm=curriculum step=2 full_d=3 clean_nmse=1.77881
+arm=curriculum seed=300 step=4/8 active_d=3 eligible=7 mse=3.899 s/step=0.010 eta_hours=0.00
+eval seed=300 arm=curriculum step=4 full_d=3 clean_nmse=1.77635
+arm=curriculum seed=300 step=6/8 active_d=3 eligible=7 mse=2.2018 s/step=0.020 eta_hours=0.00
+eval seed=300 arm=curriculum step=6 full_d=3 clean_nmse=1.77396
+arm=curriculum seed=300 step=8/8 active_d=3 eligible=7 mse=3.211 s/step=0.023 eta_hours=0.00
+eval seed=300 arm=curriculum step=8 full_d=3 clean_nmse=1.77317
+ok
+test_retained_snapshots_and_schedule_track_eligible_positions (test_robustness.ScientificChecks.test_retained_snapshots_and_schedule_track_eligible_positions) ... eval seed=300 arm=curriculum step=0 full_d=3 clean_nmse=1.78806
+arm=curriculum seed=300 step=1/8 active_d=1 eligible=3 mse=10.89 s/step=0.011 eta_hours=0.00
+arm=curriculum seed=300 step=2/8 active_d=1 eligible=3 mse=8.3215 s/step=0.011 eta_hours=0.00
+eval seed=300 arm=curriculum step=2 full_d=3 clean_nmse=1.77881
+arm=curriculum seed=300 step=4/8 active_d=3 eligible=7 mse=3.899 s/step=0.018 eta_hours=0.00
+eval seed=300 arm=curriculum step=4 full_d=3 clean_nmse=1.77635
+arm=curriculum seed=300 step=6/8 active_d=3 eligible=7 mse=2.2018 s/step=0.021 eta_hours=0.00
+eval seed=300 arm=curriculum step=6 full_d=3 clean_nmse=1.77396
+arm=curriculum seed=300 step=8/8 active_d=3 eligible=7 mse=3.211 s/step=0.022 eta_hours=0.00
+eval seed=300 arm=curriculum step=8 full_d=3 clean_nmse=1.77317
+ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 9.212s
+
+OK

@@ -1,0 +1,545 @@
+{
+  "interpretation": "All 20 seeds retained in frozen analysis. Ratios, Wilcoxon signed-rank tests, bump comparisons and exclusion sensitivity analyses are exploratory and post hoc. Exact signed-rank tests on paired differences have no zero differences or ties and assume symmetry under the null. Noise counts refer to final-checkpoint comparisons, not AUC counts. SD1 median bump ratios are below 1 in both arms; the relative difference alone does not establish a local peak.",
+  "ratios": {
+    "auc_excluded_None": {
+      "n": 20,
+      "ratio_of_means": 0.4052982330139155,
+      "median_paired_ratio": 0.6822908544837303,
+      "geometric_mean_paired_ratio": 0.6072720931527437,
+      "median_difference": -0.00747755652992055,
+      "signed_rank_difference": {
+        "n": 20,
+        "W_plus": 12,
+        "W_minus": 198,
+        "two_sided_exact_p": 0.000133514404296875
+      },
+      "signed_rank_log_ratio": {
+        "n": 20,
+        "W_plus": 12,
+        "W_minus": 198,
+        "two_sided_exact_p": 0.000133514404296875
+      }
+    },
+    "auc_excluded_1017": {
+      "n": 19,
+      "ratio_of_means": 0.6741765414119552,
+      "median_paired_ratio": 0.7098804012697931,
+      "geometric_mean_paired_ratio": 0.6851089039490366,
+      "median_difference": -0.007226589275524022,
+      "signed_rank_difference": {
+        "n": 19,
+        "W_plus": 12,
+        "W_minus": 178,
+        "two_sided_exact_p": 0.00026702880859375
+      },
+      "signed_rank_log_ratio": {
+        "n": 19,
+        "W_plus": 12,
+        "W_minus": 178,
+        "two_sided_exact_p": 0.00026702880859375
+      }
+    },
+    "final_excluded_None": {
+      "n": 20,
+      "ratio_of_means": 0.6396987232036816,
+      "median_paired_ratio": 0.6199971210744033,
+      "geometric_mean_paired_ratio": 0.6646344541176,
+      "median_difference": -0.004414859460666776,
+      "signed_rank_difference": {
+        "n": 20,
+        "W_plus": 13,
+        "W_minus": 197,
+        "two_sided_exact_p": 0.0001678466796875
+      },
+      "signed_rank_log_ratio": {
+        "n": 20,
+        "W_plus": 13,
+        "W_minus": 197,
+        "two_sided_exact_p": 0.0001678466796875
+      }
+    },
+    "final_excluded_1017": {
+      "n": 19,
+      "ratio_of_means": 0.6734225912255022,
+      "median_paired_ratio": 0.624145649553128,
+      "geometric_mean_paired_ratio": 0.6882132256499338,
+      "median_difference": -0.0043966746889054775,
+      "signed_rank_difference": {
+        "n": 19,
+        "W_plus": 13,
+        "W_minus": 177,
+        "two_sided_exact_p": 0.000335693359375
+      },
+      "signed_rank_log_ratio": {
+        "n": 19,
+        "W_plus": 13,
+        "W_minus": 177,
+        "two_sided_exact_p": 0.000335693359375
+      }
+    },
+    "holdout_excluded_None": {
+      "n": 20,
+      "ratio_of_means": 0.6406297286839275,
+      "median_paired_ratio": 0.614987282937933,
+      "geometric_mean_paired_ratio": 0.664997277123289,
+      "median_difference": -0.004511416424065828,
+      "signed_rank_difference": {
+        "n": 20,
+        "W_plus": 13,
+        "W_minus": 197,
+        "two_sided_exact_p": 0.0001678466796875
+      },
+      "signed_rank_log_ratio": {
+        "n": 20,
+        "W_plus": 14,
+        "W_minus": 196,
+        "two_sided_exact_p": 0.000209808349609375
+      }
+    },
+    "holdout_excluded_1017": {
+      "n": 19,
+      "ratio_of_means": 0.6741107016875542,
+      "median_paired_ratio": 0.6204043621809233,
+      "geometric_mean_paired_ratio": 0.6884500450796798,
+      "median_difference": -0.004458700772374868,
+      "signed_rank_difference": {
+        "n": 19,
+        "W_plus": 13,
+        "W_minus": 177,
+        "two_sided_exact_p": 0.000335693359375
+      },
+      "signed_rank_log_ratio": {
+        "n": 19,
+        "W_plus": 14,
+        "W_minus": 176,
+        "two_sided_exact_p": 0.00041961669921875
+      }
+    }
+  },
+  "noise": {
+    "gaussian_sd0": {
+      "auc": {
+        "curriculum_better": 16,
+        "curriculum_worse": 4,
+        "mean_difference": -0.025699615539051594,
+        "median_difference": -0.00747755652992055
+      },
+      "final": {
+        "curriculum_better": 17,
+        "curriculum_worse": 3,
+        "mean_difference": -0.004351966688409448,
+        "median_difference": -0.004414859460666776
+      },
+      "holdout": {
+        "curriculum_better": 17,
+        "curriculum_worse": 3,
+        "mean_difference": -0.00434602745808661,
+        "median_difference": -0.004511416424065828
+      }
+    },
+    "gaussian_sd1": {
+      "auc": {
+        "curriculum_better": 7,
+        "curriculum_worse": 13,
+        "mean_difference": -0.014354139324277636,
+        "median_difference": 0.0025203602388501264
+      },
+      "final": {
+        "curriculum_better": 1,
+        "curriculum_worse": 19,
+        "mean_difference": 0.007989215105772019,
+        "median_difference": 0.007288631051778793
+      },
+      "holdout": {
+        "curriculum_better": 1,
+        "curriculum_worse": 19,
+        "mean_difference": 0.008011147752404213,
+        "median_difference": 0.007547933608293533
+      }
+    },
+    "gaussian_sd2": {
+      "auc": {
+        "curriculum_better": 1,
+        "curriculum_worse": 19,
+        "mean_difference": 0.03139007585123182,
+        "median_difference": 0.037861193343996985
+      },
+      "final": {
+        "curriculum_better": 4,
+        "curriculum_worse": 16,
+        "mean_difference": 0.061080142855644226,
+        "median_difference": 0.03567118942737579
+      },
+      "holdout": {
+        "curriculum_better": 4,
+        "curriculum_worse": 16,
+        "mean_difference": 0.06116252243518829,
+        "median_difference": 0.034362539649009705
+      }
+    }
+  },
+  "hard_groups": {
+    "learned": {
+      "n": 10,
+      "seeds": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1007,
+        1011,
+        1012,
+        1017,
+        1018,
+        1019
+      ],
+      "final_mean": 0.05093442918732762,
+      "final_median": 0.025916590355336666,
+      "final_range": [
+        0.013193386606872082,
+        0.17857640981674194
+      ],
+      "auc_mean": 0.4691800257773138
+    },
+    "did_not_learn": {
+      "n": 10,
+      "seeds": [
+        1000,
+        1005,
+        1006,
+        1008,
+        1009,
+        1010,
+        1013,
+        1014,
+        1015,
+        1016
+      ],
+      "final_mean": 0.9833573460578918,
+      "final_median": 0.990040123462677,
+      "final_range": [
+        0.9386146664619446,
+        0.9975224137306213
+      ],
+      "auc_mean": 0.9957413539290428
+    }
+  },
+  "bump_ratio": {
+    "gaussian_sd1": {
+      "definition": "mean NMSE(k=48..52) / mean NMSE(k=38..42), final checkpoint, evaluation bank 731841",
+      "curriculum_larger": 19,
+      "shuffled_larger": 1,
+      "curriculum_median": 0.8146662283629369,
+      "shuffled_median": 0.6777290268354257,
+      "signed_rank_difference": {
+        "n": 20,
+        "W_plus": 208,
+        "W_minus": 2,
+        "two_sided_exact_p": 5.7220458984375e-06
+      },
+      "paired_seeds": [
+        {
+          "seed": 1000,
+          "curriculum": 0.8788464539595289,
+          "shuffled": 0.6895619946398548,
+          "difference": 0.18928445931967408
+        },
+        {
+          "seed": 1001,
+          "curriculum": 0.8862494079589004,
+          "shuffled": 0.8437694991470474,
+          "difference": 0.04247990881185304
+        },
+        {
+          "seed": 1002,
+          "curriculum": 0.7810981230320738,
+          "shuffled": 0.6355645189765579,
+          "difference": 0.14553360405551596
+        },
+        {
+          "seed": 1003,
+          "curriculum": 0.8446052233314416,
+          "shuffled": 0.6610416461823955,
+          "difference": 0.18356357714904614
+        },
+        {
+          "seed": 1004,
+          "curriculum": 0.7150405570646189,
+          "shuffled": 0.6827983751175151,
+          "difference": 0.03224218194710382
+        },
+        {
+          "seed": 1005,
+          "curriculum": 0.8536453773791346,
+          "shuffled": 0.6997289585120976,
+          "difference": 0.153916418867037
+        },
+        {
+          "seed": 1006,
+          "curriculum": 0.7952063322299037,
+          "shuffled": 0.6365050249369998,
+          "difference": 0.15870130729290388
+        },
+        {
+          "seed": 1007,
+          "curriculum": 0.8391489455949215,
+          "shuffled": 0.6637449760748089,
+          "difference": 0.1754039695201126
+        },
+        {
+          "seed": 1008,
+          "curriculum": 0.7102682397857968,
+          "shuffled": 0.6726596785533364,
+          "difference": 0.03760856123246037
+        },
+        {
+          "seed": 1009,
+          "curriculum": 0.7961316846114056,
+          "shuffled": 0.6717216261721616,
+          "difference": 0.12441005843924402
+        },
+        {
+          "seed": 1010,
+          "curriculum": 0.8144753113547555,
+          "shuffled": 0.7399128389109954,
+          "difference": 0.07456247244376013
+        },
+        {
+          "seed": 1011,
+          "curriculum": 0.6991705803055764,
+          "shuffled": 0.7141867618800808,
+          "difference": -0.01501618157450435
+        },
+        {
+          "seed": 1012,
+          "curriculum": 0.8210527247025771,
+          "shuffled": 0.7521102509184037,
+          "difference": 0.0689424737841734
+        },
+        {
+          "seed": 1013,
+          "curriculum": 0.7757419257628165,
+          "shuffled": 0.6922562602004629,
+          "difference": 0.0834856655623536
+        },
+        {
+          "seed": 1014,
+          "curriculum": 0.8108292051345628,
+          "shuffled": 0.7994958402890346,
+          "difference": 0.01133336484552816
+        },
+        {
+          "seed": 1015,
+          "curriculum": 0.8483086740203662,
+          "shuffled": 0.6359098650384339,
+          "difference": 0.2123988089819323
+        },
+        {
+          "seed": 1016,
+          "curriculum": 0.9164615593495397,
+          "shuffled": 0.7305913492702871,
+          "difference": 0.18587021007925253
+        },
+        {
+          "seed": 1017,
+          "curriculum": 0.7967647452037285,
+          "shuffled": 0.6067969919816235,
+          "difference": 0.18996775322210502
+        },
+        {
+          "seed": 1018,
+          "curriculum": 0.8148571453711184,
+          "shuffled": 0.6501331380237567,
+          "difference": 0.1647240073473617
+        },
+        {
+          "seed": 1019,
+          "curriculum": 0.862393180784235,
+          "shuffled": 0.6430825328510156,
+          "difference": 0.21931064793321942
+        }
+      ]
+    },
+    "gaussian_sd2": {
+      "definition": "mean NMSE(k=48..52) / mean NMSE(k=38..42), final checkpoint, evaluation bank 731841",
+      "curriculum_larger": 16,
+      "shuffled_larger": 4,
+      "curriculum_median": 1.430660156142931,
+      "shuffled_median": 1.127136356608112,
+      "signed_rank_difference": {
+        "n": 20,
+        "W_plus": 193,
+        "W_minus": 17,
+        "two_sided_exact_p": 0.0003948211669921875
+      },
+      "paired_seeds": [
+        {
+          "seed": 1000,
+          "curriculum": 1.5733785454210527,
+          "shuffled": 1.1147919228726044,
+          "difference": 0.4585866225484483
+        },
+        {
+          "seed": 1001,
+          "curriculum": 1.592605570000929,
+          "shuffled": 1.597320531636569,
+          "difference": -0.004714961635640114
+        },
+        {
+          "seed": 1002,
+          "curriculum": 1.4366241394905508,
+          "shuffled": 0.978048823818739,
+          "difference": 0.45857531567181176
+        },
+        {
+          "seed": 1003,
+          "curriculum": 1.6070461230089648,
+          "shuffled": 1.1114474221878068,
+          "difference": 0.495598700821158
+        },
+        {
+          "seed": 1004,
+          "curriculum": 1.1953326811716463,
+          "shuffled": 1.1431720700414003,
+          "difference": 0.05216061113024595
+        },
+        {
+          "seed": 1005,
+          "curriculum": 1.5783194614079292,
+          "shuffled": 1.1222513555204952,
+          "difference": 0.45606810588743407
+        },
+        {
+          "seed": 1006,
+          "curriculum": 1.5468585001848631,
+          "shuffled": 0.9902614702792902,
+          "difference": 0.5565970299055729
+        },
+        {
+          "seed": 1007,
+          "curriculum": 1.3597267291536572,
+          "shuffled": 1.1256688796923229,
+          "difference": 0.23405784946133434
+        },
+        {
+          "seed": 1008,
+          "curriculum": 1.1649674833913057,
+          "shuffled": 1.1588948058271389,
+          "difference": 0.006072677564166851
+        },
+        {
+          "seed": 1009,
+          "curriculum": 1.3659696535531205,
+          "shuffled": 1.1286038335239015,
+          "difference": 0.23736582002921902
+        },
+        {
+          "seed": 1010,
+          "curriculum": 1.4246961727953114,
+          "shuffled": 1.3154536273326867,
+          "difference": 0.10924254546262469
+        },
+        {
+          "seed": 1011,
+          "curriculum": 1.1916839243233772,
+          "shuffled": 1.2676737406363623,
+          "difference": -0.07598981631298507
+        },
+        {
+          "seed": 1012,
+          "curriculum": 1.2934695798277824,
+          "shuffled": 1.3580438566776811,
+          "difference": -0.06457427684989869
+        },
+        {
+          "seed": 1013,
+          "curriculum": 1.4099602477073974,
+          "shuffled": 1.2088361452834293,
+          "difference": 0.20112410242396805
+        },
+        {
+          "seed": 1014,
+          "curriculum": 1.4048717318350763,
+          "shuffled": 1.544739196822968,
+          "difference": -0.1398674649878917
+        },
+        {
+          "seed": 1015,
+          "curriculum": 1.5332194571665967,
+          "shuffled": 1.0027974533259174,
+          "difference": 0.5304220038406793
+        },
+        {
+          "seed": 1016,
+          "curriculum": 1.8179341511129588,
+          "shuffled": 1.4585426096836198,
+          "difference": 0.35939154142933893
+        },
+        {
+          "seed": 1017,
+          "curriculum": 1.3650743106755423,
+          "shuffled": 0.8712683073399082,
+          "difference": 0.49380600333563407
+        },
+        {
+          "seed": 1018,
+          "curriculum": 1.4464152401167703,
+          "shuffled": 1.0410750134309479,
+          "difference": 0.40534022668582237
+        },
+        {
+          "seed": 1019,
+          "curriculum": 1.6918773048858715,
+          "shuffled": 1.0109944776114714,
+          "difference": 0.6808828272744001
+        }
+      ]
+    }
+  },
+  "interpolation_region": {
+    "gaussian_sd1": {
+      "curriculum": {
+        "mean_peak_k_35_65": 35,
+        "mean_peak": 0.34731021523475647,
+        "mean_error_at_50": 0.23359663635492325
+      },
+      "shuffled": {
+        "mean_peak_k_35_65": 35,
+        "mean_peak": 0.34910551458597183,
+        "mean_error_at_50": 0.19620173275470734
+      }
+    },
+    "gaussian_sd2": {
+      "curriculum": {
+        "mean_peak_k_35_65": 51,
+        "mean_peak": 0.7605820745229721,
+        "mean_error_at_50": 0.7539509415626526
+      },
+      "shuffled": {
+        "mean_peak_k_35_65": 51,
+        "mean_peak": 0.5890505701303482,
+        "mean_error_at_50": 0.5843860372900963
+      }
+    }
+  },
+  "original_training_code": {
+    "repository": "https://github.com/neilpattanaik/in-context-learning",
+    "commit": "338337192195827c58356f9b627e5f999ea703d2",
+    "files": {
+      "src/train.py": {
+        "sha256": "570c7d6e4f448bdffaa17377052c30ffb231f69dcadb852e469ddffb246229b1"
+      },
+      "src/tasks.py": {
+        "sha256": "6671b0c91bc50cceaebbc35aff3a28b4f02a01a74b07530783311731011a8495"
+      },
+      "src/models.py": {
+        "sha256": "c2acd16bf7f4351055c7f9448c308b5c85cdedb2eb659fd8103fbd764024530e"
+      }
+    },
+    "finding": "Training calls model(xs, ys) without slicing. Default indices cover all positions; mean_squared_error averages all batch and position errors. The paper text and code differ; do not claim final-query-only original training."
+  },
+  "ridge_fit": {
+    "status": "excluded_from_packet",
+    "reason": "Reviewer clarified fit is exploratory, post hoc, unstable across noise levels, and not a convincing ridge model. No fitted penalty estimates are reported. The hardcoded Bayes-reference indices in ref2.py are wrong at both SD1 and SD2; this affects printed reference comparisons, not the fitted-penalty selection or directly computed bump ratios."
+  }
+}

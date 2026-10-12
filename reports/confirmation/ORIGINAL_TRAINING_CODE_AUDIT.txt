@@ -1,0 +1,21 @@
+ORIGINAL SYNTHETIC TRAINING CODE: VERIFIED OBJECTIVE
+Repository: https://github.com/neilpattanaik/in-context-learning
+Commit: 338337192195827c58356f9b627e5f999ea703d2
+
+src/train.py, lines 22-28:
+    output = model(xs, ys)
+    loss = loss_func(output, ys)
+    loss.backward()
+
+src/tasks.py, lines 10-11:
+    def mean_squared_error(ys_pred, ys):
+        return (ys - ys_pred).square().mean()
+
+src/models.py, lines 116-127:
+    def forward(self, xs, ys, inds=None):
+        if inds is None:
+            inds = torch.arange(ys.shape[1])
+        ...
+        return prediction[:, ::2, 0][:, inds]
+
+Conclusion: this training path uses all prediction positions. The prior packet inferred final-query-only original training from the paper's prose and should not have done so. This evidence corrects that inference; it does not identify the exact commit/configuration used for every historical run. Reconcile the historical paper's prose against the archived run before claiming historical equivalence.

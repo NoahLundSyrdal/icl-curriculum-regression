@@ -1,0 +1,158 @@
+Curriculum acquisition of ICL: strong-baseline fresh-seed confirmation
+Frozen before new development/confirmation outcomes, 8 October 2026.
+Remote directory: /cluster/work/noahls/icl-rerun-20261005/confirmation_20261008.
+
+Purpose and claim hierarchy
+The user's broader hypothesis is that curriculum helps a transformer acquire
+ICL faster or more reliably. The PRIMARY test compares joint dimension/context
+curriculum with independently tuned full-difficulty training from the start.
+This compares training policies, including exposure to easier tasks. A GATED
+SECONDARY test compares curriculum with exactly exposure-matched shuffled
+training, isolating ordering with a common optimizer. Both use clean-target
+learning-curve AUC. This is not a test of the original increasing-noise-order
+robustness hypothesis, which remains unsupported. New experiments are corrected
+all-eligible-prefix, 50D synthetic regression, not exact historical replication.
+The previous two-seed screens and five-seed discovery informed this design.
+This is a locally frozen prospective confirmation, not an externally registered
+study, proof of a universal claim, mechanism test, or pretrained-LLM experiment.
+
+Fixed execution: 96 production models, 15 GPUs maximum in either array
+Development: seeds 600,601,602 x four optimizer candidates x three arms = 36
+models, 50,000 updates each. Confirmation: seeds 1000..1019 inclusive x three
+arms = 60 models, 125,000 updates each. Development and confirmation seeds and
+evaluation banks are disjoint and checked against prior run manifests/metrics.
+All models are clean trained. Report every run, including stalls and nulls.
+No other task/architecture search, additional seeds, or optional stopping is
+authorized by this protocol. A separate mechanism or generalization study can
+be designed later; it is not necessary to interpret the scoped primary result.
+
+Shared architecture/data/update rules
+Reuse unchanged verified run_experiment.py and robustness_experiment.py, with
+a thin adapter changing only provenance and cohort configuration. GPT-2 causal
+regression transformer: 12 layers, embedding 256, eight heads, zero dropout,
+eager attention, no cache. Physical shapes: 50 coordinates, 101 prediction
+positions, 202 interleaved tokens throughout every optimizer update. AdamW
+weight decay .01, gradient clip 1, effective batch 256, microbatch 128.
+BF16 autocast forward/backward, FP32 parameters and FP32 loss, TF32 disabled,
+deterministic algorithms. Fresh Gaussian task vectors/inputs use stateless
+seed/batch-ID/stream RNG. Within each seed all models start with exactly the
+same parameters; seed/config/source/protocol/evaluation identity is preserved.
+
+Canonical schedule and target-scale control
+IDs 0..999: scheduled dimension 5. IDs 1000..24999: dimension
+5+floor(45*(ID-1000)/23999). IDs >=25000: full 50D.
+Curriculum visits ascending IDs with scheduled dimension d and 2d+1 eligible
+loss-prefix positions. Shuffled uses a seed-fixed permutation of the identical
+first 25k IDs, followed by the same ascending IDs for the remaining updates.
+Thus their exact realized batches/targets/loss-mask/label-scale multiset match.
+Hard-only uses full 50D and all 101 eligible positions at every ascending ID.
+For all arms labels/targets are sqrt(50/active_dimension)*(x dot w), with inputs
+masked to active dimensions. Expected target variance is therefore always 50.
+All arms share identical realized full-difficulty batches and chronology after
+update 25k. Training minimizes clean MSE at every eligible x token, including
+k=0. Query prediction cannot observe its own target through causal attention.
+
+Development optimizer grid and selection (fixed before new outcomes)
+In this exact constant-variance distribution, candidates in fixed tie order:
+1. lr_low: LR .0001, raw eligible-prefix MSE.
+2. baseline: LR .0004, raw MSE.
+3. lr_high: LR .001, raw MSE.
+4. loss_nmse: LR .0004, raw MSE divided by active_dimension before backward.
+All candidates use BF16 and identical settings otherwise. The divided-loss
+candidate changes weighting/gradient clipping; it does not rescale input labels.
+Equal search budget for each arm: four candidates x three seeds x 50k updates.
+Rank by mean across development seeds of clean NMSE trapezoidally averaged at
+25k,30k,40k,50k updates, lower is better. Exact ties use the listed order.
+Select the SHUFFLED winner as the COMMON optimizer for both confirmation
+curriculum and shuffled. Independently select the HARD winner for confirmation
+hard-only. Publish curriculum's development ranking too, but do not use it to
+select a different curriculum optimizer. This intentionally gives the baselines
+a strong chance to learn. The primary is a conservative policy comparison,
+not an optimizer-matched ordering contrast; the secondary is optimizer-matched.
+These are best candidates within this limited prespecified grid, not globally
+optimal settings. Previous raw-label optimizer rankings do not select settings.
+Only the development primary-bank clean AUC enters selection. No holdout or
+confirmation result may enter tuning. Missing/nonfinite runs halt selection;
+finite stalled runs remain eligible and are ranked at their observed error.
+All development results are exploratory selection data, never confirmation.
+
+Confirmation outcomes and statistics
+20 fresh paired training seeds, three models per seed, fixed budget 125k.
+Evaluation times: 0,1k,5k,10k,20k,25k,30k,40k,50k,75k,100k,125k updates.
+All primary evaluations use a shared new full-50D bank seed 731841 with 4096
+episodes. Clean-target squared error is divided by 50 and averaged over query
+contexts k=50..100 inclusive. PRIMARY outcome per model is the trapezoidal
+mean of this clean NMSE over 25k..125k; divide by 100k to retain NMSE units.
+PRIMARY paired contrast: curriculum AUC minus tuned-hard AUC, negative better.
+Primary support requires ALL: two-sided exact sign-test p<.05 for paired seed
+differences; observed mean AUC reduction >=.02; and curriculum final mean clean
+NMSE <=.25. The sign test concerns probability of a seed win, not mean effect.
+Numerical ties abs(difference)<=1e-8 are excluded from sign-test n and reported.
+Show all 20 differences, mean, median, win rate and a descriptive paired-seed
+bootstrap percentile mean interval: 10,000 resamples, RNG seed 845731.
+Do not treat that interval as the primary significance test or extra seeds.
+Without ties 15/20 wins gives two-sided p=.041389. Assuming true seed-win
+probability .8, probability of at least 15 wins is .8042. This is an illustrative
+sample-size rationale, not a prediction, assurance, or power guarantee for the
+practical-effect/final-accuracy gates.
+
+Fixed-sequence confirmatory hierarchy for two claims
+Only if the primary FULL support gate passes can the same .05 sign-test and
+practical/final gates support a confirmatory ordering claim, using paired
+curriculum-minus-shuffled AUC. This fixed sequence controls familywise error
+for the two claims; no separate uncorrected parallel significance search.
+If the primary fails, show ordering results and its p-value descriptively, but
+do not substitute that secondary success for failed primary confirmation.
+If primary passes and ordering fails, conclude easier-task curriculum policy
+helps here, with no confirmed additional benefit of ascending chronology.
+If both pass, conclude curriculum policy helps and ordering adds benefit here.
+If primary fails, report failure to confirm the prespecified useful benefit;
+do not assert universal absence from this finite test.
+
+Other outcomes are SECONDARY/DESCRIPTIVE, no extra confirmatory claims
+Final clean NMSE, learned counts at final NMSE<=.25, full error-versus-context
+curves, scheduled time to .25 (interval-/right-censored; no interpolation),
+training/GPU/wall time and Gaussian context-label noise SD1/SD2 with clean
+query targets. A separate final holdout bank 731842 (4096 tasks) evaluates
+unchanged final weights. Fresh tasks are not new independent training seeds.
+Development uses banks 731839 primary and 731840 final holdout, also 4096 tasks.
+The heldout bank cannot select a model, stopping point or optimizer.
+
+Integrity, preservation, job dependencies and failure handling
+CPU scientific checks, fresh-seed/bank audit and production batch probes must
+pass, followed by production-shape GPU tests of finite updates, initialization,
+RNG isolation, causal/query-target-absent predictions and bitwise resumed vs
+uninterrupted training across all four optimizer candidates and all three arms.
+Every stage checks the pre-submission source freeze. Slurm dependencies:
+CPU preflight -> GPU smoke -> 36-model development array -> strict CPU selector
+-> 60-model confirmation array -> strict CPU summary. All edges afterok;
+invalid/failed dependencies cannot launch subsequent stages. Each array capped
+at 15 A100 80GB GPUs, account share-ie-idi, QoS high. No overlapping arrays.
+Rolling model/Adam/RNG checkpoints every 1000 updates; frozen checkpoints at
+every evaluation. Technical interruption resumes SAME seed/config/source/
+schedule from saved state to SAME budget. No dropping failed/stalled runs.
+Sources/tasks/protocol are SHA256-frozen before preflight. A deterministic
+selector writes a locked decision and resolved confirmation tasks after strict
+verification of all 36 development models. Their hashes enter every
+confirmation identity. Sources cannot change when the optimizer is selected.
+The final summary refuses incomplete runs, wrong schedules or identities,
+different weights for holdouts, inconsistent paired initialization, changed
+optimizer/update counts, nonfinite metrics, or mismatched curves/logs. Preserve
+individual metrics and all full curves, hashes, runtime/package versions,
+submission IDs and complete weights on IDUN. No messages to Srikar now.
+
+Approximate resources
+36 development models x 3.6-3.8 A100 GPU hours and 60 confirmation models x
+8.9-10.5 hours: approximately 664-767 GPU hours plus evaluation/retry overhead.
+Development needs three waves and confirmation four waves at concurrency 15;
+queue availability determines elapsed time. These estimates use previous runs,
+not a promised ETA. This protocol freezes run count, not a result expectation.
+
+Prior work and scope
+Garg et al., arxiv.org/2208.01066: curriculum benefits and initial learning lulls
+already known. Liu et al., arxiv.org/2505.06475: curriculum alignment and
+gradient explanations. Shin & Alvarez-Melis, arxiv.org/2609.09099: ordering
+versus matched exposure in general curricula. This confirmation supports a
+precise empirical scope; publication novelty is a separate assessment. Retain
+the original negative noise-order result and all contradictory optimizer
+findings. Do not claim a theorem or stronger generality than the measured setup.

@@ -1,0 +1,44 @@
+{
+  "packaged_date": "2026-10-12",
+  "repository_scope": "2026 dimension/context confirmation, recorded environment/raw results, review reanalysis, and historical rerun source snapshots",
+  "source_freeze": {
+    "created_utc": "2026-10-08T09:32:21.095298+00:00",
+    "file_count": 21,
+    "all_hashes_match": true,
+    "path": "experiments/confirmation_20261008/submissions/freeze.json"
+  },
+  "data_archive": {
+    "path": "data/confirmation_20261008.zip",
+    "sha256": "db5405e99a80bbe89c084ecf97a592a9b9cba27767ba7c5e0756f6e2994820a3",
+    "bytes": 9670568,
+    "development_metric_records": 360,
+    "confirmation_metric_records": 780
+  },
+  "runtime": {
+    "python": "3.12.3",
+    "torch": "2.9.0+cu126",
+    "transformers": "4.57.1",
+    "numpy": "2.3.4",
+    "gpu": "NVIDIA A100 80GB PCIe"
+  },
+  "slurm_jobs": {
+    "cpu_preflight": "25629201",
+    "gpu_smoke": "25629208",
+    "development": "25629209",
+    "selection": "25629210",
+    "confirmation": "25629211",
+    "summary": "25629212"
+  },
+  "excluded": [
+    "checkpoint/model weights and binary schedules",
+    "virtual environments",
+    "authentication material",
+    "unverified fitted ridge references and external review scripts"
+  ],
+  "verification_limits": [
+    "A source hash establishes byte identity, not scientific correctness.",
+    "The original runtime checks verified checkpoint/schedule content on the cluster; those binaries are not shipped.",
+    "Fresh GPU training has not been repeated as part of GitHub packaging.",
+    "Historical source snapshots have packaging hashes, not the confirmation prospective freeze."
+  ]
+}

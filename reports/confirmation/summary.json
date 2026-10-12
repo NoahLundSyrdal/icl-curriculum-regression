@@ -1,0 +1,2062 @@
+{
+  "kind": "icl_curriculum_strong_baseline_confirmation_v1",
+  "status": "complete_fresh_twenty_seed_confirmation",
+  "verification": {
+    "kind": "icl_curriculum_strong_baseline_confirmation_v1",
+    "cohort": "confirmation",
+    "training_runs": 60,
+    "evaluation_records": 780,
+    "frozen_checkpoints_verified": 720,
+    "all_checks_passed": true,
+    "source_hashes": {
+      "CONFIRMATION_PROTOCOL.txt": "d3f5d2a942350c075754213ddfa63f31d3e768e5b2a9e489509e2d5f948ebb4c",
+      "CONFIRMATION_TASKS.json": "6487cff07e933ba5406551a1c305d72da2e3317c22380ca79adb017054fb644b",
+      "confirmation_plan.py": "49257a96bad075a810965efb72dcdcb593e020abaa8e565f0e072dfcf227b837",
+      "confirmation_experiment.py": "505855976da328662d7c6b04f5d45b622582ae08055c281d8c8eb685e1480f5a",
+      "confirmation_analysis.py": "2fb3abd67a371e3f36d72a3f21d008e1712c2739fcf43e8fcd975a3623a2a09b",
+      "confirmation_checks.py": "32a643fb377e4bb17dbe2bf3954b9f322ea3c850a8eb7cee1a24bc9bd4ac5ad0",
+      "test_confirmation.py": "88fcd1b4659069490f79935e70c2b92a68c0735484212f339757e9ae0011c47f",
+      "select_confirmation.py": "afc37408f0da7dae22045e8b1492e0953af6aa49de53e6ca8d2addbfc6a99461",
+      "submit_confirmation.py": "2e65d876f386b7fb3ed679151cee20dac3c1931fb152c2d66e9da54e683ef269",
+      "confirmation_preflight.slurm": "f1134c0621ae3da93c50d2cbe54a1d416f6c419184d2153602f28e3fc0ace5e1",
+      "confirmation_smoke.slurm": "c58873f7b1e1f904865d971410a412ee2a5143ab1e3fadf275151a014198c841",
+      "confirmation_dev.slurm": "636fe384b608c8324ea9cbb23c77504b5b8dd1dab429ed70a5575726ed4d6add",
+      "confirmation_select.slurm": "5803d62f8fb04aa8c769557f4d89e29a1d74d44242c3856e8039cb52f8e7f4ac",
+      "confirmation_train.slurm": "6907ebfc13a17acf1b58f46ca159974c3b79a763002419e8c58ac1bf4f193b98",
+      "confirmation_summary.slurm": "ab0f661816a7866999683edf0ec703e0cee3a8e94debd574e137fb85c1efc1c2",
+      "run_experiment.py": "4df516cd368733d00795d9a3cf16f4f114db06e156cad5a4cabe3a22ce0776b7",
+      "robustness_experiment.py": "83bcb5847c8194fca7d463666f588d010564e00186ac36e1d461cb566a3e1db3",
+      "ROBUSTNESS_PROTOCOL.txt": "c239acbeed646bda3eae77513a02ac42ce729b575851c9ec570124c0703cef22",
+      "ROBUSTNESS_TASKS.json": "f8c35fed798e0073846956d2254b926c2581153bdcd9bf9c6a2065e690996410",
+      "test_robustness.py": "2de091fcfc243f813082e871c340ec4db5f4f51ce9195cde390b7a2c0f80faca",
+      "summarize_robustness.py": "84e9dbf0920b2936ee6dcaa3c6a5c63ab0f3c53b62f3ad85a0fab35992140e26"
+    }
+  },
+  "selection_sha256": "2340ea3677b326e9e3a228a5acaec8cb125b9d88b0bf86d326b891bca73512fc",
+  "resolved_tasks_sha256": "bab2bdb0e9a2bc89ba99e58991522745fd8c4eb8df72e8ef7c506c5ebf0e1849",
+  "seeds": [
+    1000,
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009,
+    1010,
+    1011,
+    1012,
+    1013,
+    1014,
+    1015,
+    1016,
+    1017,
+    1018,
+    1019
+  ],
+  "individual_runs": [
+    {
+      "task_index": 0,
+      "seed": 1000,
+      "arm": "curriculum",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.01605194869916886,
+          "final": 0.00583832710981369,
+          "holdout": 0.0058351741172373295
+        },
+        "gaussian_sd1": {
+          "auc": 0.08333506770431995,
+          "final": 0.08110227435827255,
+          "holdout": 0.08129385113716125
+        },
+        "gaussian_sd2": {
+          "auc": 0.2909121558070183,
+          "final": 0.2903684675693512,
+          "holdout": 0.2908966839313507
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 25000,
+        "previous_scheduled_step": 20000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33310.90406570025
+    },
+    {
+      "task_index": 1,
+      "seed": 1000,
+      "arm": "shuffled",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.02109025262761861,
+          "final": 0.010271371342241764,
+          "holdout": 0.010399306192994118
+        },
+        "gaussian_sd1": {
+          "auc": 0.07412214912474155,
+          "final": 0.07236044853925705,
+          "holdout": 0.0729512870311737
+        },
+        "gaussian_sd2": {
+          "auc": 0.21992170363664626,
+          "final": 0.23268303275108337,
+          "holdout": 0.23387789726257324
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 20000,
+        "previous_scheduled_step": 10000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33327.376803653315
+    },
+    {
+      "task_index": 2,
+      "seed": 1000,
+      "arm": "hard",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.9957658469676971,
+          "final": 0.9837881922721863,
+          "holdout": 0.9873390197753906
+        },
+        "gaussian_sd1": {
+          "auc": 0.9957948669791221,
+          "final": 0.9840455651283264,
+          "holdout": 0.9873320460319519
+        },
+        "gaussian_sd2": {
+          "auc": 0.9958762407302857,
+          "final": 0.9846234321594238,
+          "holdout": 0.9879637956619263
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": null,
+        "previous_scheduled_step": null,
+        "right_censored": true,
+        "budget_end": 125000
+      },
+      "training_seconds": 31848.77126721479
+    },
+    {
+      "task_index": 3,
+      "seed": 1001,
+      "arm": "curriculum",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.019121716578956692,
+          "final": 0.007345098536461592,
+          "holdout": 0.007412306033074856
+        },
+        "gaussian_sd1": {
+          "auc": 0.08461897186934948,
+          "final": 0.09104078263044357,
+          "holdout": 0.09149803966283798
+        },
+        "gaussian_sd2": {
+          "auc": 0.3246233440935612,
+          "final": 0.3655174970626831,
+          "holdout": 0.36619287729263306
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 25000,
+        "previous_scheduled_step": 20000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 37345.780265828595
+    },
+    {
+      "task_index": 4,
+      "seed": 1001,
+      "arm": "shuffled",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.017933659115806223,
+          "final": 0.006827511824667454,
+          "holdout": 0.006873458623886108
+        },
+        "gaussian_sd1": {
+          "auc": 0.07913796007633209,
+          "final": 0.07760509103536606,
+          "holdout": 0.07829155027866364
+        },
+        "gaussian_sd2": {
+          "auc": 0.27426954358816147,
+          "final": 0.3208494484424591,
+          "holdout": 0.32632941007614136
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 25000,
+        "previous_scheduled_step": 20000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33287.04359972291
+    },
+    {
+      "task_index": 5,
+      "seed": 1001,
+      "arm": "hard",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.6251092566177249,
+          "final": 0.035995714366436005,
+          "holdout": 0.03597502037882805
+        },
+        "gaussian_sd1": {
+          "auc": 0.6368103684857488,
+          "final": 0.07451743632555008,
+          "holdout": 0.07439592480659485
+        },
+        "gaussian_sd2": {
+          "auc": 0.6712578222155571,
+          "final": 0.18740403652191162,
+          "holdout": 0.18712322413921356
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 100000,
+        "previous_scheduled_step": 75000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 31899.893831601366
+    },
+    {
+      "task_index": 6,
+      "seed": 1002,
+      "arm": "curriculum",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.015155404701363295,
+          "final": 0.007786060217767954,
+          "holdout": 0.007866047322750092
+        },
+        "gaussian_sd1": {
+          "auc": 0.07538585793226957,
+          "final": 0.0766640305519104,
+          "holdout": 0.07711377739906311
+        },
+        "gaussian_sd2": {
+          "auc": 0.26622854061424733,
+          "final": 0.30790334939956665,
+          "holdout": 0.309296190738678
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 25000,
+        "previous_scheduled_step": 20000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 31909.288565943018
+    },
+    {
+      "task_index": 7,
+      "seed": 1002,
+      "arm": "shuffled",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.03396555494982749,
+          "final": 0.01396906841546297,
+          "holdout": 0.014094834215939045
+        },
+        "gaussian_sd1": {
+          "auc": 0.07890436481684446,
+          "final": 0.06866474449634552,
+          "holdout": 0.06897861510515213
+        },
+        "gaussian_sd2": {
+          "auc": 0.20801952853798866,
+          "final": 0.22091686725616455,
+          "holdout": 0.2209228277206421
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 30000,
+        "previous_scheduled_step": 25000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 31780.16996576637
+    },
+    {
+      "task_index": 8,
+      "seed": 1002,
+      "arm": "hard",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.2099347142968327,
+          "final": 0.017547352239489555,
+          "holdout": 0.017671747133135796
+        },
+        "gaussian_sd1": {
+          "auc": 0.2411966694518924,
+          "final": 0.07269174605607986,
+          "holdout": 0.07303131371736526
+        },
+        "gaussian_sd2": {
+          "auc": 0.3449862524867058,
+          "final": 0.25920340418815613,
+          "holdout": 0.2600306272506714
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 50000,
+        "previous_scheduled_step": 40000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 31869.369526123628
+    },
+    {
+      "task_index": 9,
+      "seed": 1003,
+      "arm": "curriculum",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.014653616538271307,
+          "final": 0.006460615433752537,
+          "holdout": 0.006434773560613394
+        },
+        "gaussian_sd1": {
+          "auc": 0.07888192012906074,
+          "final": 0.07929618656635284,
+          "holdout": 0.07947728037834167
+        },
+        "gaussian_sd2": {
+          "auc": 0.28274302259087564,
+          "final": 0.31904515624046326,
+          "holdout": 0.32030558586120605
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 25000,
+        "previous_scheduled_step": 20000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 31820.689827324823
+    },
+    {
+      "task_index": 10,
+      "seed": 1003,
+      "arm": "shuffled",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.022382140322588385,
+          "final": 0.01124687772244215,
+          "holdout": 0.011330896988511086
+        },
+        "gaussian_sd1": {
+          "auc": 0.07483878433704376,
+          "final": 0.06987278908491135,
+          "holdout": 0.06979114562273026
+        },
+        "gaussian_sd2": {
+          "auc": 0.23336965627968312,
+          "final": 0.24726399779319763,
+          "holdout": 0.24652278423309326
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 20000,
+        "previous_scheduled_step": 10000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33573.34762587212
+    },
+    {
+      "task_index": 11,
+      "seed": 1003,
+      "arm": "hard",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.07217507127206772,
+          "final": 0.013193386606872082,
+          "holdout": 0.013236907310783863
+        },
+        "gaussian_sd1": {
+          "auc": 0.11273201871663333,
+          "final": 0.07212553918361664,
+          "holdout": 0.07249510288238525
+        },
+        "gaussian_sd2": {
+          "auc": 0.2414958920329809,
+          "final": 0.26938948035240173,
+          "holdout": 0.2688949406147003
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 30000,
+        "previous_scheduled_step": 25000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33504.31038116291
+    },
+    {
+      "task_index": 12,
+      "seed": 1004,
+      "arm": "curriculum",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.019492832804098727,
+          "final": 0.009425031021237373,
+          "holdout": 0.009472553618252277
+        },
+        "gaussian_sd1": {
+          "auc": 0.07605151422321796,
+          "final": 0.07512140274047852,
+          "holdout": 0.07526655495166779
+        },
+        "gaussian_sd2": {
+          "auc": 0.2509090568870306,
+          "final": 0.2571603059768677,
+          "holdout": 0.25711557269096375
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 25000,
+        "previous_scheduled_step": 20000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33430.18181087263
+    },
+    {
+      "task_index": 13,
+      "seed": 1004,
+      "arm": "shuffled",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.023891143244691194,
+          "final": 0.010179267264902592,
+          "holdout": 0.010118513368070126
+        },
+        "gaussian_sd1": {
+          "auc": 0.07543886136263608,
+          "final": 0.0708082914352417,
+          "holdout": 0.07120032608509064
+        },
+        "gaussian_sd2": {
+          "auc": 0.22254235595464705,
+          "final": 0.24379543960094452,
+          "holdout": 0.244401216506958
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 25000,
+        "previous_scheduled_step": 20000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 37663.16378757544
+    },
+    {
+      "task_index": 14,
+      "seed": 1004,
+      "arm": "hard",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.4178994480986148,
+          "final": 0.02231896109879017,
+          "holdout": 0.022334637120366096
+        },
+        "gaussian_sd1": {
+          "auc": 0.4374689918011427,
+          "final": 0.07063215970993042,
+          "holdout": 0.07114407420158386
+        },
+        "gaussian_sd2": {
+          "auc": 0.49532993137836456,
+          "final": 0.21090930700302124,
+          "holdout": 0.2113552987575531
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 75000,
+        "previous_scheduled_step": 50000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33505.810988880694
+    },
+    {
+      "task_index": 15,
+      "seed": 1005,
+      "arm": "curriculum",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.015428805665578693,
+          "final": 0.007588948588818312,
+          "holdout": 0.007614822592586279
+        },
+        "gaussian_sd1": {
+          "auc": 0.0768359148874879,
+          "final": 0.07778584957122803,
+          "holdout": 0.07789211720228195
+        },
+        "gaussian_sd2": {
+          "auc": 0.2939548198133707,
+          "final": 0.2894331216812134,
+          "holdout": 0.29016271233558655
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 25000,
+        "previous_scheduled_step": 20000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33257.959554526955
+    },
+    {
+      "task_index": 16,
+      "seed": 1005,
+      "arm": "shuffled",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.02799682365730405,
+          "final": 0.020905956625938416,
+          "holdout": 0.02099568210542202
+        },
+        "gaussian_sd1": {
+          "auc": 0.07716713417321444,
+          "final": 0.08123482018709183,
+          "holdout": 0.08138873428106308
+        },
+        "gaussian_sd2": {
+          "auc": 0.2259887248277664,
+          "final": 0.2690622806549072,
+          "holdout": 0.2692602276802063
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 25000,
+        "previous_scheduled_step": 20000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33324.523640368134
+    },
+    {
+      "task_index": 17,
+      "seed": 1005,
+      "arm": "hard",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.9975222274661064,
+          "final": 0.9975224137306213,
+          "holdout": 1.0016099214553833
+        },
+        "gaussian_sd1": {
+          "auc": 0.9975221619009972,
+          "final": 0.9975224137306213,
+          "holdout": 1.0016101598739624
+        },
+        "gaussian_sd2": {
+          "auc": 0.99752207249403,
+          "final": 0.9975222945213318,
+          "holdout": 1.0016100406646729
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": null,
+        "previous_scheduled_step": null,
+        "right_censored": true,
+        "budget_end": 125000
+      },
+      "training_seconds": 31931.549855729565
+    },
+    {
+      "task_index": 18,
+      "seed": 1006,
+      "arm": "curriculum",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.020988283306360246,
+          "final": 0.00788680836558342,
+          "holdout": 0.007884440943598747
+        },
+        "gaussian_sd1": {
+          "auc": 0.08138365801423789,
+          "final": 0.08847906440496445,
+          "holdout": 0.0892757698893547
+        },
+        "gaussian_sd2": {
+          "auc": 0.35246550291776657,
+          "final": 0.7912300229072571,
+          "holdout": 0.7958996295928955
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 30000,
+        "previous_scheduled_step": 25000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33285.719570253044
+    },
+    {
+      "task_index": 19,
+      "seed": 1006,
+      "arm": "shuffled",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.03519558161497116,
+          "final": 0.015157405287027359,
+          "holdout": 0.015088696964085102
+        },
+        "gaussian_sd1": {
+          "auc": 0.07931097280234098,
+          "final": 0.06812884658575058,
+          "holdout": 0.06841111928224564
+        },
+        "gaussian_sd2": {
+          "auc": 0.20608792118728161,
+          "final": 0.21689002215862274,
+          "holdout": 0.21732090413570404
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 30000,
+        "previous_scheduled_step": 25000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 34727.67210435495
+    },
+    {
+      "task_index": 20,
+      "seed": 1006,
+      "arm": "hard",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.9975245282053947,
+          "final": 0.9975213408470154,
+          "holdout": 1.0016111135482788
+        },
+        "gaussian_sd1": {
+          "auc": 0.9975245401263237,
+          "final": 0.9975213408470154,
+          "holdout": 1.0016112327575684
+        },
+        "gaussian_sd2": {
+          "auc": 0.9975247696042061,
+          "final": 0.9975212216377258,
+          "holdout": 1.0016111135482788
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": null,
+        "previous_scheduled_step": null,
+        "right_censored": true,
+        "budget_end": 125000
+      },
+      "training_seconds": 37347.21383599378
+    },
+    {
+      "task_index": 21,
+      "seed": 1007,
+      "arm": "curriculum",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.015614635671954601,
+          "final": 0.0067972890101373196,
+          "holdout": 0.0068591004237532616
+        },
+        "gaussian_sd1": {
+          "auc": 0.07966640405356884,
+          "final": 0.0805782824754715,
+          "holdout": 0.08110994100570679
+        },
+        "gaussian_sd2": {
+          "auc": 0.2682617299258709,
+          "final": 0.27816057205200195,
+          "holdout": 0.2785691022872925
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 25000,
+        "previous_scheduled_step": 20000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33623.67262069322
+    },
+    {
+      "task_index": 22,
+      "seed": 1007,
+      "arm": "shuffled",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.03595611250493676,
+          "final": 0.014185884036123753,
+          "holdout": 0.014185762964189053
+        },
+        "gaussian_sd1": {
+          "auc": 0.08585414253175258,
+          "final": 0.07444136589765549,
+          "holdout": 0.07467357069253922
+        },
+        "gaussian_sd2": {
+          "auc": 0.2593049302697182,
+          "final": 0.27651524543762207,
+          "holdout": 0.27746644616127014
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 30000,
+        "previous_scheduled_step": 25000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 31875.226821845397
+    },
+    {
+      "task_index": 23,
+      "seed": 1007,
+      "arm": "hard",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.8693400820717215,
+          "final": 0.12182026356458664,
+          "holdout": 0.12149661034345627
+        },
+        "gaussian_sd1": {
+          "auc": 0.8720683842897415,
+          "final": 0.14261746406555176,
+          "holdout": 0.14247722923755646
+        },
+        "gaussian_sd2": {
+          "auc": 0.8803211495280265,
+          "final": 0.2049788236618042,
+          "holdout": 0.2050367295742035
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 125000,
+        "previous_scheduled_step": 100000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 31761.500292848796
+    },
+    {
+      "task_index": 24,
+      "seed": 1008,
+      "arm": "curriculum",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.021232781209982933,
+          "final": 0.010649916715919971,
+          "holdout": 0.010735909454524517
+        },
+        "gaussian_sd1": {
+          "auc": 0.07945369891822338,
+          "final": 0.07851212471723557,
+          "holdout": 0.07887773215770721
+        },
+        "gaussian_sd2": {
+          "auc": 0.2699606318026781,
+          "final": 0.28623315691947937,
+          "holdout": 0.2865671217441559
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 25000,
+        "previous_scheduled_step": 20000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 31829.939565487206
+    },
+    {
+      "task_index": 25,
+      "seed": 1008,
+      "arm": "shuffled",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.022769815544597803,
+          "final": 0.010806926526129246,
+          "holdout": 0.010838045738637447
+        },
+        "gaussian_sd1": {
+          "auc": 0.07558237854391336,
+          "final": 0.0722748339176178,
+          "holdout": 0.07259698957204819
+        },
+        "gaussian_sd2": {
+          "auc": 0.2444915510714054,
+          "final": 0.2834761440753937,
+          "holdout": 0.2836562395095825
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 20000,
+        "previous_scheduled_step": 10000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33371.93952909298
+    },
+    {
+      "task_index": 26,
+      "seed": 1008,
+      "arm": "hard",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.9975218921899796,
+          "final": 0.9975204467773438,
+          "holdout": 1.001612901687622
+        },
+        "gaussian_sd1": {
+          "auc": 0.997521910071373,
+          "final": 0.9975204467773438,
+          "holdout": 1.001612901687622
+        },
+        "gaussian_sd2": {
+          "auc": 0.9975218579173089,
+          "final": 0.9975206255912781,
+          "holdout": 1.001612901687622
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": null,
+        "previous_scheduled_step": null,
+        "right_censored": true,
+        "budget_end": 125000
+      },
+      "training_seconds": 33388.062138248235
+    },
+    {
+      "task_index": 27,
+      "seed": 1009,
+      "arm": "curriculum",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.01822366486303508,
+          "final": 0.007936470210552216,
+          "holdout": 0.008091955445706844
+        },
+        "gaussian_sd1": {
+          "auc": 0.08075579106807709,
+          "final": 0.08120226114988327,
+          "holdout": 0.08206850290298462
+        },
+        "gaussian_sd2": {
+          "auc": 0.2918181955814362,
+          "final": 0.28850728273391724,
+          "holdout": 0.29044169187545776
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 25000,
+        "previous_scheduled_step": 20000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33356.51709033735
+    },
+    {
+      "task_index": 28,
+      "seed": 1009,
+      "arm": "shuffled",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.023148660152219235,
+          "final": 0.011213398538529873,
+          "holdout": 0.01119096577167511
+        },
+        "gaussian_sd1": {
+          "auc": 0.07404095642268657,
+          "final": 0.06950845569372177,
+          "holdout": 0.06995491683483124
+        },
+        "gaussian_sd2": {
+          "auc": 0.22620333209633828,
+          "final": 0.251252681016922,
+          "holdout": 0.2517927885055542
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 20000,
+        "previous_scheduled_step": 10000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33566.25027975254
+    },
+    {
+      "task_index": 29,
+      "seed": 1009,
+      "arm": "hard",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.9971178025007248,
+          "final": 0.9942926168441772,
+          "holdout": 0.9986188411712646
+        },
+        "gaussian_sd1": {
+          "auc": 0.9971469566226006,
+          "final": 0.9945258498191833,
+          "holdout": 0.9985487461090088
+        },
+        "gaussian_sd2": {
+          "auc": 0.9971525281667709,
+          "final": 0.9945693016052246,
+          "holdout": 0.9986675381660461
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": null,
+        "previous_scheduled_step": null,
+        "right_censored": true,
+        "budget_end": 125000
+      },
+      "training_seconds": 33212.8275481537
+    },
+    {
+      "task_index": 30,
+      "seed": 1010,
+      "arm": "curriculum",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.02335978066548705,
+          "final": 0.008060872554779053,
+          "holdout": 0.008012714795768261
+        },
+        "gaussian_sd1": {
+          "auc": 0.08183164242655039,
+          "final": 0.08130186051130295,
+          "holdout": 0.08144184201955795
+        },
+        "gaussian_sd2": {
+          "auc": 0.282090812176466,
+          "final": 0.3291415870189667,
+          "holdout": 0.3284095227718353
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 30000,
+        "previous_scheduled_step": 25000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33302.686956733465
+    },
+    {
+      "task_index": 31,
+      "seed": 1010,
+      "arm": "shuffled",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.01953169475309551,
+          "final": 0.009184444323182106,
+          "holdout": 0.009236720390617847
+        },
+        "gaussian_sd1": {
+          "auc": 0.07465392462909222,
+          "final": 0.07693328708410263,
+          "holdout": 0.07741799205541611
+        },
+        "gaussian_sd2": {
+          "auc": 0.2525648381561041,
+          "final": 0.2950538098812103,
+          "holdout": 0.2983333468437195
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 20000,
+        "previous_scheduled_step": 10000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 37457.33069014549
+    },
+    {
+      "task_index": 32,
+      "seed": 1010,
+      "arm": "hard",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.9901580363512039,
+          "final": 0.9386146664619446,
+          "holdout": 0.9429121017456055
+        },
+        "gaussian_sd1": {
+          "auc": 0.9902202025055885,
+          "final": 0.9391127228736877,
+          "holdout": 0.943559467792511
+        },
+        "gaussian_sd2": {
+          "auc": 0.9904129683971405,
+          "final": 0.9406545162200928,
+          "holdout": 0.9452523589134216
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": null,
+        "previous_scheduled_step": null,
+        "right_censored": true,
+        "budget_end": 125000
+      },
+      "training_seconds": 31966.961136959493
+    },
+    {
+      "task_index": 33,
+      "seed": 1011,
+      "arm": "curriculum",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.01896545276977122,
+          "final": 0.01013576053082943,
+          "holdout": 0.010195955634117126
+        },
+        "gaussian_sd1": {
+          "auc": 0.07494691405445338,
+          "final": 0.07616890966892242,
+          "holdout": 0.07689335197210312
+        },
+        "gaussian_sd2": {
+          "auc": 0.24833456613123417,
+          "final": 0.274076372385025,
+          "holdout": 0.2759595811367035
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 25000,
+        "previous_scheduled_step": 20000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33196.4856251739
+    },
+    {
+      "task_index": 34,
+      "seed": 1011,
+      "arm": "shuffled",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.01881749867461622,
+          "final": 0.008293254300951958,
+          "holdout": 0.008340543136000633
+        },
+        "gaussian_sd1": {
+          "auc": 0.07197887878865003,
+          "final": 0.07153315842151642,
+          "holdout": 0.07184148579835892
+        },
+        "gaussian_sd2": {
+          "auc": 0.22825724072754383,
+          "final": 0.25156494975090027,
+          "holdout": 0.2521149218082428
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 25000,
+        "previous_scheduled_step": 20000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 34562.69920663349
+    },
+    {
+      "task_index": 35,
+      "seed": 1011,
+      "arm": "hard",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.6358906887471676,
+          "final": 0.05276075005531311,
+          "holdout": 0.05294780060648918
+        },
+        "gaussian_sd1": {
+          "auc": 0.6461474625393748,
+          "final": 0.08604075759649277,
+          "holdout": 0.08625634759664536
+        },
+        "gaussian_sd2": {
+          "auc": 0.6761437185108662,
+          "final": 0.18406808376312256,
+          "holdout": 0.18421390652656555
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 100000,
+        "previous_scheduled_step": 75000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 31887.594467507675
+    },
+    {
+      "task_index": 36,
+      "seed": 1012,
+      "arm": "curriculum",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.01559974142583087,
+          "final": 0.006383637432008982,
+          "holdout": 0.006311339326202869
+        },
+        "gaussian_sd1": {
+          "auc": 0.08035823926329613,
+          "final": 0.0757719874382019,
+          "holdout": 0.07602719962596893
+        },
+        "gaussian_sd2": {
+          "auc": 0.27720794901251794,
+          "final": 0.2572149634361267,
+          "holdout": 0.2580752372741699
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 25000,
+        "previous_scheduled_step": 20000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33583.12387196347
+    },
+    {
+      "task_index": 37,
+      "seed": 1012,
+      "arm": "shuffled",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.019545787875540555,
+          "final": 0.007621568627655506,
+          "holdout": 0.007574961520731449
+        },
+        "gaussian_sd1": {
+          "auc": 0.07689442839473486,
+          "final": 0.07380018383264542,
+          "holdout": 0.07402978837490082
+        },
+        "gaussian_sd2": {
+          "auc": 0.25603261962532997,
+          "final": 0.29270681738853455,
+          "holdout": 0.29407429695129395
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 30000,
+        "previous_scheduled_step": 25000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 37375.43519612588
+    },
+    {
+      "task_index": 38,
+      "seed": 1012,
+      "arm": "hard",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.6024545992724597,
+          "final": 0.029514219611883163,
+          "holdout": 0.029238583520054817
+        },
+        "gaussian_sd1": {
+          "auc": 0.6152581434696913,
+          "final": 0.07246486842632294,
+          "holdout": 0.07226090133190155
+        },
+        "gaussian_sd2": {
+          "auc": 0.6539134494960308,
+          "final": 0.2065480351448059,
+          "holdout": 0.20622387528419495
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 100000,
+        "previous_scheduled_step": 75000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 31766.79319495894
+    },
+    {
+      "task_index": 39,
+      "seed": 1013,
+      "arm": "curriculum",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.017682411381974815,
+          "final": 0.00920141488313675,
+          "holdout": 0.009248580783605576
+        },
+        "gaussian_sd1": {
+          "auc": 0.0786809753626585,
+          "final": 0.08240802586078644,
+          "holdout": 0.08296571671962738
+        },
+        "gaussian_sd2": {
+          "auc": 0.273768137767911,
+          "final": 0.320069819688797,
+          "holdout": 0.3215917646884918
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 25000,
+        "previous_scheduled_step": 20000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33375.64371957444
+    },
+    {
+      "task_index": 40,
+      "seed": 1013,
+      "arm": "shuffled",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.024909000657498837,
+          "final": 0.0105549655854702,
+          "holdout": 0.010499107651412487
+        },
+        "gaussian_sd1": {
+          "auc": 0.07982321698218584,
+          "final": 0.07583004981279373,
+          "holdout": 0.0760050117969513
+        },
+        "gaussian_sd2": {
+          "auc": 0.2631522674113512,
+          "final": 0.3263881206512451,
+          "holdout": 0.32658326625823975
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 25000,
+        "previous_scheduled_step": 20000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33395.33563276753
+    },
+    {
+      "task_index": 41,
+      "seed": 1013,
+      "arm": "hard",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.9924806013703347,
+          "final": 0.9571877121925354,
+          "holdout": 0.9598066210746765
+        },
+        "gaussian_sd1": {
+          "auc": 0.9925387457013131,
+          "final": 0.9576520919799805,
+          "holdout": 0.9601728916168213
+        },
+        "gaussian_sd2": {
+          "auc": 0.992678913474083,
+          "final": 0.9587439894676208,
+          "holdout": 0.9612682461738586
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": null,
+        "previous_scheduled_step": null,
+        "right_censored": true,
+        "budget_end": 125000
+      },
+      "training_seconds": 33457.70932445116
+    },
+    {
+      "task_index": 42,
+      "seed": 1014,
+      "arm": "curriculum",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.021307469718158244,
+          "final": 0.008047915995121002,
+          "holdout": 0.008132421411573887
+        },
+        "gaussian_sd1": {
+          "auc": 0.07933190315961838,
+          "final": 0.08033855259418488,
+          "holdout": 0.08070814609527588
+        },
+        "gaussian_sd2": {
+          "auc": 0.26574212275445463,
+          "final": 0.29304930567741394,
+          "holdout": 0.29423776268959045
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 25000,
+        "previous_scheduled_step": 20000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33436.61085155979
+    },
+    {
+      "task_index": 43,
+      "seed": 1014,
+      "arm": "shuffled",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.01739056083606556,
+          "final": 0.007627466227859259,
+          "holdout": 0.0077094705775380135
+        },
+        "gaussian_sd1": {
+          "auc": 0.07568752616643906,
+          "final": 0.07776862382888794,
+          "holdout": 0.0784028023481369
+        },
+        "gaussian_sd2": {
+          "auc": 0.2609230224043131,
+          "final": 0.3342920243740082,
+          "holdout": 0.33720099925994873
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 20000,
+        "previous_scheduled_step": 10000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33488.52864317037
+    },
+    {
+      "task_index": 44,
+      "seed": 1014,
+      "arm": "hard",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.9960561275482178,
+          "final": 0.9857876300811768,
+          "holdout": 0.990386962890625
+        },
+        "gaussian_sd1": {
+          "auc": 0.9960744693875313,
+          "final": 0.9859347343444824,
+          "holdout": 0.9905380606651306
+        },
+        "gaussian_sd2": {
+          "auc": 0.9961139380931854,
+          "final": 0.9862506985664368,
+          "holdout": 0.9908148050308228
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": null,
+        "previous_scheduled_step": null,
+        "right_censored": true,
+        "budget_end": 125000
+      },
+      "training_seconds": 33297.58370824158
+    },
+    {
+      "task_index": 45,
+      "seed": 1015,
+      "arm": "curriculum",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.012690255523193628,
+          "final": 0.006165886763483286,
+          "holdout": 0.006160635966807604
+        },
+        "gaussian_sd1": {
+          "auc": 0.07409707587212325,
+          "final": 0.07692703604698181,
+          "holdout": 0.07733253389596939
+        },
+        "gaussian_sd2": {
+          "auc": 0.25316467247903346,
+          "final": 0.3025907576084137,
+          "holdout": 0.30475562810897827
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 25000,
+        "previous_scheduled_step": 20000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33258.90147888847
+    },
+    {
+      "task_index": 46,
+      "seed": 1015,
+      "arm": "shuffled",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.03675333566498011,
+          "final": 0.014578870497643948,
+          "holdout": 0.014633957296609879
+        },
+        "gaussian_sd1": {
+          "auc": 0.07953550387173891,
+          "final": 0.06709428876638412,
+          "holdout": 0.06741075962781906
+        },
+        "gaussian_sd2": {
+          "auc": 0.20459947921335697,
+          "final": 0.22043946385383606,
+          "holdout": 0.22086574137210846
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 30000,
+        "previous_scheduled_step": 25000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33161.91595018469
+    },
+    {
+      "task_index": 47,
+      "seed": 1015,
+      "arm": "hard",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.9957450166344642,
+          "final": 0.9838194251060486,
+          "holdout": 0.9873234629631042
+        },
+        "gaussian_sd1": {
+          "auc": 0.9957618907094001,
+          "final": 0.983945369720459,
+          "holdout": 0.9874387383460999
+        },
+        "gaussian_sd2": {
+          "auc": 0.9958105087280273,
+          "final": 0.9842731952667236,
+          "holdout": 0.9877867698669434
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": null,
+        "previous_scheduled_step": null,
+        "right_censored": true,
+        "budget_end": 125000
+      },
+      "training_seconds": 33406.50703733973
+    },
+    {
+      "task_index": 48,
+      "seed": 1016,
+      "arm": "curriculum",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.012171088997274638,
+          "final": 0.005796593613922596,
+          "holdout": 0.005804171320050955
+        },
+        "gaussian_sd1": {
+          "auc": 0.07676208280026912,
+          "final": 0.08226732909679413,
+          "holdout": 0.0823117345571518
+        },
+        "gaussian_sd2": {
+          "auc": 0.2776320192962885,
+          "final": 0.3489111363887787,
+          "holdout": 0.34775495529174805
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 25000,
+        "previous_scheduled_step": 20000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 37400.30664153583
+    },
+    {
+      "task_index": 49,
+      "seed": 1016,
+      "arm": "shuffled",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.02105151677969843,
+          "final": 0.010794625617563725,
+          "holdout": 0.01075874362140894
+        },
+        "gaussian_sd1": {
+          "auc": 0.07576407175511121,
+          "final": 0.07962208986282349,
+          "holdout": 0.07986137270927429
+        },
+        "gaussian_sd2": {
+          "auc": 0.27269443720579145,
+          "final": 0.3663661479949951,
+          "holdout": 0.36675286293029785
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 20000,
+        "previous_scheduled_step": 10000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 34269.95767015964
+    },
+    {
+      "task_index": 50,
+      "seed": 1016,
+      "arm": "hard",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.9975214600563049,
+          "final": 0.9975190162658691,
+          "holdout": 1.00161874294281
+        },
+        "gaussian_sd1": {
+          "auc": 0.9975215569138527,
+          "final": 0.9975189566612244,
+          "holdout": 1.0016188621520996
+        },
+        "gaussian_sd2": {
+          "auc": 0.9975217342376709,
+          "final": 0.9975192546844482,
+          "holdout": 1.0016191005706787
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": null,
+        "previous_scheduled_step": null,
+        "right_censored": true,
+        "budget_end": 125000
+      },
+      "training_seconds": 31952.835326604545
+    },
+    {
+      "task_index": 51,
+      "seed": 1017,
+      "arm": "curriculum",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.0232890322804451,
+          "final": 0.008442068472504616,
+          "holdout": 0.008449165150523186
+        },
+        "gaussian_sd1": {
+          "auc": 0.08241014368832111,
+          "final": 0.08433762937784195,
+          "holdout": 0.08465566486120224
+        },
+        "gaussian_sd2": {
+          "auc": 0.2700988706201315,
+          "final": 0.3083712160587311,
+          "holdout": 0.31019866466522217
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 25000,
+        "previous_scheduled_step": 20000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33407.38331390917
+    },
+    {
+      "task_index": 52,
+      "seed": 1017,
+      "arm": "shuffled",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.3792430153582245,
+          "final": 0.02463367022573948,
+          "holdout": 0.024546675384044647
+        },
+        "gaussian_sd1": {
+          "auc": 0.400720844976604,
+          "final": 0.06888370960950851,
+          "holdout": 0.06908087432384491
+        },
+        "gaussian_sd2": {
+          "auc": 0.46399619057774544,
+          "final": 0.19871783256530762,
+          "holdout": 0.199096217751503
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 75000,
+        "previous_scheduled_step": 50000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 37287.69589038007
+    },
+    {
+      "task_index": 53,
+      "seed": 1017,
+      "arm": "hard",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.8808728024363518,
+          "final": 0.17857640981674194,
+          "holdout": 0.1776246875524521
+        },
+        "gaussian_sd1": {
+          "auc": 0.8830644253641367,
+          "final": 0.19452060759067535,
+          "holdout": 0.19386261701583862
+        },
+        "gaussian_sd2": {
+          "auc": 0.8894658531993628,
+          "final": 0.24200104176998138,
+          "holdout": 0.24156862497329712
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 125000,
+        "previous_scheduled_step": 100000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 31759.690267378464
+    },
+    {
+      "task_index": 54,
+      "seed": 1018,
+      "arm": "curriculum",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.015471397829242051,
+          "final": 0.007537223398685455,
+          "holdout": 0.007465161383152008
+        },
+        "gaussian_sd1": {
+          "auc": 0.07778942808508874,
+          "final": 0.07938592880964279,
+          "holdout": 0.07973933964967728
+        },
+        "gaussian_sd2": {
+          "auc": 0.2575848337262869,
+          "final": 0.2955482602119446,
+          "holdout": 0.2977130115032196
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 25000,
+        "previous_scheduled_step": 20000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33302.45973919146
+    },
+    {
+      "task_index": 55,
+      "seed": 1018,
+      "arm": "shuffled",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.02590265031903982,
+          "final": 0.012076064944267273,
+          "holdout": 0.012032735161483288
+        },
+        "gaussian_sd1": {
+          "auc": 0.07390061039477587,
+          "final": 0.06725703924894333,
+          "holdout": 0.06767132878303528
+        },
+        "gaussian_sd2": {
+          "auc": 0.2113884210586548,
+          "final": 0.22359423339366913,
+          "holdout": 0.22438737750053406
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 20000,
+        "previous_scheduled_step": 10000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33351.14673429355
+    },
+    {
+      "task_index": 56,
+      "seed": 1018,
+      "arm": "hard",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.14897705782204868,
+          "final": 0.021265260875225067,
+          "holdout": 0.021327121183276176
+        },
+        "gaussian_sd1": {
+          "auc": 0.18083144649863242,
+          "final": 0.06722220033407211,
+          "holdout": 0.06770838797092438
+        },
+        "gaussian_sd2": {
+          "auc": 0.2737858217209578,
+          "final": 0.20088207721710205,
+          "holdout": 0.20146481692790985
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 40000,
+        "previous_scheduled_step": 30000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33435.96762231365
+    },
+    {
+      "task_index": 57,
+      "seed": 1019,
+      "arm": "curriculum",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.013793199427891523,
+          "final": 0.007048486266285181,
+          "holdout": 0.0069612800143659115
+        },
+        "gaussian_sd1": {
+          "auc": 0.07611674387007952,
+          "final": 0.08002874255180359,
+          "holdout": 0.07989972829818726
+        },
+        "gaussian_sd2": {
+          "auc": 0.2752694349735975,
+          "final": 0.3032895028591156,
+          "holdout": 0.30303245782852173
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 25000,
+        "previous_scheduled_step": 20000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33361.29321404733
+    },
+    {
+      "task_index": 58,
+      "seed": 1019,
+      "arm": "shuffled",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.03681102618575096,
+          "final": 0.011445160955190659,
+          "holdout": 0.01141998078674078
+        },
+        "gaussian_sd1": {
+          "auc": 0.08242002371698617,
+          "final": 0.06531184166669846,
+          "holdout": 0.06566619873046875
+        },
+        "gaussian_sd2": {
+          "auc": 0.21116113811731338,
+          "final": 0.21239043772220612,
+          "holdout": 0.21296553313732147
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 30000,
+        "previous_scheduled_step": 25000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33411.74411014654
+    },
+    {
+      "task_index": 59,
+      "seed": 1019,
+      "arm": "hard",
+      "setting": "lr_low",
+      "outcomes": {
+        "gaussian_sd0": {
+          "auc": 0.22914653713814914,
+          "final": 0.0163519736379385,
+          "holdout": 0.01639031618833542
+        },
+        "gaussian_sd1": {
+          "auc": 0.26043294500559566,
+          "final": 0.0675118938088417,
+          "holdout": 0.06787334382534027
+        },
+        "gaussian_sd2": {
+          "auc": 0.3605404384434223,
+          "final": 0.23721492290496826,
+          "holdout": 0.23811183869838715
+        }
+      },
+      "threshold_nmse_0_25": {
+        "first_scheduled_step": 50000,
+        "previous_scheduled_step": 40000,
+        "right_censored": false,
+        "budget_end": 125000
+      },
+      "training_seconds": 33215.53402877413
+    }
+  ],
+  "primary_curriculum_vs_tuned_hard": {
+    "seeds": [
+      1000,
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010,
+      1011,
+      1012,
+      1013,
+      1014,
+      1015,
+      1016,
+      1017,
+      1018,
+      1019
+    ],
+    "seed_differences": [
+      -0.9797138982685283,
+      -0.6059875400387682,
+      -0.1947793095954694,
+      -0.05752145473379641,
+      -0.39840661529451604,
+      -0.9820934218005277,
+      -0.9765362448990345,
+      -0.8537254463997669,
+      -0.9762891109799966,
+      -0.9788941376376897,
+      -0.9667982556857169,
+      -0.6169252359773963,
+      -0.5868548578466288,
+      -0.9747981899883599,
+      -0.9747486578300596,
+      -0.9830547611112707,
+      -0.9853503710590303,
+      -0.8575837701559067,
+      -0.1335056599928066,
+      -0.2153533377102576
+    ],
+    "mean": -0.7149460138502763,
+    "median": -0.9121910129208117,
+    "sign_test": {
+      "wins": 20,
+      "losses": 0,
+      "ties": 0,
+      "effective_n": 20,
+      "two_sided_p": 1.9073486328125e-06,
+      "null_win_probability": 0.5,
+      "tie_tolerance": 1e-08
+    },
+    "descriptive_bootstrap_mean_ci95": [
+      -0.8488870746369648,
+      -0.5622010039619201
+    ],
+    "bootstrap_repetitions": 10000,
+    "bootstrap_seed": 845731,
+    "inference_note": "Sign test concerns seed win probability; bootstrap mean interval is descriptive, not the primary test."
+  },
+  "primary_criteria": {
+    "two_sided_significant": true,
+    "practical_mean_reduction": true,
+    "curriculum_learned": true
+  },
+  "primary_supported": true,
+  "ordering_vs_matched_shuffled": {
+    "seeds": [
+      1000,
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010,
+      1011,
+      1012,
+      1013,
+      1014,
+      1015,
+      1016,
+      1017,
+      1018,
+      1019
+    ],
+    "seed_differences": [
+      -0.0050383039284497486,
+      0.0011880574631504687,
+      -0.018810150248464195,
+      -0.007728523784317078,
+      -0.004398310440592468,
+      -0.012568017991725355,
+      -0.014207298308610915,
+      -0.020341476832982156,
+      -0.0015370343346148702,
+      -0.004924995289184154,
+      0.0038280859123915427,
+      0.0001479540951550007,
+      -0.003946046449709684,
+      -0.007226589275524022,
+      0.003916908882092684,
+      -0.024063080141786482,
+      -0.008880427782423792,
+      -0.3559539830777794,
+      -0.01043125248979777,
+      -0.023017826757859437
+    ],
+    "mean": -0.025699615539051594,
+    "median": -0.00747755652992055,
+    "sign_test": {
+      "wins": 16,
+      "losses": 4,
+      "ties": 0,
+      "effective_n": 20,
+      "two_sided_p": 0.01181793212890625,
+      "null_win_probability": 0.5,
+      "tie_tolerance": 1e-08
+    },
+    "descriptive_bootstrap_mean_ci95": [
+      -0.062199251899059164,
+      -0.005555414944348741
+    ],
+    "bootstrap_repetitions": 10000,
+    "bootstrap_seed": 845731,
+    "inference_note": "Sign test concerns seed win probability; bootstrap mean interval is descriptive, not the primary test."
+  },
+  "ordering_criteria": {
+    "two_sided_significant": true,
+    "practical_mean_reduction": true,
+    "curriculum_learned": true
+  },
+  "ordering_test_eligible": true,
+  "ordering_supported": true,
+  "testing_rule": "Fixed sequence: test broad curriculum-vs-tuned-hard claim first; only if its full support gate passes may the ordering contrast support a confirmatory claim. Otherwise ordering p-value is descriptive.",
+  "arm_means": {
+    "curriculum": {
+      "gaussian_sd0": {
+        "auc": 0.017514676002901977,
+        "final": 0.007726721256040037,
+        "holdout": 0.007747425464913249
+      },
+      "gaussian_sd1": {
+        "auc": 0.07893469736911357,
+        "final": 0.08043591305613518,
+        "holdout": 0.08079244121909142
+      },
+      "gaussian_sd2": {
+        "auc": 0.2786385209485889,
+        "final": 0.3252910926938057,
+        "holdout": 0.32635878771543503
+      }
+    },
+    "shuffled": {
+      "gaussian_sd0": {
+        "auc": 0.043214291541953574,
+        "final": 0.012078687944449485,
+        "holdout": 0.012093452922999858
+      },
+      "gaussian_sd1": {
+        "auc": 0.0932888366933912,
+        "final": 0.07244669795036315,
+        "holdout": 0.0727812934666872
+      },
+      "gaussian_sd2": {
+        "auc": 0.24724844509735702,
+        "final": 0.26421094983816146,
+        "holdout": 0.26519626528024676
+      }
+    },
+    "hard": {
+      "gaussian_sd0": {
+        "auc": 0.7324606898531784,
+        "final": 0.5171458876226097,
+        "holdout": 0.5190541560295969
+      },
+      "gaussian_sd1": {
+        "auc": 0.7421819078270346,
+        "final": 0.5377822082489729,
+        "holdout": 0.5397774174809455
+      },
+      "gaussian_sd2": {
+        "auc": 0.7722687930427492,
+        "final": 0.6020898871123791,
+        "holdout": 0.6041115276515484
+      }
+    }
+  },
+  "learned_at_final": {
+    "curriculum": 20,
+    "shuffled": 20,
+    "hard": 10
+  },
+  "claim": "Curriculum helps acquisition versus tuned hard-only in this fixed setup; chronology also helps beyond matched exposure."
+}

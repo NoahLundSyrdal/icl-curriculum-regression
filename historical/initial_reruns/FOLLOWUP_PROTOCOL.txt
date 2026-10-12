@@ -1,0 +1,83 @@
+IDUN H1 follow-up and exploratory checkpoint diagnostics
+Fixed before submission: 2026-10-06. Seeds 0,1,2,3,4.
+
+Purpose
+The completed original curriculum/shuffled comparison (H2) and its continuation
+interaction remain unchanged. This follow-up tests noise exposure versus clean
+training (H1) and explores prediction behavior. It does not establish an internal
+algorithm or guarantee a publishable positive result.
+
+Clean-only training
+Train five models from scratch for 20,000 updates, retaining immutable model,
+AdamW, schedule and RNG snapshots at 10,000 and 20,000 updates. The unchanged
+run_experiment.py trainer, full BF16 configuration, initialization seeds,
+CPU task/input/corruption generators and microbatch draw order are reused.
+Only context corruption changes: sigma=0 throughout. Architecture, optimizer,
+constant learning rate, clipping, effective batch 2048, microbatch 512, clean
+all-prefix target loss, dimension 20 and 41 prediction positions are identical.
+Noise draws are still consumed, preserving paired episode streams. No early
+stopping, schedule search or extra curriculum variants. Resume preserves AdamW
+and training RNG and refuses changed protocol, source or code.
+
+Primary H1 endpoint
+At 20,000 total updates, compare existing shuffled+mixed models to clean-only
+models, per seed: D = noisy NMSE - clean-only NMSE. Negative D favors noise
+exposure. Gaussian context noise SD=2, clean-target MSE divided by dimension 20,
+averaged over k=20..40, on the unchanged shared 4,096-episode bank seed 81973.
+Report all five paired differences, mean difference and two-sided 95% Student
+t interval (df=4). This is a new comparison using completed noisy arms; it is
+not an independent replication of those arms. Uncertainty is over training
+seeds, conditional on this test bank. No equivalence or superiority claim if
+the interval includes zero. Secondary: corresponding 10,000-step shuffled vs
+clean-only difference, other noise conditions, k curves, and clean-performance
+cost. All secondary intervals are descriptive, unadjusted for multiplicity.
+The original shuffled schedule and its separately shuffled mixed tail have
+the same [0,1] SD multiset in each 10k phase. These are the stationary noisy
+comparisons; they are not identical to one new shuffle spanning 20k updates.
+
+Exploratory checkpoint diagnostics
+Inspect all 10 original 10k models, 20 final 20k continuation models, and the
+10 new clean snapshots. Do not infer availability of intermediate weights.
+Use fresh Gaussian episode banks: calibration seed 921731 (512 episodes),
+held-out seed 921733 (4,096 episodes), distinct from bank 81973. Conditions
+SD=0,0.5,1,2; k=20..40. All models share the same banks.
+Ridge prior w~N(0,I), convention beta=(X'X+lambda I)^(-1)X'y.
+Fixed references: minimum-norm OLS, lambda=1/3,1,4; known-SD Bayes ridge uses
+lambda=sigma^2 and is explicitly privileged. It is not an information-matched
+training baseline. No comparison assumes the model knows the test SD.
+Ridge-fit grid: zero, 0.25,1/3,1,4, plus 41 log-spaced positive penalties
+from 1e-4 to 100. Select one penalty per model and condition minimizing
+prediction discrepancy across calibration episodes and k=20..40. Selection
+matches transformer predictions, not query targets. Held-out target errors
+and prediction discrepancies are then reported per k and averaged over late
+contexts. Selection is exploratory, not a fitted mechanism proof.
+An empirical Bayes reference selects a positive grid penalty separately for
+each context by maximizing the Gaussian marginal likelihood of preceding
+context labels under the known task prior. It sees preceding X and y only,
+never the query target or true test SD. Its grid imposes a numerical floor
+1e-4 and ceiling 100; assumptions and limitations must accompany reporting.
+OLS at k=dimension with noisy labels has heavy-tailed/infinite-mean risk in
+ideal Gaussian settings; report finite-bank values without implying stability.
+
+Symmetry checks
+On the first 512 held-out episodes, compare original predictions to one fixed
+orthogonal rotation of all input vectors (QR seed 921743, labels unchanged),
+and jointly permute preceding input-label pairs independently per episode
+and k (seed 921739+k), retaining the same query vector. Query label is zero
+and inaccessible. Report prediction changes and task errors. Ridge references
+are mathematically invariant; meaningful neural sensitivity would undermine
+a literal ridge description. Approximate agreement alone is not mechanistic
+proof. No exhaustive transformation search or cherry-picking.
+
+Validation and reporting
+Before full GPU runs, test causal references against direct linear algebra,
+known-SD Bayes reference, permutation/rotation invariance, context-only marginal
+likelihood, reproducible disjoint calibration/test banks, unchanged trainer
+agreement, paired episode streams, interruption/resume and retained snapshots.
+Use separate Slurm jobs with afterok dependencies, immutable source hashes and
+recorded submission manifest. GPU production runs use the verified prior CUDA
+environment, not login-node training. Automatic final summary requires all
+controls and all 40 checkpoint diagnostic records. Missing/failed work cannot
+be silently dropped. Report primary/secondary distinctions and all seeds.
+Keep conclusions about H1, H2, finite-budget effects and ridge-like predictions
+separate. No additional compute or seed extension chosen to chase significance.

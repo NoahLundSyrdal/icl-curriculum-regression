@@ -1,0 +1,44 @@
+Curriculum robustness and component diagnostics — fixed before new training
+Date: 7 October 2026. IDUN root /cluster/work/noahls/icl-rerun-20261005.
+This is a diagnostic follow-up to the completed dimension/context study. The previous primary endpoint and results remain unchanged. No outcomes from this new cohort were available when this plan was fixed. Prior study and audit outcomes informed these questions; this is not an independently preregistered discovery study.
+
+Questions
+1. Can reasonable changes to learning rate, forward/backward precision or loss scaling rescue shuffled/hard-only models within a diagnostic training budget, and do the same settings change curriculum learning?
+2. With target variance held constant, which dimension/context schedules help, and does chronological ordering matter when exactly the same batches are shuffled?
+These are exploratory diagnostics, not a final publication significance test. Two fresh paired training seeds (300 and 301) per condition are too few for a strong claim about training reliability. All outcomes, including failures, will be reported. Future claims about tuned baselines require a separate longer study with additional fresh seeds.
+
+Shared setup
+GPT-2 regression Transformer, 12 layers, embedding 256, 8 heads, zero dropout, eager causal attention, no cache. Physical shape is always 101 input positions / 202 interleaved tokens / 50 coordinates. AdamW, weight decay 0.01, gradient clipping 1, effective batch 256, microbatch 128. Parameter initialization matches within seed across all conditions, with model weights stored in FP32. BF16 refers to autocast forward/backward; the loss is computed in FP32. FP32 training disables TF32. Data are fresh Gaussian tasks/inputs, with independently seeded stateless CPU task/input RNG streams from the preceding verified trainer. Each seed and canonical batch ID determines the exact realized batch. All arms train on clean labels. Evaluation is always full 50D on clean query targets, regardless of training difficulty.
+
+Canonical schedule
+Batch IDs 0..999 use scheduled dimension 5. IDs 1000..24999 use 5+floor(45*(ID-1000)/23999). IDs >=25000 use 50. An ordered arm visits ascending IDs. Each shuffled counterpart applies the same seeded permutation to all first 25,000 IDs and then visits ascending IDs from 25,000 onward. Thus each ordered/shuffled pair has identical realized inputs, labels and eligible loss-position/scale multisets; only chronology differs. Hard-only visits ascending IDs at full difficulty throughout.
+
+Optimizer screen: 30 models
+Seeds 300,301 x three arms (coupled curriculum, coupled shuffled, hard-only) x five fixed settings:
+- Baseline: learning rate 0.0004, BF16, raw clean all-eligible-prefix MSE.
+- Lower learning rate: 0.0001, BF16, raw MSE.
+- Higher learning rate: 0.001, BF16, raw MSE.
+- Precision: learning rate 0.0004, FP32, raw MSE.
+- Loss scaling: learning rate 0.0004, BF16, raw MSE divided by active dimension before backward/gradient clipping.
+All settings are applied equally to each of the three arms. All screen models run exactly 50,000 optimizer updates, sharing the last 25,000 full-difficulty batches. Coupled curriculum changes active dimension and eligible prefix positions (2d+1) together. Targets are unscaled Gaussian dot products, as in the completed long study. Loss scaling is an optimizer/objective diagnostic; it does not change context labels or data. Single-factor settings do not exhaust all optimizer choices or their interactions.
+
+Screen ranking is a candidate recommendation only: for each arm, rank settings by mean across the two training seeds of clean late-context NMSE trapezoidally averaged over 25,000,30,000,40,000,50,000 updates. Break exact ties by the fixed setting order above. Report every seed and setting, including the baseline and the ranking. Selection on these outcomes does not validate a tuned generalization claim. Endpoint error, observed threshold crossings and training time are secondary. A stalled screen run is not evidence that it would still stall at 125,000 updates; screen results will not be compared to the old long endpoint as equal-budget evidence. A failed run is retained/reported, never silently replaced or ranked as a successful run.
+
+Variance-controlled component study: 14 models
+Seeds 300,301 x seven treatments, baseline optimizer, BF16, raw MSE, exactly 125,000 updates:
+- Both schedules, ordered and shuffled (two treatments).
+- Dimension only, ordered and shuffled: active dimension follows d; all 101 prefix prediction positions remain eligible.
+- Context only, ordered and shuffled: full 50D inputs throughout; eligible prefix follows 2d+1.
+- Hard-only: full 50D / all 101 eligible positions throughout.
+For every batch, targets and context labels are y=sqrt(50/active_dimension)*(x dot w), with masked inputs restricted to active dimensions and Gaussian w. Expected marginal target variance is therefore 50 in every treatment and at every stage. This changes the low-dimensional regression task scaling; it is a deliberate control, not the identical raw-target curriculum from the previous study. Inputs still reflect the intended dimension treatment. Physical tensor shapes are fixed and causal attention prevents future positions affecting eligible prefix predictions. All seven treatments have identical full-difficulty batches and order for the final 100,000 updates.
+
+Component outcomes: descriptive paired ordered-minus-shuffled contrasts for both, dimension-only and context-only. Use clean late-context error trapezoidally averaged over 25,000,30,000,40,000,50,000,75,000,100,000,125,000 updates as the main diagnostic measure, with final error as secondary. Report paired differences and means separately for both seeds. Also report the ordered 2x2 factorial dimension and context effects and interaction, including the hard-only cell; these describe effects of enabling these specific schedules at constant target variance, not proof of an internal mechanism. No p<0.05 gate, no two-seed t-confidence claims, no pooling with the earlier five seeds. Comparisons between raw and constant-scale curricula are only equal-budget comparisons through 50,000 updates, with the same seed, initialization and raw task draws; long endpoints have different budgets.
+
+Evaluation and preservation
+Fresh shared primary bank seed 315831, 4,096 episodes, SD0/1/2 Gaussian context-label corruption with clean query targets. NMSE divides squared error by the full target dimension 50; the main late-context region is k50..100 inclusive. Primary outcomes use clean SD0; noise conditions are descriptive and cannot replace the main contrast. Evaluations at 0,1,000,5,000,10,000,20,000,25,000,30,000,40,000,50,000 updates, plus 75,000,100,000,125,000 for component models. A separate final holdout bank (seed 315833, 4,096 episodes) evaluates the unchanged final weights. Fresh episodes do not add independent training seeds. Threshold NMSE <=0.25 is reported only at scheduled evaluations, without interpolation.
+Rolling resumable model/Adam/RNG state every 1,000 updates, retained frozen weights at every scheduled evaluation. Restart must preserve source, protocol, task list and all config/treatment identities and finish the same fixed budget. CPU scientific checks and canonical GPU smoke must pass before the array runs. No automatic replacement, continuation, hyperparameter expansion or confirmatory study is part of this submission. Source hashes, task list, Slurm IDs and summaries are preserved. Automatic summary refuses incomplete/incompatible records and checks checkpoints, optimizer steps, full task schedules, initialization pairing and evaluation identities.
+
+Execution
+44 training jobs in one Slurm array, at most 15 GPUs simultaneously. Account share-ie-idi, QoS high, GPUQ A100 80GB. Preflight -> GPU smoke -> array -> summary uses afterok dependencies. The GPU smoke includes production shapes, finite BF16/FP32/objective updates, identical initialization, and bitwise resumed versus uninterrupted training across representative treatments. Expected runtime depends on scheduling and measured throughput; it is not guaranteed to finish overnight. The follow-up should guide a subsequent fresh-seed confirmation rather than serve as definitive publication evidence by itself.
+
+Prior work motivating the design: Garg et al., What Can Transformers Learn In-Context?, Section 6 and Appendix B.5, https://arxiv.org/html/2208.01066 . High-dimensional curriculum gains and non-curriculum lulls are already known. The fixed realized-batch comparisons, shared terminal training and target-variance control address narrower questions; novelty is not assumed.

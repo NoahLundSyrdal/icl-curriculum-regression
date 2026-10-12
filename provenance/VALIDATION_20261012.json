@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-12",
+  "original_scientific_unit_tests": {
+    "status": "passed",
+    "test_count": 26,
+    "seconds": 9.212,
+    "environment": "existing original IDUN venv, CPU execution",
+    "command": "python -m unittest -v test_confirmation test_robustness",
+    "output": "provenance/FROZEN_UNIT_TESTS_20261012.txt"
+  },
+  "new_gpu_training_executed": false,
+  "review_plot_runtime": {
+    "numpy": "2.5.3",
+    "matplotlib": "3.11.2"
+  },
+  "ridge_reference_status": "Independent review scripts excluded; no fitted ridge estimates or unverified baseline overlays used.",
+  "repository_archive_verification": {
+    "status": "passed",
+    "archive_sha256": "db5405e99a80bbe89c084ecf97a592a9b9cba27767ba7c5e0756f6e2994820a3",
+    "frozen_source_files": 21,
+    "captured_source_files": 30,
+    "historical_source_files": 59,
+    "models": {
+      "development": 36,
+      "confirmation": 60
+    },
+    "evaluation_records": {
+      "development": 360,
+      "confirmation": 780
+    },
+    "paired_initializations_verified": true,
+    "raw_development_selection_reproduced": true,
+    "binary_checkpoint_audit_repeated": false,
+    "note": "The original checkpoint audit is archived; checkpoints/schedules are not shipped or re-audited here."
+  },
+  "review_statistics_reproduced": true,
+  "review_figure_png_reproduced_byte_for_byte": true,
+  "python_syntax_checked": true,
+  "staging_modes_checked": true,
+  "nonempty_run_destination_protected": true
+}

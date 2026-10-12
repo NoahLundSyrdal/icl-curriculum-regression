@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store
+.env
+.env.*
+*.pt
+*.pth
+*.ckpt
+/runs/
+/artifacts/
+/regenerated_figures/
+/experiments/**/results/
+/experiments/**/logs/
+/historical/**/results/
+/historical/**/logs/

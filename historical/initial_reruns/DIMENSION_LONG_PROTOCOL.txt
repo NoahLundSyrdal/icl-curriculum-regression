@@ -1,0 +1,41 @@
+Fixed long-budget dimension/context curriculum study v1
+Frozen before submission, 6 October 2026. All quantities below fixed before new outcomes.
+
+Motivation and scope
+The two-seed 6,000-update pilot showed a small favorable ordering signal but final NMSE remained about 0.937, close to the zero-predictor population baseline of 1. This follow-up changes both training duration and curriculum pace, so it is a fresh-seed study of the specified longer schedule, not a continuation or exact replication of that pilot. Pilot seeds 100/101 and their outcomes do not enter this study's uncertainty estimates. No guarantee of positive results or publication is implied.
+
+Cohort and budget
+Five fresh paired training seeds: 200, 201, 202, 203, 204.
+Three arms per seed: curriculum, shuffled, hard. Fifteen independent models total.
+Each model trains exactly 125,000 optimizer updates, effective batch 256 (microbatch 128), totaling 32,000,000 training episodes. Each update physically processes 101 x positions and 101 label tokens in all arms, including low-difficulty batches; dense computation shapes and optimizer-update budgets match. Earlier low-dimensional batches have fewer eligible loss positions. Curriculum versus shuffled has exactly the same realized batches, loss weights and eligible-position multiset; hard-only differs in task exposure by design. Report measured training time as well as updates; identical shape does not promise bitwise equal wall time.
+
+Architecture and optimizer
+Full target dimension 50, 101 x positions, model position capacity 101.
+GPT-2 causal Transformer: 12 layers, embedding 256, 8 heads, dropout zero.
+AdamW constant learning rate 0.0004, weight decay 0.01, gradient clipping norm 1.0.
+BF16 forward/backward with FP32 raw clean-target MSE; no learning-rate tuning.
+Training minimizes the mean squared error at eligible x positions, including k=0. All training context labels are clean in every arm. This studies coupled dimension/context curriculum; it does not isolate dimension versus context length and is not noise-ordering training.
+
+Exact exposure matching and curriculum
+Canonical batch IDs are 0 through 124,999. For IDs 0..999, active dimension d=5 and eligible x positions=11. For IDs 1000..24,999, d=5+floor(45*(ID-1000)/23999), eligible positions=2*d+1. For IDs 25,000..124,999, d=50, eligible positions=101. All 101 x positions are physically present on every update; ineligible suffix predictions contribute no loss. Causality prevents future tokens from affecting eligible predictions.
+Curriculum visits canonical IDs in ascending order. Shuffled uses the seed-specific permutation of IDs 0..24,999, followed by identical ordered IDs 25,000..124,999. Hard visits all IDs in ascending order, always d=50/101 eligible positions. Thus all arms share the same final 100,000 full-difficulty batches in order.
+Weights and inputs are independent standard Gaussian draws generated statelessly per training seed, canonical batch ID and stream, with SHA256 payload dimension_batch_v1|seed|ID|stream. Inputs beyond d are zeroed for curriculum/shuffled, and clean targets are recomputed from those inputs and the full Gaussian weights. Training batches are generated before slicing into microbatches. All arms within a seed share initial parameter tensors; source and protocol hashes are recorded in run manifests.
+
+Evaluations and saved weights
+Evaluate at updates 0, 1,000, 5,000, 10,000, 20,000, 25,000, 30,000, 40,000, 50,000, 75,000, 100,000, 125,000.
+All evaluations use full-50D inputs, 101 x positions, clean query targets and the same fixed 4096-episode primary bank, seed 273819, shared across every seed/arm/checkpoint. Gaussian context noise SD 0, 1, 2; all are secondary except SD0. NMSE is squared prediction error divided by 50. Late-context error averages k=50..100 inclusive. The measured zero-predictor error on each bank is also saved; its population expectation is 1.
+A separate final holdout bank, seed 273821, 4096 fresh episodes, evaluates the same final weights in all three conditions. This is a sampling robustness check, not additional independent training replication; it does not replace the primary endpoint.
+Retain frozen model/optimizer/RNG snapshots at every scheduled evaluation, including initialization and final weights. Rolling checkpoints every 1,000 updates permit restart. Preserve CPU, Python and CUDA RNG states and optimizer progress; evaluation must not change training. A restart must keep all sources, schedule, protocol and settings unchanged. Signals save at the next complete optimizer update. Operational restarts may replace failed array tasks without increasing the training budget or choosing outcomes; document replacement jobs. Unexpected failures leave the cohort incomplete and prevent an overall conclusion. There is no early stopping for results.
+
+Primary analysis
+One prespecified primary contrast: curriculum minus shuffled in trapezoidal mean clean (SD0) late-context NMSE over updates 25,000..125,000, using all scheduled points in this interval. Lower is better. Nonuniform evaluation spacing is weighted by elapsed optimizer updates. Calculate one paired difference per training seed, then their mean and a two-sided 95% paired t interval with 4 degrees of freedom (critical value 2.7764451051977987). The unit of replication is the training seed, not evaluation episodes or checkpoints. Report all five differences and wins, with small-n and approximate-normality limitations. Report a conclusion only when every arm, all 180 scheduled primary evaluation records, all 15 final holdout records and all 180 frozen checkpoints pass verification.
+A clear, useful ordering benefit under this design requires all three prespecified conditions: primary paired interval upper limit <0; mean primary curriculum-minus-shuffled <= -0.02 NMSE; and mean final curriculum clean NMSE <=0.25. The last condition prevents calling a difference between barely learning models a successful regression result. Failure of a criterion is reported directly; it is not a proof of equivalence or absence of curriculum effects elsewhere. Thresholds are operational study criteria, not universally established standards.
+
+Secondary analyses
+Report curriculum-minus-hard primary-window contrast; final clean/noisy errors; complete per-prefix and per-update curves; separate final holdout results; measured training time; first scheduled clean late-context error <=0.25 per arm/seed (no interpolation, null if not attained). These are descriptive and cannot substitute for a failed primary comparison. If final performance is similar but the primary favors curriculum, the supported claim concerns learning efficiency, not improved asymptotic accuracy. Noise robustness is secondary to the clean-target learning question. A coupled curriculum result does not establish which curriculum component caused it.
+
+Validity checks before training
+Run inherited scientific checks for batch matching, causal eligibility, paired initialization, evaluation RNG isolation, bitwise CPU restart in all arms, boundary snapshot recovery, changed-identity rejection and trapezoidal integration. Verify exact production schedules and representative full-size batches across all five seeds. Run canonical BF16 GPU shapes for all arms and compare uninterrupted versus split/resumed four-update model, optimizer and CPU/CUDA/Python RNG states bitwise. Separate smoke directories and outcomes from study data. Training depends on successful CPU preflight and GPU smoke; final summary depends on all successful array tasks. Submit once and persist every returned job ID immediately to avoid duplicate runs.
+
+Execution and preservation
+IDUN account share-ie-idi, QoS high, A100 80GB, up to fifteen parallel GPU tasks, 4 CPUs/24GB RAM each, 12-hour wall limit. Pilot timing suggests about 9.5 hours training per model; queue waits and I/O add uncertainty. No automatic parameter search, extra seeds, budget extension or repeat study. The submitter records all source hashes and result directories. Old pilot sources, protocol, results and checkpoints remain separate.

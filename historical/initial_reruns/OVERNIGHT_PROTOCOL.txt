@@ -1,0 +1,96 @@
+OVERNIGHT CONTINUATION DIAGNOSTIC: FIXED PROTOCOL
+Prepared before any continuation results on 5 October 2026.
+
+Motivation
+The completed original five-pair comparison is inconclusive: curriculum
+minus shuffled NMSE -0.007729, 95% paired interval [-0.034687, +0.019228].
+Its mean advantage was 2.45%, with three of five seeds favoring curriculum.
+The clean/noisy tradeoff and context-length pattern motivate investigating
+recent training conditions. This continuation is a separate exploratory
+experiment; it does not replace or retest the original prespecified result.
+
+Design and budget
+Original history: curriculum or shuffled; original training seeds 0..4.
+Continuation tail: high (constant context Gaussian noise SD1) or mixed
+(a fixed seed-specific shuffle of evenly spaced SD0..1 levels).
+All 5 x 2 x 2 = 20 branches continue for exactly 10,000 optimizer steps.
+Restore model, AdamW state and episode/torch/CUDA RNG states from each
+completed source checkpoint. Preserve the original Config, 10,000-step
+schedule, source checkpoint bytes and original results. Continuation
+outputs are separate under results/continuation_10000/seed_N/HISTORY/TAIL/.
+Original effective batch2048, microbatch512, clean-target all-prefix loss,
+learning rate0.0004, AdamW weight decay0.01, gradient clipping1 and BF16
+operations remain fixed. Total history per final model is20,000 steps.
+No early stopping and no selection of a best checkpoint.
+
+Within each seed, every branch uses the same future clean task/input and
+base Gaussian corruption draws restored from the original paired streams.
+The mixed schedule uses a separate CPU generator and is identical for both
+original histories within each seed. Different seeds are independent.
+The high and mixed tails deliberately differ in offered noise variance:
+sum(sigma squared)10,000 vs approximately3,333.5. Only history comparisons
+within the same tail have matched future noise budgets. A high-vs-mixed
+comparison cannot be called an equal-noise-budget ordering experiment.
+Record full and final250/final1000-step noise budgets to expose finite
+mixed-tail fluctuations. Use A10080GB GPUs with the same software stack;
+record actual GPU variant and baseline reevaluation differences.
+
+Measurements fixed in advance
+Evaluate after0,1000,2500,5000 and10,000 added steps using the existing shared
+4096-episode evaluation bank and clean targets. The main metric remains
+Gaussian context noise SD2, normalized MSE averaged over k20..40.
+Keep clean, lightly noisy, SD1 and other distribution/context-length
+curves as secondary descriptive outcomes. Reevaluate baseline on the
+newly allocated GPU; compare it to saved original metrics for provenance.
+Evaluation must not advance the training RNG streams or optimizer.
+
+Main exploratory contrast
+At final10,000 define within-seed history differences
+D_high = NMSE(curriculum history, high tail) - NMSE(shuffled history, high tail)
+D_mixed = NMSE(curriculum history, mixed tail) - NMSE(shuffled history, mixed tail)
+The main exploratory interaction is D_high - D_mixed, paired across all5seeds.
+Negative interaction: curriculum relative to shuffled is favored more by
+high than mixed tail. Positive interaction: the opposite direction.
+Report mean, all five paired values and95% Student t interval across seeds.
+Also report both D values and their changes from baseline at every fixed
+timepoint. Retain all trajectories regardless of sign/significance.
+Other endpoints/timepoints are secondary; no favorable-tail selection.
+The planned comparison is exploratory because it was motivated by the
+completed original data, and remains conditional on a fixed evaluation bank.
+Intervals crossing zero are inconclusive; they do not establish equivalence.
+No practically meaningful equivalence margin has been specified.
+
+Interpretation and decision
+If history gaps diminish under both common endings, the result is consistent
+with recent training conditions and/or additional convergence accounting for
+some of the original pattern. This does not uniquely establish recency.
+If gaps persist, ordering history survives these particular interventions;
+this does not uniquely establish a gradual-curriculum teaching mechanism.
+An interaction would show that the effect of ending distribution depends
+on original history. High/mixed tails bundle noise intensity/distribution.
+Compare fixed evaluations at5000 and10,000 for stability, while retaining
+the final10,000 comparison regardless of stability. Five seeds provide
+limited precision and t inference assumes roughly normal paired differences.
+Any clear pattern would motivate a separately planned replication at another
+problem size and/or a bridge under verified original paper/code settings.
+If the diagnostic stays unclear, preserve the inconclusive result and
+reassess further compute; do not add seeds until significance appears.
+
+Operational plan
+Use continuation.slurm indices0..19 with independent outputs and checkpoints.
+Mapping: seed=id//4; history=(id%4)//2 (curriculum,shuffled);
+tail=id%2 (high,mixed). Allow up to20parallel jobs, subject to verified
+IDUN user/account limits and availability. Requested A10080GB,4CPU,24GBRAM,
+4-hour job ceiling. Training is about34..41GPU-hours plus evaluation,
+loading/checkpoint overhead; rough total35..45GPU-hours. Concurrent duration
+is about2hours if all20start together; queueing may extend elapsed time.
+Submit only after continuation correctness checks and source checkpoint
+preflight succeed. Queue a dependent CPU summary with no automatic extra
+experiments. Large continuation checkpoint/loss files remain on IDUN.
+
+Source experiment
+/cluster/work/noahls/icl-rerun-20261005/results/full
+Source run_experiment.py SHA256
+4df516cd368733d00795d9a3cf16f4f114db06e156cad5a4cabe3a22ce0776b7
+Original successful jobs25586962,25590955 tasks5,6,10,13,14,17,18,
+replacement25599855_9; final summary25590956 completed20:56:48 Oslo.

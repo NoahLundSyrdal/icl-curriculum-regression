@@ -1,0 +1,337 @@
+{
+  "kind": "icl_curriculum_strong_baseline_confirmation_v1",
+  "production_shapes_passed": true,
+  "all_4_optimizers_3_arms_passed": true,
+  "bitwise_restart_passed": true,
+  "paired_initialization_passed": true,
+  "causal_and_query_target_absent_passed": true,
+  "freeze_sha256": "97c4b474eb6d196dba5d195ca0bbce2e20d8dc084a49ea4e144528dc1401e41c",
+  "records": [
+    {
+      "task_index": 0,
+      "arm": "curriculum",
+      "setting": "lr_low",
+      "k": 0,
+      "query_target_absent_max_difference": 0.00146484375,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 0,
+      "arm": "curriculum",
+      "setting": "lr_low",
+      "k": 50,
+      "query_target_absent_max_difference": 0.0,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 0,
+      "arm": "curriculum",
+      "setting": "lr_low",
+      "k": 100,
+      "query_target_absent_max_difference": 0.0,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 1,
+      "arm": "shuffled",
+      "setting": "lr_low",
+      "k": 0,
+      "query_target_absent_max_difference": 0.00390625,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 1,
+      "arm": "shuffled",
+      "setting": "lr_low",
+      "k": 50,
+      "query_target_absent_max_difference": 0.0,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 1,
+      "arm": "shuffled",
+      "setting": "lr_low",
+      "k": 100,
+      "query_target_absent_max_difference": 0.00030517578125,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 2,
+      "arm": "hard",
+      "setting": "lr_low",
+      "k": 0,
+      "query_target_absent_max_difference": 0.001953125,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 2,
+      "arm": "hard",
+      "setting": "lr_low",
+      "k": 50,
+      "query_target_absent_max_difference": 0.001953125,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 2,
+      "arm": "hard",
+      "setting": "lr_low",
+      "k": 100,
+      "query_target_absent_max_difference": 0.001953125,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 3,
+      "arm": "curriculum",
+      "setting": "baseline",
+      "k": 0,
+      "query_target_absent_max_difference": 0.001953125,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 3,
+      "arm": "curriculum",
+      "setting": "baseline",
+      "k": 50,
+      "query_target_absent_max_difference": 0.001953125,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 3,
+      "arm": "curriculum",
+      "setting": "baseline",
+      "k": 100,
+      "query_target_absent_max_difference": 0.0,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 4,
+      "arm": "shuffled",
+      "setting": "baseline",
+      "k": 0,
+      "query_target_absent_max_difference": 0.002197265625,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 4,
+      "arm": "shuffled",
+      "setting": "baseline",
+      "k": 50,
+      "query_target_absent_max_difference": 0.000732421875,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 4,
+      "arm": "shuffled",
+      "setting": "baseline",
+      "k": 100,
+      "query_target_absent_max_difference": 0.0,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 5,
+      "arm": "hard",
+      "setting": "baseline",
+      "k": 0,
+      "query_target_absent_max_difference": 0.001953125,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 5,
+      "arm": "hard",
+      "setting": "baseline",
+      "k": 50,
+      "query_target_absent_max_difference": 0.001953125,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 5,
+      "arm": "hard",
+      "setting": "baseline",
+      "k": 100,
+      "query_target_absent_max_difference": 0.0,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 6,
+      "arm": "curriculum",
+      "setting": "lr_high",
+      "k": 0,
+      "query_target_absent_max_difference": 0.00390625,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 6,
+      "arm": "curriculum",
+      "setting": "lr_high",
+      "k": 50,
+      "query_target_absent_max_difference": 0.0,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 6,
+      "arm": "curriculum",
+      "setting": "lr_high",
+      "k": 100,
+      "query_target_absent_max_difference": 0.0,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 7,
+      "arm": "shuffled",
+      "setting": "lr_high",
+      "k": 0,
+      "query_target_absent_max_difference": 0.001953125,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 7,
+      "arm": "shuffled",
+      "setting": "lr_high",
+      "k": 50,
+      "query_target_absent_max_difference": 0.0009765625,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 7,
+      "arm": "shuffled",
+      "setting": "lr_high",
+      "k": 100,
+      "query_target_absent_max_difference": 0.0,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 8,
+      "arm": "hard",
+      "setting": "lr_high",
+      "k": 0,
+      "query_target_absent_max_difference": 0.00439453125,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 8,
+      "arm": "hard",
+      "setting": "lr_high",
+      "k": 50,
+      "query_target_absent_max_difference": 0.0078125,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 8,
+      "arm": "hard",
+      "setting": "lr_high",
+      "k": 100,
+      "query_target_absent_max_difference": 0.0,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 9,
+      "arm": "curriculum",
+      "setting": "loss_nmse",
+      "k": 0,
+      "query_target_absent_max_difference": 0.00390625,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 9,
+      "arm": "curriculum",
+      "setting": "loss_nmse",
+      "k": 50,
+      "query_target_absent_max_difference": 0.001953125,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 9,
+      "arm": "curriculum",
+      "setting": "loss_nmse",
+      "k": 100,
+      "query_target_absent_max_difference": 0.00390625,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 10,
+      "arm": "shuffled",
+      "setting": "loss_nmse",
+      "k": 0,
+      "query_target_absent_max_difference": 0.001953125,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 10,
+      "arm": "shuffled",
+      "setting": "loss_nmse",
+      "k": 50,
+      "query_target_absent_max_difference": 0.0009765625,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 10,
+      "arm": "shuffled",
+      "setting": "loss_nmse",
+      "k": 100,
+      "query_target_absent_max_difference": 0.00048828125,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 11,
+      "arm": "hard",
+      "setting": "loss_nmse",
+      "k": 0,
+      "query_target_absent_max_difference": 0.0009765625,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 11,
+      "arm": "hard",
+      "setting": "loss_nmse",
+      "k": 50,
+      "query_target_absent_max_difference": 0.00048828125,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    },
+    {
+      "task_index": 11,
+      "arm": "hard",
+      "setting": "loss_nmse",
+      "k": 100,
+      "query_target_absent_max_difference": 0.0,
+      "causal_mutation_bitwise": true,
+      "bitwise_training_resume": true
+    }
+  ],
+  "gpu": "NVIDIA A100 80GB PCIe",
+  "torch": "2.9.0+cu126"
+}

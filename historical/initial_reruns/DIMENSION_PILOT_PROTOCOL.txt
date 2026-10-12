@@ -1,0 +1,91 @@
+Curriculum ordering in harder in-context regression: bounded exploratory pilot
+Fixed before submission, 6 October 2026.
+
+Purpose
+Test whether a curriculum over task dimension AND context length accelerates
+learning of a harder 50-dimensional linear-regression task. This is a new
+question after the completed, inconclusive noise-ordering study. Broad curriculum
+learning is within the thesis scope. Positive results are hypotheses, not a
+requirement. The existing H1/H2 reports remain unchanged.
+
+Rationale and limits
+Garg et al., arXiv:2208.01066, Section 6/Appendix B.5, show substantial benefits
+from dimension/context curricula, particularly at higher dimensions. A simple
+replication alone would add limited novelty. This pilot adds an exact matched-
+batch shuffled comparison and a common terminal phase to distinguish ordering
+from exposure to easier tasks. We jointly change dimension/context length and
+cannot attribute any effect uniquely to either component.
+
+Arms and exact data matching
+Two fresh initialization seeds: 100 and 101. Three arms per seed:
+curriculum, shuffled, hard. Each runs 6,000 optimizer updates from scratch.
+Define a fixed canonical bank of training BATCH IDs 0..5999. For IDs 0..999,
+active dimension is 5. For IDs 1000..2999, active dimension rises monotonically
+from 5 to 50 using floor(45*(ID-1000)/1999)+5. For IDs 3000..5999 it is 50.
+The eligible prediction positions per batch are 2*active_dimension+1.
+curriculum processes these IDs in order. shuffled processes one seeded random
+permutation of IDs 0..2999, then IDs 3000..5999 in the same order as curriculum.
+hard uses IDs in order, always with all 50 dimensions and 101 positions.
+All arms therefore have a common final 3,000-update phase with exactly identical
+batches. Curriculum and shuffled see exactly the SAME full training batches,
+targets, active dimensions and eligible positions, with only chronology changed.
+The hard arm shares underlying full-dimensional w/x episodes but changes the
+initial 3,000 batches to full difficulty.
+
+Stateless sampling and model
+CPU Gaussian generators derive independent task/input/corruption seeds by SHA256
+of version, initialization seed, batch ID and stream name. They have no dependency
+on optimizer step or ordering. Draw the complete effective batch before slicing
+microbatches. Generate w~N(0,I_50), x~N(0,I_50), then zero coordinates beyond
+the batch's active dimension and compute clean y=xw. Training context labels are
+clean in ALL arms: this isolates task-difficulty curriculum rather than exposure
+to noise. Gaussian test corruption SD=1,2 is secondary.
+Use the unchanged RegressionTransformer architecture from run_experiment.py:
+12 layers, width 256, 8 heads, dropout 0, positional capacity 101 x positions.
+AdamW lr=4e-4, weight decay=.01, norm clipping=1, BF16 GPU operations and FP32
+raw squared-error loss, averaged over eligible prediction positions. Effective
+batch=256, microbatch=128. No learning-rate schedule or early stopping.
+The model physically processes all 101 x positions (202 tokens) in every arm
+and every update; only the loss is restricted to eligible prefix positions.
+Thus forward/dense-backward tensor shapes, total processed tokens and optimizer
+update counts are matched. Report measured training time separately; equal
+shapes are not a promise of identical hardware runtime. Context/target values
+beyond the eligible prefix cannot affect earlier predictions causally.
+
+Fixed evaluation and primary pilot contrast
+New shared bank: eval seed 173819, 1,024 episodes, full dimension 50 and 101
+prediction positions for ALL arms and ALL evaluation times. Gaussian label
+noise SDs 0,1,2; query truth remains clean. NMSE=squared error/50, and k means
+the number of preceding labels. Main target error averages k=50..100.
+Measure at optimizer updates 0,500,1000,2000,3000,4000,5000,6000.
+Primary PILOT contrast: curriculum minus shuffled, for the trapezoidal mean
+of the SD=0 target error over the common full-difficulty phase, updates
+3000..6000, with endpoints at 3000,4000,5000,6000. Negative favors curriculum.
+Secondary: corresponding curriculum-hard contrast, final endpoint, full curves,
+test SD1/SD2 robustness, per-prefix curves and measured training time.
+Report both per-seed contrasts and their mean; TWO SEEDS ARE EXPLORATORY.
+Do not claim confirmatory significance, practical equivalence or publishability.
+The full-difficulty bank prevents comparing easier training losses as though
+they were superior target-task learning. No outcome-driven early stopping.
+
+Validation, resources and decision
+Before production, verify exact batch identity under permutation, equal data
+histograms and eligible-prefix totals, identical terminal batches, fixed full-
+difficulty evaluation, causal independence from future tokens/labels, matched
+initialization, evaluation RNG isolation, and bitwise tiny CPU interruption/
+resume against uninterrupted training. Reject altered source/protocol on resume.
+Preflight runs on Slurm CPUQ. One separate GPU smoke job checks production shapes,
+BF16 training and curriculum/shuffled identity at baseline. Its directory is
+separate from the pilot. Six GPU array tasks may run in parallel on A100 80GB.
+Automatic summary depends on all six succeeding and requires all 48 evaluations.
+Retain model/Adam/RNG snapshots at the phase boundary (3000) and endpoint (6000),
+plus a rolling restart checkpoint. Record software, sources, schedules and jobs.
+
+This is one bounded pilot, not a schedule/hyperparameter search. If it exposes
+a numerical or data-matching defect, fix and document the defect before reading
+contrasts. If the pilot is uninformative due to insufficient learning, report
+that limitation and discuss a justified budget change. Any publication-level
+confirmation needs fresh seeds and a protocol fixed before those outcomes.
+No full confirmation or new grid is automatically launched by this protocol.
+
+Reference: https://arxiv.org/html/2208.01066

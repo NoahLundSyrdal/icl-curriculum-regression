@@ -1,0 +1,27 @@
+{
+  "kind": "icl_curriculum_strong_baseline_confirmation_v1",
+  "created_utc": "2026-10-08T09:32:21.095298+00:00",
+  "source_hashes": {
+    "CONFIRMATION_PROTOCOL.txt": "d3f5d2a942350c075754213ddfa63f31d3e768e5b2a9e489509e2d5f948ebb4c",
+    "CONFIRMATION_TASKS.json": "6487cff07e933ba5406551a1c305d72da2e3317c22380ca79adb017054fb644b",
+    "confirmation_plan.py": "49257a96bad075a810965efb72dcdcb593e020abaa8e565f0e072dfcf227b837",
+    "confirmation_experiment.py": "505855976da328662d7c6b04f5d45b622582ae08055c281d8c8eb685e1480f5a",
+    "confirmation_analysis.py": "2fb3abd67a371e3f36d72a3f21d008e1712c2739fcf43e8fcd975a3623a2a09b",
+    "confirmation_checks.py": "32a643fb377e4bb17dbe2bf3954b9f322ea3c850a8eb7cee1a24bc9bd4ac5ad0",
+    "test_confirmation.py": "88fcd1b4659069490f79935e70c2b92a68c0735484212f339757e9ae0011c47f",
+    "select_confirmation.py": "afc37408f0da7dae22045e8b1492e0953af6aa49de53e6ca8d2addbfc6a99461",
+    "submit_confirmation.py": "2e65d876f386b7fb3ed679151cee20dac3c1931fb152c2d66e9da54e683ef269",
+    "confirmation_preflight.slurm": "f1134c0621ae3da93c50d2cbe54a1d416f6c419184d2153602f28e3fc0ace5e1",
+    "confirmation_smoke.slurm": "c58873f7b1e1f904865d971410a412ee2a5143ab1e3fadf275151a014198c841",
+    "confirmation_dev.slurm": "636fe384b608c8324ea9cbb23c77504b5b8dd1dab429ed70a5575726ed4d6add",
+    "confirmation_select.slurm": "5803d62f8fb04aa8c769557f4d89e29a1d74d44242c3856e8039cb52f8e7f4ac",
+    "confirmation_train.slurm": "6907ebfc13a17acf1b58f46ca159974c3b79a763002419e8c58ac1bf4f193b98",
+    "confirmation_summary.slurm": "ab0f661816a7866999683edf0ec703e0cee3a8e94debd574e137fb85c1efc1c2",
+    "run_experiment.py": "4df516cd368733d00795d9a3cf16f4f114db06e156cad5a4cabe3a22ce0776b7",
+    "robustness_experiment.py": "83bcb5847c8194fca7d463666f588d010564e00186ac36e1d461cb566a3e1db3",
+    "ROBUSTNESS_PROTOCOL.txt": "c239acbeed646bda3eae77513a02ac42ce729b575851c9ec570124c0703cef22",
+    "ROBUSTNESS_TASKS.json": "f8c35fed798e0073846956d2254b926c2581153bdcd9bf9c6a2065e690996410",
+    "test_robustness.py": "2de091fcfc243f813082e871c340ec4db5f4f51ce9195cde390b7a2c0f80faca",
+    "summarize_robustness.py": "84e9dbf0920b2936ee6dcaa3c6a5c63ab0f3c53b62f3ad85a0fab35992140e26"
+  }
+}
