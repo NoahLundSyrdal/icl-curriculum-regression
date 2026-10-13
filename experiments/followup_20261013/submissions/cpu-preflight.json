@@ -1,0 +1,968 @@
+{
+  "kind": "icl_curriculum_generalization_components_20261013_v1",
+  "tests_passed": true,
+  "all_150_production_batch_probes_passed": true,
+  "fresh_seed_audit": {
+    "prior_records": 2257,
+    "prior_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      100,
+      101,
+      200,
+      201,
+      202,
+      203,
+      204,
+      300,
+      301,
+      600,
+      601,
+      602,
+      1000,
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010,
+      1011,
+      1012,
+      1013,
+      1014,
+      1015,
+      1016,
+      1017,
+      1018,
+      1019
+    ],
+    "prior_evaluation_banks": [
+      81973,
+      173819,
+      273819,
+      273821,
+      315831,
+      315833,
+      731839,
+      731840,
+      731841,
+      731842
+    ],
+    "training_seeds_disjoint": true,
+    "evaluation_banks_disjoint": true,
+    "note": "Audits prior manifests and primary/holdout metric records before any production training."
+  },
+  "freeze_sha256": "084d75d1e91a4edf17a7646655234d506c75cd14d57d6ada1204dce69a4c1544",
+  "probes": [
+    {
+      "index": 0,
+      "dims": 20,
+      "strategy": "joint_d20_curriculum",
+      "lr": 1e-05
+    },
+    {
+      "index": 1,
+      "dims": 20,
+      "strategy": "joint_d20_shuffled",
+      "lr": 1e-05
+    },
+    {
+      "index": 2,
+      "dims": 50,
+      "strategy": "joint_d50_curriculum",
+      "lr": 1e-05
+    },
+    {
+      "index": 3,
+      "dims": 50,
+      "strategy": "joint_d50_shuffled",
+      "lr": 1e-05
+    },
+    {
+      "index": 4,
+      "dims": 50,
+      "strategy": "dimension_d50_curriculum",
+      "lr": 1e-05
+    },
+    {
+      "index": 5,
+      "dims": 50,
+      "strategy": "dimension_d50_shuffled",
+      "lr": 1e-05
+    },
+    {
+      "index": 6,
+      "dims": 50,
+      "strategy": "context_d50_curriculum",
+      "lr": 1e-05
+    },
+    {
+      "index": 7,
+      "dims": 50,
+      "strategy": "context_d50_shuffled",
+      "lr": 1e-05
+    },
+    {
+      "index": 8,
+      "dims": 20,
+      "strategy": "hard_d20",
+      "lr": 1e-05
+    },
+    {
+      "index": 9,
+      "dims": 50,
+      "strategy": "hard_d50",
+      "lr": 1e-05
+    },
+    {
+      "index": 10,
+      "dims": 20,
+      "strategy": "joint_d20_curriculum",
+      "lr": 3e-05
+    },
+    {
+      "index": 11,
+      "dims": 20,
+      "strategy": "joint_d20_shuffled",
+      "lr": 3e-05
+    },
+    {
+      "index": 12,
+      "dims": 50,
+      "strategy": "joint_d50_curriculum",
+      "lr": 3e-05
+    },
+    {
+      "index": 13,
+      "dims": 50,
+      "strategy": "joint_d50_shuffled",
+      "lr": 3e-05
+    },
+    {
+      "index": 14,
+      "dims": 50,
+      "strategy": "dimension_d50_curriculum",
+      "lr": 3e-05
+    },
+    {
+      "index": 15,
+      "dims": 50,
+      "strategy": "dimension_d50_shuffled",
+      "lr": 3e-05
+    },
+    {
+      "index": 16,
+      "dims": 50,
+      "strategy": "context_d50_curriculum",
+      "lr": 3e-05
+    },
+    {
+      "index": 17,
+      "dims": 50,
+      "strategy": "context_d50_shuffled",
+      "lr": 3e-05
+    },
+    {
+      "index": 18,
+      "dims": 20,
+      "strategy": "hard_d20",
+      "lr": 3e-05
+    },
+    {
+      "index": 19,
+      "dims": 50,
+      "strategy": "hard_d50",
+      "lr": 3e-05
+    },
+    {
+      "index": 20,
+      "dims": 20,
+      "strategy": "joint_d20_curriculum",
+      "lr": 0.0001
+    },
+    {
+      "index": 21,
+      "dims": 20,
+      "strategy": "joint_d20_shuffled",
+      "lr": 0.0001
+    },
+    {
+      "index": 22,
+      "dims": 50,
+      "strategy": "joint_d50_curriculum",
+      "lr": 0.0001
+    },
+    {
+      "index": 23,
+      "dims": 50,
+      "strategy": "joint_d50_shuffled",
+      "lr": 0.0001
+    },
+    {
+      "index": 24,
+      "dims": 50,
+      "strategy": "dimension_d50_curriculum",
+      "lr": 0.0001
+    },
+    {
+      "index": 25,
+      "dims": 50,
+      "strategy": "dimension_d50_shuffled",
+      "lr": 0.0001
+    },
+    {
+      "index": 26,
+      "dims": 50,
+      "strategy": "context_d50_curriculum",
+      "lr": 0.0001
+    },
+    {
+      "index": 27,
+      "dims": 50,
+      "strategy": "context_d50_shuffled",
+      "lr": 0.0001
+    },
+    {
+      "index": 28,
+      "dims": 20,
+      "strategy": "hard_d20",
+      "lr": 0.0001
+    },
+    {
+      "index": 29,
+      "dims": 50,
+      "strategy": "hard_d50",
+      "lr": 0.0001
+    },
+    {
+      "index": 30,
+      "dims": 20,
+      "strategy": "joint_d20_curriculum",
+      "lr": 0.0003
+    },
+    {
+      "index": 31,
+      "dims": 20,
+      "strategy": "joint_d20_shuffled",
+      "lr": 0.0003
+    },
+    {
+      "index": 32,
+      "dims": 50,
+      "strategy": "joint_d50_curriculum",
+      "lr": 0.0003
+    },
+    {
+      "index": 33,
+      "dims": 50,
+      "strategy": "joint_d50_shuffled",
+      "lr": 0.0003
+    },
+    {
+      "index": 34,
+      "dims": 50,
+      "strategy": "dimension_d50_curriculum",
+      "lr": 0.0003
+    },
+    {
+      "index": 35,
+      "dims": 50,
+      "strategy": "dimension_d50_shuffled",
+      "lr": 0.0003
+    },
+    {
+      "index": 36,
+      "dims": 50,
+      "strategy": "context_d50_curriculum",
+      "lr": 0.0003
+    },
+    {
+      "index": 37,
+      "dims": 50,
+      "strategy": "context_d50_shuffled",
+      "lr": 0.0003
+    },
+    {
+      "index": 38,
+      "dims": 20,
+      "strategy": "hard_d20",
+      "lr": 0.0003
+    },
+    {
+      "index": 39,
+      "dims": 50,
+      "strategy": "hard_d50",
+      "lr": 0.0003
+    },
+    {
+      "index": 40,
+      "dims": 20,
+      "strategy": "joint_d20_curriculum",
+      "lr": 0.001
+    },
+    {
+      "index": 41,
+      "dims": 20,
+      "strategy": "joint_d20_shuffled",
+      "lr": 0.001
+    },
+    {
+      "index": 42,
+      "dims": 50,
+      "strategy": "joint_d50_curriculum",
+      "lr": 0.001
+    },
+    {
+      "index": 43,
+      "dims": 50,
+      "strategy": "joint_d50_shuffled",
+      "lr": 0.001
+    },
+    {
+      "index": 44,
+      "dims": 50,
+      "strategy": "dimension_d50_curriculum",
+      "lr": 0.001
+    },
+    {
+      "index": 45,
+      "dims": 50,
+      "strategy": "dimension_d50_shuffled",
+      "lr": 0.001
+    },
+    {
+      "index": 46,
+      "dims": 50,
+      "strategy": "context_d50_curriculum",
+      "lr": 0.001
+    },
+    {
+      "index": 47,
+      "dims": 50,
+      "strategy": "context_d50_shuffled",
+      "lr": 0.001
+    },
+    {
+      "index": 48,
+      "dims": 20,
+      "strategy": "hard_d20",
+      "lr": 0.001
+    },
+    {
+      "index": 49,
+      "dims": 50,
+      "strategy": "hard_d50",
+      "lr": 0.001
+    },
+    {
+      "index": 50,
+      "dims": 20,
+      "strategy": "joint_d20_curriculum",
+      "lr": 1e-05
+    },
+    {
+      "index": 51,
+      "dims": 20,
+      "strategy": "joint_d20_shuffled",
+      "lr": 1e-05
+    },
+    {
+      "index": 52,
+      "dims": 50,
+      "strategy": "joint_d50_curriculum",
+      "lr": 1e-05
+    },
+    {
+      "index": 53,
+      "dims": 50,
+      "strategy": "joint_d50_shuffled",
+      "lr": 1e-05
+    },
+    {
+      "index": 54,
+      "dims": 50,
+      "strategy": "dimension_d50_curriculum",
+      "lr": 1e-05
+    },
+    {
+      "index": 55,
+      "dims": 50,
+      "strategy": "dimension_d50_shuffled",
+      "lr": 1e-05
+    },
+    {
+      "index": 56,
+      "dims": 50,
+      "strategy": "context_d50_curriculum",
+      "lr": 1e-05
+    },
+    {
+      "index": 57,
+      "dims": 50,
+      "strategy": "context_d50_shuffled",
+      "lr": 1e-05
+    },
+    {
+      "index": 58,
+      "dims": 20,
+      "strategy": "hard_d20",
+      "lr": 1e-05
+    },
+    {
+      "index": 59,
+      "dims": 50,
+      "strategy": "hard_d50",
+      "lr": 1e-05
+    },
+    {
+      "index": 60,
+      "dims": 20,
+      "strategy": "joint_d20_curriculum",
+      "lr": 3e-05
+    },
+    {
+      "index": 61,
+      "dims": 20,
+      "strategy": "joint_d20_shuffled",
+      "lr": 3e-05
+    },
+    {
+      "index": 62,
+      "dims": 50,
+      "strategy": "joint_d50_curriculum",
+      "lr": 3e-05
+    },
+    {
+      "index": 63,
+      "dims": 50,
+      "strategy": "joint_d50_shuffled",
+      "lr": 3e-05
+    },
+    {
+      "index": 64,
+      "dims": 50,
+      "strategy": "dimension_d50_curriculum",
+      "lr": 3e-05
+    },
+    {
+      "index": 65,
+      "dims": 50,
+      "strategy": "dimension_d50_shuffled",
+      "lr": 3e-05
+    },
+    {
+      "index": 66,
+      "dims": 50,
+      "strategy": "context_d50_curriculum",
+      "lr": 3e-05
+    },
+    {
+      "index": 67,
+      "dims": 50,
+      "strategy": "context_d50_shuffled",
+      "lr": 3e-05
+    },
+    {
+      "index": 68,
+      "dims": 20,
+      "strategy": "hard_d20",
+      "lr": 3e-05
+    },
+    {
+      "index": 69,
+      "dims": 50,
+      "strategy": "hard_d50",
+      "lr": 3e-05
+    },
+    {
+      "index": 70,
+      "dims": 20,
+      "strategy": "joint_d20_curriculum",
+      "lr": 0.0001
+    },
+    {
+      "index": 71,
+      "dims": 20,
+      "strategy": "joint_d20_shuffled",
+      "lr": 0.0001
+    },
+    {
+      "index": 72,
+      "dims": 50,
+      "strategy": "joint_d50_curriculum",
+      "lr": 0.0001
+    },
+    {
+      "index": 73,
+      "dims": 50,
+      "strategy": "joint_d50_shuffled",
+      "lr": 0.0001
+    },
+    {
+      "index": 74,
+      "dims": 50,
+      "strategy": "dimension_d50_curriculum",
+      "lr": 0.0001
+    },
+    {
+      "index": 75,
+      "dims": 50,
+      "strategy": "dimension_d50_shuffled",
+      "lr": 0.0001
+    },
+    {
+      "index": 76,
+      "dims": 50,
+      "strategy": "context_d50_curriculum",
+      "lr": 0.0001
+    },
+    {
+      "index": 77,
+      "dims": 50,
+      "strategy": "context_d50_shuffled",
+      "lr": 0.0001
+    },
+    {
+      "index": 78,
+      "dims": 20,
+      "strategy": "hard_d20",
+      "lr": 0.0001
+    },
+    {
+      "index": 79,
+      "dims": 50,
+      "strategy": "hard_d50",
+      "lr": 0.0001
+    },
+    {
+      "index": 80,
+      "dims": 20,
+      "strategy": "joint_d20_curriculum",
+      "lr": 0.0003
+    },
+    {
+      "index": 81,
+      "dims": 20,
+      "strategy": "joint_d20_shuffled",
+      "lr": 0.0003
+    },
+    {
+      "index": 82,
+      "dims": 50,
+      "strategy": "joint_d50_curriculum",
+      "lr": 0.0003
+    },
+    {
+      "index": 83,
+      "dims": 50,
+      "strategy": "joint_d50_shuffled",
+      "lr": 0.0003
+    },
+    {
+      "index": 84,
+      "dims": 50,
+      "strategy": "dimension_d50_curriculum",
+      "lr": 0.0003
+    },
+    {
+      "index": 85,
+      "dims": 50,
+      "strategy": "dimension_d50_shuffled",
+      "lr": 0.0003
+    },
+    {
+      "index": 86,
+      "dims": 50,
+      "strategy": "context_d50_curriculum",
+      "lr": 0.0003
+    },
+    {
+      "index": 87,
+      "dims": 50,
+      "strategy": "context_d50_shuffled",
+      "lr": 0.0003
+    },
+    {
+      "index": 88,
+      "dims": 20,
+      "strategy": "hard_d20",
+      "lr": 0.0003
+    },
+    {
+      "index": 89,
+      "dims": 50,
+      "strategy": "hard_d50",
+      "lr": 0.0003
+    },
+    {
+      "index": 90,
+      "dims": 20,
+      "strategy": "joint_d20_curriculum",
+      "lr": 0.001
+    },
+    {
+      "index": 91,
+      "dims": 20,
+      "strategy": "joint_d20_shuffled",
+      "lr": 0.001
+    },
+    {
+      "index": 92,
+      "dims": 50,
+      "strategy": "joint_d50_curriculum",
+      "lr": 0.001
+    },
+    {
+      "index": 93,
+      "dims": 50,
+      "strategy": "joint_d50_shuffled",
+      "lr": 0.001
+    },
+    {
+      "index": 94,
+      "dims": 50,
+      "strategy": "dimension_d50_curriculum",
+      "lr": 0.001
+    },
+    {
+      "index": 95,
+      "dims": 50,
+      "strategy": "dimension_d50_shuffled",
+      "lr": 0.001
+    },
+    {
+      "index": 96,
+      "dims": 50,
+      "strategy": "context_d50_curriculum",
+      "lr": 0.001
+    },
+    {
+      "index": 97,
+      "dims": 50,
+      "strategy": "context_d50_shuffled",
+      "lr": 0.001
+    },
+    {
+      "index": 98,
+      "dims": 20,
+      "strategy": "hard_d20",
+      "lr": 0.001
+    },
+    {
+      "index": 99,
+      "dims": 50,
+      "strategy": "hard_d50",
+      "lr": 0.001
+    },
+    {
+      "index": 100,
+      "dims": 20,
+      "strategy": "joint_d20_curriculum",
+      "lr": 1e-05
+    },
+    {
+      "index": 101,
+      "dims": 20,
+      "strategy": "joint_d20_shuffled",
+      "lr": 1e-05
+    },
+    {
+      "index": 102,
+      "dims": 50,
+      "strategy": "joint_d50_curriculum",
+      "lr": 1e-05
+    },
+    {
+      "index": 103,
+      "dims": 50,
+      "strategy": "joint_d50_shuffled",
+      "lr": 1e-05
+    },
+    {
+      "index": 104,
+      "dims": 50,
+      "strategy": "dimension_d50_curriculum",
+      "lr": 1e-05
+    },
+    {
+      "index": 105,
+      "dims": 50,
+      "strategy": "dimension_d50_shuffled",
+      "lr": 1e-05
+    },
+    {
+      "index": 106,
+      "dims": 50,
+      "strategy": "context_d50_curriculum",
+      "lr": 1e-05
+    },
+    {
+      "index": 107,
+      "dims": 50,
+      "strategy": "context_d50_shuffled",
+      "lr": 1e-05
+    },
+    {
+      "index": 108,
+      "dims": 20,
+      "strategy": "hard_d20",
+      "lr": 1e-05
+    },
+    {
+      "index": 109,
+      "dims": 50,
+      "strategy": "hard_d50",
+      "lr": 1e-05
+    },
+    {
+      "index": 110,
+      "dims": 20,
+      "strategy": "joint_d20_curriculum",
+      "lr": 3e-05
+    },
+    {
+      "index": 111,
+      "dims": 20,
+      "strategy": "joint_d20_shuffled",
+      "lr": 3e-05
+    },
+    {
+      "index": 112,
+      "dims": 50,
+      "strategy": "joint_d50_curriculum",
+      "lr": 3e-05
+    },
+    {
+      "index": 113,
+      "dims": 50,
+      "strategy": "joint_d50_shuffled",
+      "lr": 3e-05
+    },
+    {
+      "index": 114,
+      "dims": 50,
+      "strategy": "dimension_d50_curriculum",
+      "lr": 3e-05
+    },
+    {
+      "index": 115,
+      "dims": 50,
+      "strategy": "dimension_d50_shuffled",
+      "lr": 3e-05
+    },
+    {
+      "index": 116,
+      "dims": 50,
+      "strategy": "context_d50_curriculum",
+      "lr": 3e-05
+    },
+    {
+      "index": 117,
+      "dims": 50,
+      "strategy": "context_d50_shuffled",
+      "lr": 3e-05
+    },
+    {
+      "index": 118,
+      "dims": 20,
+      "strategy": "hard_d20",
+      "lr": 3e-05
+    },
+    {
+      "index": 119,
+      "dims": 50,
+      "strategy": "hard_d50",
+      "lr": 3e-05
+    },
+    {
+      "index": 120,
+      "dims": 20,
+      "strategy": "joint_d20_curriculum",
+      "lr": 0.0001
+    },
+    {
+      "index": 121,
+      "dims": 20,
+      "strategy": "joint_d20_shuffled",
+      "lr": 0.0001
+    },
+    {
+      "index": 122,
+      "dims": 50,
+      "strategy": "joint_d50_curriculum",
+      "lr": 0.0001
+    },
+    {
+      "index": 123,
+      "dims": 50,
+      "strategy": "joint_d50_shuffled",
+      "lr": 0.0001
+    },
+    {
+      "index": 124,
+      "dims": 50,
+      "strategy": "dimension_d50_curriculum",
+      "lr": 0.0001
+    },
+    {
+      "index": 125,
+      "dims": 50,
+      "strategy": "dimension_d50_shuffled",
+      "lr": 0.0001
+    },
+    {
+      "index": 126,
+      "dims": 50,
+      "strategy": "context_d50_curriculum",
+      "lr": 0.0001
+    },
+    {
+      "index": 127,
+      "dims": 50,
+      "strategy": "context_d50_shuffled",
+      "lr": 0.0001
+    },
+    {
+      "index": 128,
+      "dims": 20,
+      "strategy": "hard_d20",
+      "lr": 0.0001
+    },
+    {
+      "index": 129,
+      "dims": 50,
+      "strategy": "hard_d50",
+      "lr": 0.0001
+    },
+    {
+      "index": 130,
+      "dims": 20,
+      "strategy": "joint_d20_curriculum",
+      "lr": 0.0003
+    },
+    {
+      "index": 131,
+      "dims": 20,
+      "strategy": "joint_d20_shuffled",
+      "lr": 0.0003
+    },
+    {
+      "index": 132,
+      "dims": 50,
+      "strategy": "joint_d50_curriculum",
+      "lr": 0.0003
+    },
+    {
+      "index": 133,
+      "dims": 50,
+      "strategy": "joint_d50_shuffled",
+      "lr": 0.0003
+    },
+    {
+      "index": 134,
+      "dims": 50,
+      "strategy": "dimension_d50_curriculum",
+      "lr": 0.0003
+    },
+    {
+      "index": 135,
+      "dims": 50,
+      "strategy": "dimension_d50_shuffled",
+      "lr": 0.0003
+    },
+    {
+      "index": 136,
+      "dims": 50,
+      "strategy": "context_d50_curriculum",
+      "lr": 0.0003
+    },
+    {
+      "index": 137,
+      "dims": 50,
+      "strategy": "context_d50_shuffled",
+      "lr": 0.0003
+    },
+    {
+      "index": 138,
+      "dims": 20,
+      "strategy": "hard_d20",
+      "lr": 0.0003
+    },
+    {
+      "index": 139,
+      "dims": 50,
+      "strategy": "hard_d50",
+      "lr": 0.0003
+    },
+    {
+      "index": 140,
+      "dims": 20,
+      "strategy": "joint_d20_curriculum",
+      "lr": 0.001
+    },
+    {
+      "index": 141,
+      "dims": 20,
+      "strategy": "joint_d20_shuffled",
+      "lr": 0.001
+    },
+    {
+      "index": 142,
+      "dims": 50,
+      "strategy": "joint_d50_curriculum",
+      "lr": 0.001
+    },
+    {
+      "index": 143,
+      "dims": 50,
+      "strategy": "joint_d50_shuffled",
+      "lr": 0.001
+    },
+    {
+      "index": 144,
+      "dims": 50,
+      "strategy": "dimension_d50_curriculum",
+      "lr": 0.001
+    },
+    {
+      "index": 145,
+      "dims": 50,
+      "strategy": "dimension_d50_shuffled",
+      "lr": 0.001
+    },
+    {
+      "index": 146,
+      "dims": 50,
+      "strategy": "context_d50_curriculum",
+      "lr": 0.001
+    },
+    {
+      "index": 147,
+      "dims": 50,
+      "strategy": "context_d50_shuffled",
+      "lr": 0.001
+    },
+    {
+      "index": 148,
+      "dims": 20,
+      "strategy": "hard_d20",
+      "lr": 0.001
+    },
+    {
+      "index": 149,
+      "dims": 50,
+      "strategy": "hard_d50",
+      "lr": 0.001
+    }
+  ],
+  "python": "3.12.3 (main, Apr  8 2025, 14:03:57) [GCC 13.3.0]",
+  "torch": "2.9.0+cu126",
+  "transformers": "4.57.1"
+}

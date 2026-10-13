@@ -1,0 +1,21 @@
+{
+  "kind": "icl_curriculum_generalization_components_20261013_v1",
+  "status": "pipeline_submitted",
+  "created_utc": "2026-10-13T09:37:17.707937+00:00",
+  "remote_root": "/cluster/work/noahls/icl-rerun-20261005/followup_20261013",
+  "development_models": 150,
+  "confirmation_slots": 360,
+  "confirmation_unique_min": 200,
+  "confirmation_unique_max": 360,
+  "account": "share-ie-idi",
+  "qos": "high",
+  "max_concurrent_gpus": 15,
+  "git_commit": "7eb7438290c5993eca99b0a783c6d1f792f42899",
+  "note": "Five LRs x three fresh development seeds x ten strategies, all 125k. Aliases skip identical confirmation runs. No external messages.",
+  "preflight_job": "25688086",
+  "gpu_smoke_job": "25688091",
+  "development_job": "25688092",
+  "selection_job": "25688093",
+  "confirmation_job": "25688094",
+  "summary_job": "25688095"
+}

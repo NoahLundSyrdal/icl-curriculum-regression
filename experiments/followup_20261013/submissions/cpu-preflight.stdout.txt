@@ -1,0 +1,100 @@
+Selection locked. Unique confirmation models: 200
+eval seed=1600 arm=shuffled step=0 full_d=3 clean_nmse=2.01771
+arm=shuffled seed=1600 step=1/8 active_d=2 eligible=5 mse=3.137 s/step=0.051 eta_hours=0.00
+arm=shuffled seed=1600 step=2/8 active_d=3 eligible=7 mse=6.4687 s/step=0.031 eta_hours=0.00
+eval seed=1600 arm=shuffled step=2 full_d=3 clean_nmse=2.01576
+arm=shuffled seed=1600 step=4/8 active_d=1 eligible=3 mse=3.3129 s/step=0.028 eta_hours=0.00
+eval seed=1600 arm=shuffled step=4 full_d=3 clean_nmse=2.01802
+arm=shuffled seed=1600 step=6/8 active_d=3 eligible=7 mse=3.5503 s/step=0.027 eta_hours=0.00
+eval seed=1600 arm=shuffled step=6 full_d=3 clean_nmse=2.0171
+arm=shuffled seed=1600 step=8/8 active_d=3 eligible=7 mse=7.1367 s/step=0.027 eta_hours=0.00
+eval seed=1600 arm=shuffled step=8 full_d=3 clean_nmse=2.01429
+eval seed=1600 arm=shuffled step=0 full_d=3 clean_nmse=2.01771
+arm=shuffled seed=1600 step=1/8 active_d=2 eligible=5 mse=3.137 s/step=0.011 eta_hours=0.00
+arm=shuffled seed=1600 step=2/8 active_d=3 eligible=7 mse=6.4687 s/step=0.010 eta_hours=0.00
+eval seed=1600 arm=shuffled step=2 full_d=3 clean_nmse=2.01576
+arm=shuffled seed=1600 step=4/8 active_d=1 eligible=3 mse=3.3129 s/step=0.011 eta_hours=0.00
+eval seed=1600 arm=shuffled step=4 full_d=3 clean_nmse=2.01802
+arm=shuffled seed=1600 step=6/8 active_d=3 eligible=7 mse=3.5503 s/step=0.021 eta_hours=0.00
+eval seed=1600 arm=shuffled step=6 full_d=3 clean_nmse=2.0171
+arm=shuffled seed=1600 step=8/8 active_d=3 eligible=7 mse=7.1367 s/step=0.022 eta_hours=0.00
+eval seed=1600 arm=shuffled step=8 full_d=3 clean_nmse=2.01429
+eval seed=1600 arm=shuffled step=0 full_d=3 clean_nmse=2.01771
+arm=shuffled seed=1600 step=1/8 active_d=2 eligible=7 mse=3.1752 s/step=0.011 eta_hours=0.00
+arm=shuffled seed=1600 step=2/8 active_d=3 eligible=7 mse=6.4675 s/step=0.011 eta_hours=0.00
+eval seed=1600 arm=shuffled step=2 full_d=3 clean_nmse=2.01672
+arm=shuffled seed=1600 step=4/8 active_d=1 eligible=7 mse=3.2175 s/step=0.018 eta_hours=0.00
+eval seed=1600 arm=shuffled step=4 full_d=3 clean_nmse=2.01997
+arm=shuffled seed=1600 step=6/8 active_d=3 eligible=7 mse=3.5449 s/step=0.021 eta_hours=0.00
+eval seed=1600 arm=shuffled step=6 full_d=3 clean_nmse=2.02123
+arm=shuffled seed=1600 step=8/8 active_d=3 eligible=7 mse=7.1591 s/step=0.022 eta_hours=0.00
+eval seed=1600 arm=shuffled step=8 full_d=3 clean_nmse=2.01967
+eval seed=1600 arm=shuffled step=0 full_d=3 clean_nmse=2.01771
+arm=shuffled seed=1600 step=1/8 active_d=2 eligible=7 mse=3.1752 s/step=0.011 eta_hours=0.00
+arm=shuffled seed=1600 step=2/8 active_d=3 eligible=7 mse=6.4675 s/step=0.011 eta_hours=0.00
+eval seed=1600 arm=shuffled step=2 full_d=3 clean_nmse=2.01672
+arm=shuffled seed=1600 step=4/8 active_d=1 eligible=7 mse=3.2175 s/step=0.010 eta_hours=0.00
+eval seed=1600 arm=shuffled step=4 full_d=3 clean_nmse=2.01997
+arm=shuffled seed=1600 step=6/8 active_d=3 eligible=7 mse=3.5449 s/step=0.020 eta_hours=0.00
+eval seed=1600 arm=shuffled step=6 full_d=3 clean_nmse=2.02123
+arm=shuffled seed=1600 step=8/8 active_d=3 eligible=7 mse=7.1591 s/step=0.022 eta_hours=0.00
+eval seed=1600 arm=shuffled step=8 full_d=3 clean_nmse=2.01967
+eval seed=1600 arm=shuffled step=0 full_d=3 clean_nmse=2.01771
+arm=shuffled seed=1600 step=1/8 active_d=3 eligible=5 mse=1.9805 s/step=0.011 eta_hours=0.00
+arm=shuffled seed=1600 step=2/8 active_d=3 eligible=7 mse=6.4774 s/step=0.010 eta_hours=0.00
+eval seed=1600 arm=shuffled step=2 full_d=3 clean_nmse=2.01248
+arm=shuffled seed=1600 step=4/8 active_d=3 eligible=3 mse=1.6966 s/step=0.018 eta_hours=0.00
+eval seed=1600 arm=shuffled step=4 full_d=3 clean_nmse=2.01472
+arm=shuffled seed=1600 step=6/8 active_d=3 eligible=7 mse=3.5545 s/step=0.020 eta_hours=0.00
+eval seed=1600 arm=shuffled step=6 full_d=3 clean_nmse=2.01365
+arm=shuffled seed=1600 step=8/8 active_d=3 eligible=7 mse=7.1455 s/step=0.022 eta_hours=0.00
+eval seed=1600 arm=shuffled step=8 full_d=3 clean_nmse=2.01074
+eval seed=1600 arm=shuffled step=0 full_d=3 clean_nmse=2.01771
+arm=shuffled seed=1600 step=1/8 active_d=3 eligible=5 mse=1.9805 s/step=0.011 eta_hours=0.00
+arm=shuffled seed=1600 step=2/8 active_d=3 eligible=7 mse=6.4774 s/step=0.011 eta_hours=0.00
+eval seed=1600 arm=shuffled step=2 full_d=3 clean_nmse=2.01248
+arm=shuffled seed=1600 step=4/8 active_d=3 eligible=3 mse=1.6966 s/step=0.011 eta_hours=0.00
+eval seed=1600 arm=shuffled step=4 full_d=3 clean_nmse=2.01472
+arm=shuffled seed=1600 step=6/8 active_d=3 eligible=7 mse=3.5545 s/step=0.021 eta_hours=0.00
+eval seed=1600 arm=shuffled step=6 full_d=3 clean_nmse=2.01365
+arm=shuffled seed=1600 step=8/8 active_d=3 eligible=7 mse=7.1455 s/step=0.022 eta_hours=0.00
+eval seed=1600 arm=shuffled step=8 full_d=3 clean_nmse=2.01074
+eval seed=1600 arm=hard step=0 full_d=3 clean_nmse=2.01771
+arm=hard seed=1600 step=1/8 active_d=3 eligible=7 mse=3.5098 s/step=0.010 eta_hours=0.00
+arm=hard seed=1600 step=2/8 active_d=3 eligible=7 mse=2.2722 s/step=0.010 eta_hours=0.00
+eval seed=1600 arm=hard step=2 full_d=3 clean_nmse=2.01898
+arm=hard seed=1600 step=4/8 active_d=3 eligible=7 mse=6.4678 s/step=0.017 eta_hours=0.00
+eval seed=1600 arm=hard step=4 full_d=3 clean_nmse=2.01488
+arm=hard seed=1600 step=6/8 active_d=3 eligible=7 mse=3.5575 s/step=0.020 eta_hours=0.00
+eval seed=1600 arm=hard step=6 full_d=3 clean_nmse=2.01468
+arm=hard seed=1600 step=8/8 active_d=3 eligible=7 mse=7.1793 s/step=0.021 eta_hours=0.00
+eval seed=1600 arm=hard step=8 full_d=3 clean_nmse=2.0123
+eval seed=1600 arm=hard step=0 full_d=3 clean_nmse=2.01771
+arm=hard seed=1600 step=1/8 active_d=3 eligible=7 mse=3.5098 s/step=0.011 eta_hours=0.00
+arm=hard seed=1600 step=2/8 active_d=3 eligible=7 mse=2.2722 s/step=0.011 eta_hours=0.00
+eval seed=1600 arm=hard step=2 full_d=3 clean_nmse=2.01898
+arm=hard seed=1600 step=4/8 active_d=3 eligible=7 mse=6.4678 s/step=0.011 eta_hours=0.00
+eval seed=1600 arm=hard step=4 full_d=3 clean_nmse=2.01488
+arm=hard seed=1600 step=6/8 active_d=3 eligible=7 mse=3.5575 s/step=0.021 eta_hours=0.00
+eval seed=1600 arm=hard step=6 full_d=3 clean_nmse=2.01468
+arm=hard seed=1600 step=8/8 active_d=3 eligible=7 mse=7.1793 s/step=0.023 eta_hours=0.00
+eval seed=1600 arm=hard step=8 full_d=3 clean_nmse=2.0123
+eval seed=1600 arm=curriculum step=0 full_d=3 clean_nmse=2.01771
+arm=curriculum seed=1600 step=1/8 active_d=1 eligible=3 mse=3.7099 s/step=0.011 eta_hours=0.00
+arm=curriculum seed=1600 step=2/8 active_d=1 eligible=3 mse=3.3462 s/step=0.011 eta_hours=0.00
+eval seed=1600 arm=curriculum step=2 full_d=3 clean_nmse=2.01734
+arm=curriculum seed=1600 step=4/8 active_d=3 eligible=7 mse=6.4718 s/step=0.018 eta_hours=0.00
+eval seed=1600 arm=curriculum step=4 full_d=3 clean_nmse=2.01509
+arm=curriculum seed=1600 step=6/8 active_d=3 eligible=7 mse=3.5643 s/step=0.020 eta_hours=0.00
+eval seed=1600 arm=curriculum step=6 full_d=3 clean_nmse=2.01471
+arm=curriculum seed=1600 step=8/8 active_d=3 eligible=7 mse=7.15 s/step=0.021 eta_hours=0.00
+eval seed=1600 arm=curriculum step=8 full_d=3 clean_nmse=2.01224
+eval seed=1600 arm=curriculum step=0 full_d=3 clean_nmse=2.01771
+arm=curriculum seed=1600 step=1/8 active_d=1 eligible=3 mse=3.7099 s/step=0.011 eta_hours=0.00
+arm=curriculum seed=1600 step=2/8 active_d=1 eligible=3 mse=3.3462 s/step=0.011 eta_hours=0.00
+arm=curriculum seed=1600 step=4/8 active_d=3 eligible=7 mse=6.4718 s/step=0.012 eta_hours=0.00
+eval seed=1600 arm=curriculum step=4 full_d=3 clean_nmse=2.01509
+arm=curriculum seed=1600 step=6/8 active_d=3 eligible=7 mse=3.5643 s/step=0.016 eta_hours=0.00
+arm=curriculum seed=1600 step=8/8 active_d=3 eligible=7 mse=7.15 s/step=0.015 eta_hours=0.00
+eval seed=1600 arm=curriculum step=8 full_d=3 clean_nmse=2.01224
+CPU scientific tests and all 150 production-task probes passed.

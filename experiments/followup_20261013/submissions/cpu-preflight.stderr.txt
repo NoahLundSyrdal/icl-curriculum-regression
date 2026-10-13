@@ -1,0 +1,21 @@
+test_aliases_reuse_only_exact_training_config_and_do_not_add_replication (test_followup.Design.test_aliases_reuse_only_exact_training_config_and_do_not_add_replication) ... ok
+test_each_strategy_gets_own_best_and_symmetric_shared_setting (test_followup.Design.test_each_strategy_gets_own_best_and_symmetric_shared_setting) ... ok
+test_equal_full_horizon_tuning_and_disjoint_seeds (test_followup.Design.test_equal_full_horizon_tuning_and_disjoint_seeds) ... ok
+test_geometric_ratio_not_driven_by_a_single_arithmetic_outlier (test_followup.Design.test_geometric_ratio_not_driven_by_a_single_arithmetic_outlier) ... ok
+test_missing_nonfinite_and_extra_development_data_rejected (test_followup.Design.test_missing_nonfinite_and_extra_development_data_rejected) ... ok
+test_primary_failure_blocks_all_secondary_claims_and_practical_gate (test_followup.Design.test_primary_failure_blocks_all_secondary_claims_and_practical_gate) ... ok
+test_selection_uses_only_complete_development_primary_clean_final_scores (test_followup.Design.test_selection_uses_only_complete_development_primary_clean_final_scores) ... ok
+test_sign_and_holm_multiple_comparison_controls (test_followup.Design.test_sign_and_holm_multiple_comparison_controls) ... ok
+test_bitwise_resume_all_components_and_optimizers (test_followup.Scientific.test_bitwise_resume_all_components_and_optimizers) ... /cluster/work/noahls/icl-rerun-20261005/followup_20261013/.venv/lib/python3.12/site-packages/torch/backends/__init__.py:46: UserWarning: Please use the new API settings to control TF32 behavior, such as torch.backends.cudnn.conv.fp32_precision = 'tf32' or torch.backends.cuda.matmul.fp32_precision = 'ieee'. Old settings, e.g, torch.backends.cuda.matmul.allow_tf32 = True, torch.backends.cudnn.allow_tf32 = True, allowTF32CuDNN() and allowTF32CuBLAS() will be deprecated after Pytorch 2.9. Please see https://pytorch.org/docs/main/notes/cuda.html#tensorfloat-32-tf32-on-ampere-and-later-devices (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:80.)
+  self.setter(val)
+ok
+test_exact_batches_components_shared_terminal_phase_and_variance (test_followup.Scientific.test_exact_batches_components_shared_terminal_phase_and_variance) ... ok
+test_metric_checks_catch_wrong_bank_target_scale_and_scalar (test_followup.Scientific.test_metric_checks_catch_wrong_bank_target_scale_and_scalar) ... ok
+test_own_and_future_label_leakage_and_independent_query (test_followup.Scientific.test_own_and_future_label_leakage_and_independent_query) ... ok
+test_production_shapes_and_masks_in_both_dimensions (test_followup.Scientific.test_production_shapes_and_masks_in_both_dimensions) ... ok
+test_sparse_retention_preserves_required_checkpoints_and_rng_isolation (test_followup.Scientific.test_sparse_retention_preserves_required_checkpoints_and_rng_isolation) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 7.915s
+
+OK
