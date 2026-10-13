@@ -39,7 +39,7 @@ jobs:
           MKL_NUM_THREADS: '1'
         run: python -m unittest -v test_confirmation test_robustness
       - name: Verify new follow-up scientific controls
-        working-directory: experiments/followup_20261013
+        working-directory: experiments/followup_20261013_v2
         env:
           OMP_NUM_THREADS: '1'
           OPENBLAS_NUM_THREADS: '1'

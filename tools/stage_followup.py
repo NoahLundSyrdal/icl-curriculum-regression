@@ -4,7 +4,7 @@ from pathlib import Path
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--destination',type=Path,required=True);a=parser.parse_args()
-    repo=Path(__file__).resolve().parents[1];source=repo/'experiments/followup_20261013'
+    repo=Path(__file__).resolve().parents[1];source=repo/'experiments/followup_20261013_v2'
     destination=a.destination.resolve()
     if destination==source or source in destination.parents:raise ValueError('Stage outside archived source')
     if destination.exists() and any(destination.iterdir()):raise FileExistsError('Destination is not empty')

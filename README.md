@@ -50,7 +50,8 @@ python3 -m venv .venv-analysis
 
 | Path | Contents |
 | --- | --- |
-| `experiments/followup_20261013/` | New prospective study source, protocol, fixed task plan and cluster submission evidence. |
+| `experiments/followup_20261013_v2/` | Active corrected prospective study source, protocol, task plan and cluster submission evidence. |
+| `experiments/followup_20261013/` | Superseded preliminary launch; unchanged source freeze and cancellation records. |
 | `experiments/confirmation_20261008/` | Frozen confirmation source, original cluster scripts, recorded selection and preflight metadata; auxiliary source files have separate capture hashes. |
 | `data/confirmation_20261008.zip` | Complete text/metric archive from the completed cluster run: 360 development and 780 confirmation records, manifests, training logs, source and metadata. |
 | `analysis/` | Added post hoc review statistics and figures. |
