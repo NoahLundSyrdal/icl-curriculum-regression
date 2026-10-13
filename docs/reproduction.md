@@ -98,3 +98,7 @@ The original selector and summary audit check checkpoint files, binary schedules
 ## 5. Historical source
 
 `historical/initial_reruns/` contains the earlier local source snapshots for noise reruns, continuations, dimension pilots and long runs, with their protocols and tests. Packaging hashes are in `provenance/HISTORICAL_SOURCE_MANIFEST.json`; these do not imply those files were prospectively frozen with the later confirmation. Their raw result history and model weights are not included in the current confirmation archive. The current paper-review claims come from the later 20-seed confirmation and are not pooled across exploratory studies.
+
+## 6. New prospective follow-up
+
+The separate 13 October study has an equal full-horizon tuning budget and new seeds. See [its protocol, implementation and reproduction guide](followup_20261013.md). The original reproduction entry point continues to verify only the completed 8 October evidence.

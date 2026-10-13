@@ -38,3 +38,12 @@ jobs:
           OPENBLAS_NUM_THREADS: '1'
           MKL_NUM_THREADS: '1'
         run: python -m unittest -v test_confirmation test_robustness
+      - name: Verify new follow-up scientific controls
+        working-directory: experiments/followup_20261013
+        env:
+          OMP_NUM_THREADS: '1'
+          OPENBLAS_NUM_THREADS: '1'
+          MKL_NUM_THREADS: '1'
+        run: |
+          python -c "import followup_plan as p; p.verify_sources()"
+          python -m unittest -v test_followup

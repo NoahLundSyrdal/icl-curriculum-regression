@@ -11,6 +11,10 @@ The 21 prospectively frozen source files are preserved byte for byte. This repos
 - [Code walkthrough: exact execution path and implementing functions](docs/code_walkthrough.md)
 - [Methods and actual configurations](docs/methods.md)
 
+## New follow-up study
+
+The [13 October prospective study](docs/followup_20261013.md) tests another dimension, separates dimension and context curricula, and gives every strategy an equal full-horizon optimizer search. Its source, protocol and submission evidence are separate from the completed results below. New outcomes are not available yet.
+
 ## What we ran
 
 - 36 development models: three seeds × four optimizer configurations × three strategies, 50,000 updates.
@@ -46,6 +50,7 @@ python3 -m venv .venv-analysis
 
 | Path | Contents |
 | --- | --- |
+| `experiments/followup_20261013/` | New prospective study source, protocol, fixed task plan and cluster submission evidence. |
 | `experiments/confirmation_20261008/` | Frozen confirmation source, original cluster scripts, recorded selection and preflight metadata; auxiliary source files have separate capture hashes. |
 | `data/confirmation_20261008.zip` | Complete text/metric archive from the completed cluster run: 360 development and 780 confirmation records, manifests, training logs, source and metadata. |
 | `analysis/` | Added post hoc review statistics and figures. |

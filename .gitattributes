@@ -11,3 +11,6 @@
 /reports/** -whitespace
 /experiments/confirmation_20261008/** whitespace=cr-at-eol,-blank-at-eof
 /historical/** whitespace=cr-at-eol,-blank-at-eof
+
+experiments/followup_20261013/run_experiment.py -text
+experiments/followup_20261013/robustness_experiment.py -text
