@@ -20,3 +20,7 @@ The arrays are capped at 15 concurrent GPUs. All same-dimensional strategies hav
 The successful final audit will generate `results/followup_20261013_v2.zip` and its checksum manifest with all text metrics, logs, code and provenance. Publishing the completed result archive in GitHub follows completion; weights and binary schedules remain on IDUN. This page is a dated submission snapshot, not live monitoring.
 
 GitHub verification passed on the unchanged source: original 26 tests plus 15 new scientific tests, archive recomputation and source verification. See `repository-ci.json`. This commit adds completed GPU/launch records without changing any frozen source. The GPU preflight ran on NVIDIA A100-SXM4-80GB; requested production resources are A100 80GB and actual model hardware is recorded in every metric.
+
+## Later operational amendment
+
+The original launch snapshot above showed 15 jobs. On 13 October, after checking the live 25-GPU per-user limit and quota, the user prioritized thesis work. The live development/confirmation cap is now 20 and all remaining ICL stages have Nice 1,000,000. Twenty development jobs were observed running. This leaves five slots of user-limit headroom; it is not a physical reservation or a guarantee of immediate thesis starts. The unchanged frozen source and original job receipt remain preserved. See [resource-policy-note.md](resource-policy-note.md) and the recorded before/after Slurm commands. At sustained availability the updated whole-study estimate is roughly 6–9 days, subject to queue delays.

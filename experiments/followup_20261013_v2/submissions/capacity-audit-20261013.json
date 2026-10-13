@@ -1,0 +1,82 @@
+{
+  "checked_utc": "2026-10-13T13:16:37.215473+00:00",
+  "account_quota_row": [
+    "share-ie-idi          5766000       4998        27895       "
+  ],
+  "qos_limits": "high|cpu=2000,gres/gpu=25,mem=8000G,node=40||||",
+  "a100_80gb_nodes": [
+    {
+      "node": "idun-06-01",
+      "state": "ALLOCATED",
+      "total": 4,
+      "allocated": 2,
+      "unused_gpu_slots": 2,
+      "usable": true
+    },
+    {
+      "node": "idun-06-02",
+      "state": "ALLOCATED+DRAIN",
+      "total": 4,
+      "allocated": 1,
+      "unused_gpu_slots": 0,
+      "usable": false
+    },
+    {
+      "node": "idun-06-03",
+      "state": "MIXED",
+      "total": 4,
+      "allocated": 3,
+      "unused_gpu_slots": 1,
+      "usable": true
+    },
+    {
+      "node": "idun-06-04",
+      "state": "MIXED",
+      "total": 4,
+      "allocated": 3,
+      "unused_gpu_slots": 1,
+      "usable": true
+    },
+    {
+      "node": "idun-06-05",
+      "state": "MIXED",
+      "total": 4,
+      "allocated": 4,
+      "unused_gpu_slots": 0,
+      "usable": true
+    },
+    {
+      "node": "idun-06-07",
+      "state": "MIXED",
+      "total": 4,
+      "allocated": 4,
+      "unused_gpu_slots": 0,
+      "usable": true
+    },
+    {
+      "node": "idun-07-08",
+      "state": "MIXED",
+      "total": 10,
+      "allocated": 10,
+      "unused_gpu_slots": 0,
+      "usable": true
+    },
+    {
+      "node": "idun-07-09",
+      "state": "MIXED",
+      "total": 10,
+      "allocated": 6,
+      "unused_gpu_slots": 4,
+      "usable": true
+    },
+    {
+      "node": "idun-07-10",
+      "state": "MIXED",
+      "total": 10,
+      "allocated": 1,
+      "unused_gpu_slots": 9,
+      "usable": true
+    }
+  ],
+  "unused_a100_80gb_gpu_slots": 17
+}

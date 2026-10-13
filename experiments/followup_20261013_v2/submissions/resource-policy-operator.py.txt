@@ -1,0 +1,48 @@
+"""Operational-only Slurm amendment. No frozen source or thesis job changes."""
+from pathlib import Path
+import subprocess,json,hashlib,datetime,re
+root=Path('/cluster/work/noahls/icl-rerun-20261005/followup_20261013_v2')
+record=root/'submissions/resource-policy-20261013.json'
+if record.exists():raise SystemExit('Policy record exists; inspect before repeating any change')
+freeze=json.loads((root/'submissions/freeze.json').read_text())
+def check_sources():
+    for name,digest in freeze['source_hashes'].items():
+        if hashlib.sha256((root/name).read_bytes()).hexdigest()!=digest:raise RuntimeError('Frozen source changed: '+name)
+def run(args):return subprocess.check_output(args,text=True).strip()
+def job(identifier):return run(['scontrol','show','job',str(identifier),'-o'])
+check_sources()
+qos=run(['sacctmgr','-n','-P','show','qos','where','name=high','format=Name,MaxTRESPerUser'])
+if 'gres/gpu=25' not in qos:raise RuntimeError('GPU limit differs; reevaluate capacity')
+ids=(25688192,25688193,25688194,25688195)
+before={str(i):job(i) for i in ids}
+for i,text in before.items():
+    if 'UserId=noahls(' not in text or 'JobName=icl-next-' not in text or str(root) not in text:raise RuntimeError('Wrong study job: '+i)
+value=dict(kind='icl_followup_thesis_first_operational_amendment_v1',created_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),
+    status='applying',source_freeze_sha256=hashlib.sha256((root/'submissions/freeze.json').read_bytes()).hexdigest(),
+    user_gpu_limit=25,original_array_cap=15,active_array_cap=20,thesis_user_limit_headroom=5,nice=1000000,
+    user_intent='User authorized more parallel ICL capacity subject to master thesis priority.',
+    policy='Lower priority of every remaining ICL stage; cap each GPU array at 20. Success dependencies prevent development and confirmation overlapping. Five user-limit slots are headroom, not physical reservations or guarantees. Shared fair-share and filesystem effects remain possible.',
+    source_changes=False,scientific_changes=False,thesis_jobs_changed=False,
+    original_protocol_note='The frozen original protocol and submission retain a 15-GPU cap; this dated operational amendment explicitly overrides only live scheduling, not training/selection/inference or model count.',
+    before=before,commands=[])
+def save():
+    tmp=record.with_suffix('.json.tmp');tmp.write_text(json.dumps(value,indent=2)+'\n');tmp.replace(record)
+save()
+try:
+    # Lower queue priority before admitting extra ICL jobs.
+    for identifier in ids:
+        cmd=['scontrol','update',f'JobId={identifier}','Nice=1000000']
+        run(cmd);value['commands'].append(cmd);save()
+    for identifier in ids:
+        if 'Nice=1000000' not in job(identifier):raise RuntimeError('Nice update not verified')
+    for identifier in (25688192,25688194):
+        cmd=['scontrol','update',f'JobId={identifier}','ArrayTaskThrottle=20']
+        run(cmd);value['commands'].append(cmd);save()
+    after={str(i):job(i) for i in ids}
+    for identifier in (25688192,25688194):
+        if 'ArrayTaskThrottle=20' not in after[str(identifier)]:raise RuntimeError('Throttle not verified')
+    check_sources();value.update(status='applied_verified',after=after,verified_utc=datetime.datetime.now(datetime.timezone.utc).isoformat())
+    save()
+    print(json.dumps({k:value[k] for k in ('status','active_array_cap','thesis_user_limit_headroom','nice','scientific_changes','thesis_jobs_changed')},indent=2))
+except Exception as error:
+    value.update(status='partial_or_failed_inspect_before_retry',error=str(error));save();raise
