@@ -1,0 +1,23 @@
+{
+  "kind": "icl_curriculum_generalization_components_20261013_v2",
+  "created_utc": "2026-10-13T09:50:08.232641+00:00",
+  "source_hashes": {
+    "FOLLOWUP_PROTOCOL.md": "ef8009de0adf2a26fc093e5d55d90c6fb41405865b27ddc83af8ad053b4a4c16",
+    "FOLLOWUP_TASKS.json": "fc9023ea9079fd84ebc951a1be5efa2adc530aad57ceab99aa65759596b26d27",
+    "followup_plan.py": "f1f8a17e26673811ea7cd2327e496acab2021c817d7b441a535aededc695487d",
+    "followup_experiment.py": "1f9585dab90825dd4c91dd034224ed74124771dce44a73128491d2cef0b93e40",
+    "followup_analysis.py": "15708ef7ee5363e0ce18d729c4ef994846905d0965cc245c4aaa1963400bee80",
+    "archive_followup.py": "c87da734839ab4bb392e1b0d96f4d2c370431234023b962e56645bc6f3dd1f27",
+    "followup_checks.py": "387a45d0b275e3da6b960254bb8850682de7111d5cd29586e89d5dc9b11a1070",
+    "test_followup.py": "ae66150ea0a9efd6eecef8bf2d8af9ee361a4c04577c028e7ac7052da4812c57",
+    "submit_followup.py": "3aecad582b3bdb5b7eaca6f79d66dd28352dc0e82d2e209d977604875cc38c7b",
+    "followup_preflight.slurm": "02e7a4f6332748c8e1a6e156be23ab61cfb59b6e95b67ff01edd1fcf2571b84b",
+    "followup_smoke.slurm": "ff66820f07014a5332ca2abb8fc8a8e0bd81475371f6b645da24381c10f9f681",
+    "followup_dev.slurm": "15b0c16361d3d722145e2250d4751a0682f975e538d1bb85bf7d607c90331bf2",
+    "followup_select.slurm": "0cef4a11db68b2f1697761e674552eb76b218315f67e2619ff40a427dcebb3bd",
+    "followup_confirm.slurm": "81ecb84086a4f97cc3106eba2c8eea1a77ce819b20fc3adc76c4de6c48f97ff5",
+    "followup_summary.slurm": "d559f267ee71dd46fdfef86866e1994781d04842f83ad3e8a6f99e42a8c8de19",
+    "run_experiment.py": "4df516cd368733d00795d9a3cf16f4f114db06e156cad5a4cabe3a22ce0776b7",
+    "robustness_experiment.py": "83bcb5847c8194fca7d463666f588d010564e00186ac36e1d461cb566a3e1db3"
+  }
+}
